@@ -1,0 +1,33 @@
+C:\Users\Yeison\AppData\Local\Temporary Projects\Catación Anei\bin\Debug\Catación Anei.exe.config
+E:\Universidad Popular del Cesar (UPC)\Programación\Visual Studio\Catación Anei\Catación Anei\bin\Debug\Catación Anei.exe.config
+E:\Universidad Popular del Cesar (UPC)\Programación\Visual Studio\Catación Anei\Catación Anei\bin\Debug\Catación Anei.exe
+E:\Universidad Popular del Cesar (UPC)\Programación\Visual Studio\Catación Anei\Catación Anei\bin\Debug\Catación Anei.pdb
+E:\Universidad Popular del Cesar (UPC)\Programación\Visual Studio\Catación Anei\Catación Anei\bin\Debug\Catación Anei.xml
+E:\Universidad Popular del Cesar (UPC)\Programación\Visual Studio\Catación Anei\Catación Anei\obj\Debug\Catación_Anei.frmIniciarSecion.resources
+E:\Universidad Popular del Cesar (UPC)\Programación\Visual Studio\Catación Anei\Catación Anei\obj\Debug\Catación_Anei.Resources.resources
+E:\Universidad Popular del Cesar (UPC)\Programación\Visual Studio\Catación Anei\Catación Anei\obj\Debug\Catación Anei.vbproj.GenerateResource.Cache
+E:\Universidad Popular del Cesar (UPC)\Programación\Visual Studio\Catación Anei\Catación Anei\obj\Debug\Catación Anei.exe
+E:\Universidad Popular del Cesar (UPC)\Programación\Visual Studio\Catación Anei\Catación Anei\obj\Debug\Catación Anei.xml
+E:\Universidad Popular del Cesar (UPC)\Programación\Visual Studio\Catación Anei\Catación Anei\obj\Debug\Catación Anei.pdb
+E:\Universidad Popular del Cesar (UPC)\Programación\Visual Studio\Catación Anei\Catación Anei\obj\Debug\Catación_Anei.frmMenuPrincipal.resources
+E:\Universidad Popular del Cesar (UPC)\Programación\Visual Studio\Catación Anei\Catación Anei\obj\Debug\Catación_Anei.frmGestionarCatadores.resources
+E:\Universidad Popular del Cesar (UPC)\Programación\Visual Studio\Catación Anei\Catación Anei\obj\Debug\Catación_Anei.frmRealizarCataciones.resources
+E:\Universidad Popular del Cesar (UPC)\Programación\Visual Studio\Catación Anei\Catación Anei\obj\Debug\Catación_Anei.frmNuevaSesionCatacion.resources
+E:\Universidad Popular del Cesar (UPC)\Programación\Visual Studio\Catación Anei\Catación Anei\obj\Debug\Catación_Anei.frmEliminarSesionCatacion.resources
+E:\Universidad Popular del Cesar (UPC)\Programación\Visual Studio\Catación Anei\Catación Anei\obj\Debug\Catación_Anei.frmModicarSesionCatacion.resources
+E:\Universidad Popular del Cesar (UPC)\Programación\Visual Studio\Catación Anei\Catación Anei\obj\Debug\Catación_Anei.frmCatarRobusta.resources
+E:\Universidad Popular del Cesar (UPC)\Programación\Visual Studio\Catación Anei\Catación Anei\obj\Debug\Catación_Anei.frmCatarArabica.resources
+E:\Universidad Popular del Cesar (UPC)\Programación\Visual Studio\Catación Anei\Catación Anei\obj\Debug\Catación_Anei.frmDescriptores_FraganciaAroma.resources
+E:\Universidad Popular del Cesar (UPC)\Programación\Visual Studio\Catación Anei\Catación Anei\obj\Debug\Catación_Anei.frmDescriptores_SaborBoca.resources
+E:\Universidad Popular del Cesar (UPC)\Programación\Visual Studio\Catación Anei\Catación Anei\obj\Debug\Catación_Anei.frmDescriptores_Sabor.resources
+E:\Universidad Popular del Cesar (UPC)\Programación\Visual Studio\Catación Anei\Catación Anei\obj\Debug\Catación_Anei.frmDescriptores_Acidez.resources
+E:\Universidad Popular del Cesar (UPC)\Programación\Visual Studio\Catación Anei\Catación Anei\obj\Debug\Catación_Anei.frmDescriptores_Balance.resources
+E:\Universidad Popular del Cesar (UPC)\Programación\Visual Studio\Catación Anei\Catación Anei\obj\Debug\Catación_Anei.frmDescriptores_Cuerpo.resources
+E:\Universidad Popular del Cesar (UPC)\Programación\Visual Studio\Catación Anei\Catación Anei\obj\Debug\Catación_Anei.frmDescriptores_SalÁcido.resources
+E:\Universidad Popular del Cesar (UPC)\Programación\Visual Studio\Catación Anei\Catación Anei\obj\Debug\Catación_Anei.frmDescriptores_SensaciónBoca.resources
+E:\Universidad Popular del Cesar (UPC)\Programación\Visual Studio\Catación Anei\Catación Anei\obj\Debug\Catación_Anei.frmDescriptores_Defectos.resources
+E:\Universidad Popular del Cesar (UPC)\Programación\Visual Studio\Catación Anei\Catación Anei\obj\Debug\Catación_Anei.frmCambiarContraseña.resources
+C:\Users\SONY\Downloads\Catación Anei\Catación Anei\bin\Debug\Catación Anei.exe.config
+C:\Users\SONY\Downloads\Catación Anei\Catación Anei\obj\Debug\Catación Anei.exe
+C:\Users\SONY\Downloads\Catación Anei\Catación Anei\obj\Debug\Catación Anei.xml
+C:\Users\SONY\Downloads\Catación Anei\Catación Anei\obj\Debug\Catación Anei.pdb
