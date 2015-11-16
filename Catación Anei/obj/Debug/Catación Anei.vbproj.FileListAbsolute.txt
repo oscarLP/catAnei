@@ -31,3 +31,7 @@ C:\Users\SONY\Downloads\Catación Anei\Catación Anei\bin\Debug\Catación Anei.e
 C:\Users\SONY\Downloads\Catación Anei\Catación Anei\obj\Debug\Catación Anei.exe
 C:\Users\SONY\Downloads\Catación Anei\Catación Anei\obj\Debug\Catación Anei.xml
 C:\Users\SONY\Downloads\Catación Anei\Catación Anei\obj\Debug\Catación Anei.pdb
+E:\Users\SONY\Documents\GitHub\catAnei\Catación Anei\bin\Debug\Catación Anei.exe.config
+E:\Users\SONY\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación Anei.exe
+E:\Users\SONY\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación Anei.xml
+E:\Users\SONY\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación Anei.pdb
