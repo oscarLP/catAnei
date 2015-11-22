@@ -34,7 +34,7 @@ Partial Class frmNuevaSesionCatacion
         Me.rbRobusta = New System.Windows.Forms.RadioButton()
         Me.rbArabica = New System.Windows.Forms.RadioButton()
         Me.GroupBox6 = New System.Windows.Forms.GroupBox()
-        Me.rbLetas = New System.Windows.Forms.RadioButton()
+        Me.rbLetras = New System.Windows.Forms.RadioButton()
         Me.rbDigitos = New System.Windows.Forms.RadioButton()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.txtLugar = New System.Windows.Forms.TextBox()
@@ -42,14 +42,14 @@ Partial Class frmNuevaSesionCatacion
         Me.Label4 = New System.Windows.Forms.Label()
         Me.txtDescripcion = New System.Windows.Forms.TextBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.lbHoraInicio = New System.Windows.Forms.Label()
+        Me.lbFechaInicio = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.btnCancelar = New System.Windows.Forms.Button()
         Me.btnGuardar = New System.Windows.Forms.Button()
         Me.tmFecha = New System.Windows.Forms.Timer(Me.components)
-        Me.lbFechaInicio = New System.Windows.Forms.Label()
-        Me.lbHoraInicio = New System.Windows.Forms.Label()
         Me.lbSesion = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
@@ -184,7 +184,7 @@ Partial Class frmNuevaSesionCatacion
         '
         'GroupBox6
         '
-        Me.GroupBox6.Controls.Add(Me.rbLetas)
+        Me.GroupBox6.Controls.Add(Me.rbLetras)
         Me.GroupBox6.Controls.Add(Me.rbDigitos)
         Me.GroupBox6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.GroupBox6.Location = New System.Drawing.Point(6, 207)
@@ -194,19 +194,19 @@ Partial Class frmNuevaSesionCatacion
         Me.GroupBox6.TabStop = False
         Me.GroupBox6.Text = "Estructura del identificador de la muestra"
         '
-        'rbLetas
+        'rbLetras
         '
-        Me.rbLetas.AutoSize = True
-        Me.rbLetas.Checked = True
-        Me.rbLetas.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rbLetas.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.rbLetas.Location = New System.Drawing.Point(10, 22)
-        Me.rbLetas.Name = "rbLetas"
-        Me.rbLetas.Size = New System.Drawing.Size(157, 26)
-        Me.rbLetas.TabIndex = 6
-        Me.rbLetas.TabStop = True
-        Me.rbLetas.Text = "Letra (Ej. A, B, C)"
-        Me.rbLetas.UseVisualStyleBackColor = True
+        Me.rbLetras.AutoSize = True
+        Me.rbLetras.Checked = True
+        Me.rbLetras.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rbLetras.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.rbLetras.Location = New System.Drawing.Point(10, 22)
+        Me.rbLetras.Name = "rbLetras"
+        Me.rbLetras.Size = New System.Drawing.Size(157, 26)
+        Me.rbLetras.TabIndex = 6
+        Me.rbLetras.TabStop = True
+        Me.rbLetras.Text = "Letra (Ej. A, B, C)"
+        Me.rbLetras.UseVisualStyleBackColor = True
         '
         'rbDigitos
         '
@@ -290,6 +290,28 @@ Partial Class frmNuevaSesionCatacion
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Fecha"
         '
+        'lbHoraInicio
+        '
+        Me.lbHoraInicio.AutoSize = True
+        Me.lbHoraInicio.Font = New System.Drawing.Font("Trebuchet MS", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbHoraInicio.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.lbHoraInicio.Location = New System.Drawing.Point(127, 57)
+        Me.lbHoraInicio.Name = "lbHoraInicio"
+        Me.lbHoraInicio.Size = New System.Drawing.Size(106, 20)
+        Me.lbHoraInicio.TabIndex = 18
+        Me.lbHoraInicio.Text = "Hora de inicio"
+        '
+        'lbFechaInicio
+        '
+        Me.lbFechaInicio.AutoSize = True
+        Me.lbFechaInicio.Font = New System.Drawing.Font("Trebuchet MS", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbFechaInicio.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.lbFechaInicio.Location = New System.Drawing.Point(127, 24)
+        Me.lbFechaInicio.Name = "lbFechaInicio"
+        Me.lbFechaInicio.Size = New System.Drawing.Size(116, 20)
+        Me.lbFechaInicio.TabIndex = 18
+        Me.lbFechaInicio.Text = "Fecha de inicio"
+        '
         'Label13
         '
         Me.Label13.AutoSize = True
@@ -354,28 +376,6 @@ Partial Class frmNuevaSesionCatacion
         'tmFecha
         '
         Me.tmFecha.Interval = 1000
-        '
-        'lbFechaInicio
-        '
-        Me.lbFechaInicio.AutoSize = True
-        Me.lbFechaInicio.Font = New System.Drawing.Font("Trebuchet MS", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbFechaInicio.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.lbFechaInicio.Location = New System.Drawing.Point(127, 24)
-        Me.lbFechaInicio.Name = "lbFechaInicio"
-        Me.lbFechaInicio.Size = New System.Drawing.Size(116, 20)
-        Me.lbFechaInicio.TabIndex = 18
-        Me.lbFechaInicio.Text = "Fecha de inicio"
-        '
-        'lbHoraInicio
-        '
-        Me.lbHoraInicio.AutoSize = True
-        Me.lbHoraInicio.Font = New System.Drawing.Font("Trebuchet MS", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbHoraInicio.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.lbHoraInicio.Location = New System.Drawing.Point(127, 57)
-        Me.lbHoraInicio.Name = "lbHoraInicio"
-        Me.lbHoraInicio.Size = New System.Drawing.Size(106, 20)
-        Me.lbHoraInicio.TabIndex = 18
-        Me.lbHoraInicio.Text = "Hora de inicio"
         '
         'lbSesion
         '
@@ -450,7 +450,7 @@ Partial Class frmNuevaSesionCatacion
     Friend WithEvents rbRobusta As System.Windows.Forms.RadioButton
     Friend WithEvents rbArabica As System.Windows.Forms.RadioButton
     Friend WithEvents GroupBox6 As System.Windows.Forms.GroupBox
-    Friend WithEvents rbLetas As System.Windows.Forms.RadioButton
+    Friend WithEvents rbLetras As System.Windows.Forms.RadioButton
     Friend WithEvents rbDigitos As System.Windows.Forms.RadioButton
     Friend WithEvents GroupBox4 As System.Windows.Forms.GroupBox
     Friend WithEvents txtLugar As System.Windows.Forms.TextBox

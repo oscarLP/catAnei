@@ -2,7 +2,7 @@
 
     'Al cerrar el formulario
     Private Sub frmMenuPrincipal_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
-        frmIniciarSecion.Close()
+        frmIniciarSesion.Close()
     End Sub
 
     Private Sub btnGestionarCatadores_Click(sender As Object, e As EventArgs) Handles btnGestionarCatadores.Click
@@ -16,26 +16,31 @@
         frmRealizarCataciones.Focus()
     End Sub
 
+    Private Sub tsPerfil_Click(sender As Object, e As EventArgs) Handles tsPerfil.Click
+        frmPerfil.Show()
+    End Sub
+
     Private Sub tsCambiarContraseña_Click(sender As Object, e As EventArgs) Handles tsCambiarContraseña.Click
         frmCambiarContraseña.ShowDialog()
     End Sub
 
     Sub CerrarSesion() 'Condiciones para abrir el formulario Iniciar sesión
         If frmGestionarCatadores.Visible = True Or frmRealizarCataciones.Visible = True Or frmNuevaSesionCatacion.Visible = True Or
-            frmCatarArabica.Visible = True Or frmCatarRobusta.Visible = True Then
+            frmCatarArabica.Visible = True Or frmCatarRobusta.Visible = True Or frmBienvenido.Visible = True Then
 
             frmGestionarCatadores.Close()
             frmRealizarCataciones.Close()
             frmNuevaSesionCatacion.Close()
             frmCatarArabica.Close()
             frmCatarRobusta.Close()
+            frmBienvenido.Close()
         End If
 
         Me.Visible = False
-        If frmIniciarSecion.Visible = False Then
-            frmIniciarSecion.Visible = True
+        If frmIniciarSesion.Visible = False Then
+            frmIniciarSesion.Visible = True
         Else
-            frmIniciarSecion.ShowDialog()
+            frmIniciarSesion.ShowDialog()
         End If
     End Sub
 
@@ -79,5 +84,17 @@
         btnConsultasYEstadisticas.Width = 194
         btnConsultasYEstadisticas.Height = 230
         btnConsultasYEstadisticas.BackgroundImageLayout = ImageLayout.Center
+    End Sub
+
+    Private Sub tsProveedores_Click(sender As Object, e As EventArgs) Handles tsProveedores.Click
+        frmProveedores.Show()
+    End Sub
+
+    Private Sub tsProductores_Click(sender As Object, e As EventArgs) Handles tsProductores.Click
+        frmProductores.Show()
+    End Sub
+
+    Private Sub tsCiudades_Click(sender As Object, e As EventArgs) Handles tsCiudades.Click
+        frmCiudad.Show()
     End Sub
 End Class

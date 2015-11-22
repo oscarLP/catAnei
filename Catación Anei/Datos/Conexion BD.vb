@@ -2,7 +2,6 @@
 Imports System.Data.SqlClient
 Imports System.Configuration
 Public Class Conexion_BD
-    'Private cadena As String
 
     Protected configuracion As ConnectionStringSettings = ConfigurationManager.ConnectionStrings("cn")
     Dim cn As New SqlConnection(configuracion.ConnectionString)

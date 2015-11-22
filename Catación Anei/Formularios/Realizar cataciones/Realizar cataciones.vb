@@ -1,19 +1,23 @@
 ﻿Public Class frmRealizarCataciones
+    Private Clase_SesionCatacion As New Clase_Sesion_de_catacion
+    Private Tabla_SesionesCatacion As New BindingSource
+
     Private Sub frmRealizarCataciones_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         DespuesDelFocus_txtBuscar()
         AntesDelFocus_txtBuscar()
         LimpiarCampos()
+        CargarGrilla() 'Carga en la tabla todos los registros
+        Total_Registrados() 'Muestra 'Total' el numero de registros
     End Sub
 
     Sub LimpiarCampos()
         'btnCatar.Enabled = False
-        btnModificar.Enabled = False
-        btnEliminar.Enabled = False
+        'btnModificar.Enabled = False
+        'btnEliminar.Enabled = False
     End Sub
 
     'Evento: Al iniciar el formulario los campos tiene el efecto Placeholder
     '-------------------------------------------------------------------------------------------------------------
-
     Sub DespuesDelFocus_txtBuscar()
         If txtBuscar.Text = "Buscar" Then
             txtBuscar.ForeColor = Color.DimGray
@@ -56,5 +60,23 @@
 
     Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
         frmEliminarSesionCatacion.ShowDialog()
+    End Sub
+
+    Sub Total_Registrados() 'Muestra el total de catadores registradores
+        lbTotal.Text = Clase_SesionCatacion.Total_Registros()
+    End Sub
+
+    Sub CargarGrilla() 'Carga todos los registros de sesiones de catacion en la tabla
+        Tabla_SesionesCatacion.DataSource = Clase_SesionCatacion.Lista_SesionCatacion()
+        dgListaSesionesCataciones.DataSource = Tabla_SesionesCatacion
+    End Sub
+
+    Sub Contar_Registros() 'Cuenta los registros filtrados en la tabla
+        lbSeleccionados.Text = dgListaSesionesCataciones.RowCount
+    End Sub
+
+    'Actualiza el numero de registros reflejados en la tabla
+    Private Sub dgListaSesionesCataciones_BindingContextChanged(sender As Object, e As EventArgs) Handles dgListaSesionesCataciones.BindingContextChanged
+        Contar_Registros()
     End Sub
 End Class

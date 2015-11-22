@@ -22,6 +22,9 @@ Partial Class frmRealizarCataciones
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmRealizarCataciones))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -29,8 +32,8 @@ Partial Class frmRealizarCataciones
         Me.Label2 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label15 = New System.Windows.Forms.Label()
-        Me.Label14 = New System.Windows.Forms.Label()
+        Me.lbSeleccionados = New System.Windows.Forms.Label()
+        Me.lbTotal = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.txtBuscarPor = New System.Windows.Forms.ComboBox()
         Me.Label18 = New System.Windows.Forms.Label()
@@ -103,8 +106,9 @@ Partial Class frmRealizarCataciones
         Me.GroupBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.GroupBox1.Controls.Add(Me.Label9)
-        Me.GroupBox1.Controls.Add(Me.Label15)
-        Me.GroupBox1.Controls.Add(Me.Label14)
+        Me.GroupBox1.Controls.Add(Me.lbSeleccionados)
+        Me.GroupBox1.Controls.Add(Me.lbTotal)
+        Me.GroupBox1.Controls.Add(Me.btnNuevaSesionCatacion)
         Me.GroupBox1.Controls.Add(Me.Label12)
         Me.GroupBox1.Controls.Add(Me.txtBuscarPor)
         Me.GroupBox1.Controls.Add(Me.Label18)
@@ -130,27 +134,27 @@ Partial Class frmRealizarCataciones
         Me.Label9.TabIndex = 37
         Me.Label9.Text = "Seleccionados:"
         '
-        'Label15
+        'lbSeleccionados
         '
-        Me.Label15.AutoSize = True
-        Me.Label15.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label15.Location = New System.Drawing.Point(289, 62)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(28, 22)
-        Me.Label15.TabIndex = 38
-        Me.Label15.Text = "---"
+        Me.lbSeleccionados.AutoSize = True
+        Me.lbSeleccionados.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbSeleccionados.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.lbSeleccionados.Location = New System.Drawing.Point(291, 62)
+        Me.lbSeleccionados.Name = "lbSeleccionados"
+        Me.lbSeleccionados.Size = New System.Drawing.Size(28, 22)
+        Me.lbSeleccionados.TabIndex = 38
+        Me.lbSeleccionados.Text = "---"
         '
-        'Label14
+        'lbTotal
         '
-        Me.Label14.AutoSize = True
-        Me.Label14.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label14.Location = New System.Drawing.Point(50, 61)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(28, 22)
-        Me.Label14.TabIndex = 39
-        Me.Label14.Text = "---"
+        Me.lbTotal.AutoSize = True
+        Me.lbTotal.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbTotal.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.lbTotal.Location = New System.Drawing.Point(50, 61)
+        Me.lbTotal.Name = "lbTotal"
+        Me.lbTotal.Size = New System.Drawing.Size(28, 22)
+        Me.lbTotal.TabIndex = 39
+        Me.lbTotal.Text = "---"
         '
         'Label12
         '
@@ -215,7 +219,7 @@ Partial Class frmRealizarCataciones
         Me.GroupBox2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.GroupBox2.Location = New System.Drawing.Point(34, 219)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(656, 383)
+        Me.GroupBox2.Size = New System.Drawing.Size(774, 383)
         Me.GroupBox2.TabIndex = 3
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Lista de sesiones de cataciones"
@@ -224,12 +228,36 @@ Partial Class frmRealizarCataciones
         '
         Me.dgListaSesionesCataciones.AllowUserToAddRows = False
         Me.dgListaSesionesCataciones.AllowUserToDeleteRows = False
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.dgListaSesionesCataciones.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        Me.dgListaSesionesCataciones.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgListaSesionesCataciones.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders
+        Me.dgListaSesionesCataciones.BackgroundColor = System.Drawing.Color.White
+        Me.dgListaSesionesCataciones.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Trebuchet MS", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgListaSesionesCataciones.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.dgListaSesionesCataciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Trebuchet MS", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SaddleBrown
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgListaSesionesCataciones.DefaultCellStyle = DataGridViewCellStyle3
         Me.dgListaSesionesCataciones.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgListaSesionesCataciones.Location = New System.Drawing.Point(3, 19)
+        Me.dgListaSesionesCataciones.MultiSelect = False
         Me.dgListaSesionesCataciones.Name = "dgListaSesionesCataciones"
         Me.dgListaSesionesCataciones.ReadOnly = True
-        Me.dgListaSesionesCataciones.Size = New System.Drawing.Size(650, 361)
+        Me.dgListaSesionesCataciones.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgListaSesionesCataciones.Size = New System.Drawing.Size(768, 361)
         Me.dgListaSesionesCataciones.TabIndex = 0
         '
         'GroupBox3
@@ -239,11 +267,10 @@ Partial Class frmRealizarCataciones
         Me.GroupBox3.Controls.Add(Me.btnEliminar)
         Me.GroupBox3.Controls.Add(Me.btnCatar)
         Me.GroupBox3.Controls.Add(Me.btnModificar)
-        Me.GroupBox3.Controls.Add(Me.btnNuevaSesionCatacion)
         Me.GroupBox3.Font = New System.Drawing.Font("Trebuchet MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox3.Location = New System.Drawing.Point(714, 219)
+        Me.GroupBox3.Location = New System.Drawing.Point(814, 219)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(251, 383)
+        Me.GroupBox3.Size = New System.Drawing.Size(151, 383)
         Me.GroupBox3.TabIndex = 2
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Opciones"
@@ -254,9 +281,9 @@ Partial Class frmRealizarCataciones
         Me.btnEliminar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.btnEliminar.Image = Global.Catación_Anei.My.Resources.Resources.Eliminar_32x32
         Me.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnEliminar.Location = New System.Drawing.Point(6, 145)
+        Me.btnEliminar.Location = New System.Drawing.Point(6, 104)
         Me.btnEliminar.Name = "btnEliminar"
-        Me.btnEliminar.Size = New System.Drawing.Size(239, 35)
+        Me.btnEliminar.Size = New System.Drawing.Size(139, 35)
         Me.btnEliminar.TabIndex = 4
         Me.btnEliminar.Text = "Eliminar"
         Me.btnEliminar.UseVisualStyleBackColor = True
@@ -267,9 +294,9 @@ Partial Class frmRealizarCataciones
         Me.btnCatar.ForeColor = System.Drawing.Color.SaddleBrown
         Me.btnCatar.Image = Global.Catación_Anei.My.Resources.Resources.Catar_32x32
         Me.btnCatar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnCatar.Location = New System.Drawing.Point(6, 63)
+        Me.btnCatar.Location = New System.Drawing.Point(6, 22)
         Me.btnCatar.Name = "btnCatar"
-        Me.btnCatar.Size = New System.Drawing.Size(239, 35)
+        Me.btnCatar.Size = New System.Drawing.Size(139, 35)
         Me.btnCatar.TabIndex = 2
         Me.btnCatar.Text = "Catar"
         Me.btnCatar.UseVisualStyleBackColor = True
@@ -280,20 +307,21 @@ Partial Class frmRealizarCataciones
         Me.btnModificar.ForeColor = System.Drawing.Color.Green
         Me.btnModificar.Image = Global.Catación_Anei.My.Resources.Resources.Modificar_32x32
         Me.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnModificar.Location = New System.Drawing.Point(6, 104)
+        Me.btnModificar.Location = New System.Drawing.Point(6, 63)
         Me.btnModificar.Name = "btnModificar"
-        Me.btnModificar.Size = New System.Drawing.Size(239, 35)
+        Me.btnModificar.Size = New System.Drawing.Size(139, 35)
         Me.btnModificar.TabIndex = 3
         Me.btnModificar.Text = "Modificar"
         Me.btnModificar.UseVisualStyleBackColor = True
         '
         'btnNuevaSesionCatacion
         '
+        Me.btnNuevaSesionCatacion.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnNuevaSesionCatacion.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnNuevaSesionCatacion.ForeColor = System.Drawing.Color.Teal
         Me.btnNuevaSesionCatacion.Image = Global.Catación_Anei.My.Resources.Resources.Nueva_sesión_de_catación_32x32
         Me.btnNuevaSesionCatacion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnNuevaSesionCatacion.Location = New System.Drawing.Point(6, 22)
+        Me.btnNuevaSesionCatacion.Location = New System.Drawing.Point(686, 46)
         Me.btnNuevaSesionCatacion.Name = "btnNuevaSesionCatacion"
         Me.btnNuevaSesionCatacion.Size = New System.Drawing.Size(239, 35)
         Me.btnNuevaSesionCatacion.TabIndex = 1
@@ -351,8 +379,8 @@ Partial Class frmRealizarCataciones
     Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents Label9 As System.Windows.Forms.Label
-    Friend WithEvents Label15 As System.Windows.Forms.Label
-    Friend WithEvents Label14 As System.Windows.Forms.Label
+    Friend WithEvents lbSeleccionados As System.Windows.Forms.Label
+    Friend WithEvents lbTotal As System.Windows.Forms.Label
     Friend WithEvents Label12 As System.Windows.Forms.Label
     Friend WithEvents txtBuscarPor As System.Windows.Forms.ComboBox
     Friend WithEvents Label18 As System.Windows.Forms.Label
