@@ -3,33 +3,33 @@
     Private Fun_Usuario As New Gestor_Usuario
 
     Private Sub frmIniciarSecion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Bienvenido()
+        'Bienvenido()
         DespuesDelFocus_txtUsuario()
         AntesDelFocus_txtUsuario()
         'DespuesDelFocus_txtContraseña()
         'AntesDelFocus_txContraseña()
         HabDes_BotonIngresar()
     End Sub
+    '==Funcion que será usada como mensaje para la primera instalacion.. en proceso de desarrollo...==
+    'Sub Bienvenido()
+    '    MsgBox("No se que pasa")
+    '    Dim Verificar_Administrador As New BindingSource
+    '    Verificar_Administrador.DataSource = Fun_Usuario.Verificar_Administrador()
+    '    If Verificar_Administrador.Count = 0 Then 'Si 'Verificar_Administrador' es igual a 0 quiere decir que no hay un perfil como administrador
+    '        MsgBox("que pasa, que pasa2")
+    '        Me.Visible = False
+    '        If frmBienvenido.Visible = False Then
+    '            frmBienvenido.Visible = True
+    '        Else
+    '            MsgBox("que pasa, que pasa3")
+    '            MsgBox("que pasa, que pasa4")
+    '            frmBienvenido.ShowDialog()
 
-    Sub Bienvenido()
-        MsgBox("No se que pasa")
-        Dim Verificar_Administrador As New BindingSource
-        Verificar_Administrador.DataSource = Fun_Usuario.Verificar_Administrador()
-        If Verificar_Administrador.Count = 0 Then 'Si 'Verificar_Administrador' es igual a 0 quiere decir que no hay un perfil como administrador
-            MsgBox("que pasa, que pasa2")
-            Me.Visible = False
-            If frmBienvenido.Visible = False Then
-                frmBienvenido.Visible = True
-            Else
-                MsgBox("que pasa, que pasa3")
-                MsgBox("que pasa, que pasa4")
-                frmBienvenido.ShowDialog()
-
-            End If
-        Else
-            MsgBox("No se que pasa5")
-        End If
-    End Sub
+    '        End If
+    '    Else
+    '        MsgBox("No se que pasa5")
+    '    End If
+    'End Sub
 
     'BOTON INGRESAR
     Private Sub btnIngresar_Click(sender As Object, e As EventArgs) Handles btnIngresar.Click
