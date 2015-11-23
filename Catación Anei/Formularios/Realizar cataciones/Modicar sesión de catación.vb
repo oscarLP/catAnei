@@ -1,8 +1,8 @@
 ﻿Public Class frmModicarSesionCatacion
-    Private Clase_SesionCatacion As New Clase_Sesion_de_catacion
+    Private Fun_sesion As New Gestor_Sesion_Catado
 
     Private Sub btnModificar_Click(sender As Object, e As EventArgs) Handles btnModificar.Click
-        If Clase_SesionCatacion.Modificar_SesionCatacion("Codigo", dtFechaInicio.Text, dtHoraInicio.Text, txtDescripcion.Text, txtLugar.Text, IdentificadorMuestra(), ProtocoloCatacion()) Then
+        If Fun_sesion.Modificar_SesionCatacion("Codigo", dtFechaInicio.Text, dtHoraInicio.Text, txtDescripcion.Text, txtLugar.Text, IdentificadorMuestra(), ProtocoloCatacion()) Then
             MessageBox.Show("Modificado correctamente.")
         Else
             MessageBox.Show("No se pudo modificado.")

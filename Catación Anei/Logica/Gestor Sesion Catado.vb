@@ -1,8 +1,27 @@
 ﻿Imports System.Data.SqlClient
-Public Class Clase_Sesion_de_catacion
+Public Class Gestor_Sesion_Catado
     Private db As New Conexion_BD
     Private Comando As SqlCommand
 
+
+    'Devuelve una tabla con todos los registros de las sesiones de catacion para agregarlo a la tabla
+    Public Function Tabla_sesiones() As DataTable
+
+        Dim Tabla As New DataTable
+
+        Try
+            Dim da As New SqlDataAdapter("SELECT S.fecha_inicio 'Fecha de inicio', S.hora_inicio 'Hora de inicio', S.descripcion 'Descripción', S.lugar, " +
+                                         "S.identificador_muestra 'Identificador de muestra', S.protocolo 'Protocolo de catación', " +
+                                         "S.numero_muestras 'Numero de muestras', U.fk_codigo_usuario 'Creador de la sesión' FROM SESION_CATADO S, USUARIO U WHERE S.fk_codigo_usuario = U.codigo", db.Conexion)
+            da.Fill(Tabla)
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            db.Conexion.Close()
+        End Try
+
+        Return Tabla
+
+    End Function
     Public Function Guardar_SesionCatacion(ByVal Codigo As String, ByVal FechaInicio As String, ByVal HoraInicio As String,
                                     ByVal Descripcion As String, ByVal Lugar As String, ByVal IdentificadorMuestra As String,
                                     ByVal ProtocoloCatacion As String, ByVal NumeroMuestras As Integer, ByVal CodigoUsuario As String) As Boolean
@@ -30,6 +49,7 @@ Public Class Clase_Sesion_de_catacion
         Else
             Return False
         End If
+
     End Function
 
     Public Function Modificar_SesionCatacion(ByVal Codigo As String, ByVal FechaInicio As String, ByVal HoraInicio As String,
@@ -72,7 +92,7 @@ Public Class Clase_Sesion_de_catacion
         Try
             db.Conexion.Open()
             Dim Tabla As New DataTable
-            Dim da As New SqlDataAdapter("SELECT Codigo FROM Usuario WHERE NombreUsuario = '" & NombreUsuario & "'", db.Conexion)
+            Dim da As New SqlDataAdapter("SELECT codigo FROM USUARIO WHERE nombre_usuario = '" & NombreUsuario & "'", db.Conexion)
             da.Fill(Tabla)
             Datos.DataSource = Tabla
             Codigo = Datos.Item(0)("Codigo")
@@ -88,25 +108,6 @@ Public Class Clase_Sesion_de_catacion
             Return MsgBox("No se pudo encontrar el Nombre del Usuario.", vbExclamation, "Seguridad")
         End If
     End Function
-
-    Public Function Lista_SesionCatacion() As DataTable 'Devuelve una tabla con todos los registros de las sesiones de catacion para agregarlo a la tabla
-        Try
-            db.Conexion.Open()
-            Dim Tabla As New DataTable
-            Dim da As New SqlDataAdapter("SELECT S.FechaInicio 'Fecha de inicio', S.HoraInicio 'Hora de inicio', S.Descripcion 'Descripción', S.Lugar, " +
-                                         "S.IdentificadorMuestra 'Identificador de la muestra', S.ProtocoloCatacion 'Protocolo de catación', " +
-                                         "S.NumeroMuestras 'Numero de muestras', U.NombreUsuario 'Creador de la sesión' FROM Sesion_catacion S, Usuario U WHERE S.CodigoUsuario = U.Codigo", db.Conexion)
-            da.Fill(Tabla)
-
-            db.Conexion.Close()
-            Return Tabla
-        Catch ex As Exception
-            MsgBox(ex.Message)
-            db.Conexion.Close()
-        End Try
-
-    End Function
-
     Public Function Total_Registros() As Integer 'Generar un codigo al azar para luego guardarlo en guardar
         Dim varTotal As Integer
         Dim Datos As New BindingSource

@@ -1,5 +1,5 @@
 ﻿Public Class frmRealizarCataciones
-    Private Clase_SesionCatacion As New Clase_Sesion_de_catacion
+    Private Fun_sesion As New Gestor_Sesion_Catado
     Private Tabla_SesionesCatacion As New BindingSource
 
     Private Sub frmRealizarCataciones_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -11,9 +11,9 @@
     End Sub
 
     Sub LimpiarCampos()
-        'btnCatar.Enabled = False
-        'btnModificar.Enabled = False
-        'btnEliminar.Enabled = False
+        btnCatar.Enabled = False
+        btnModificar.Enabled = False
+        btnEliminar.Enabled = False
     End Sub
 
     'Evento: Al iniciar el formulario los campos tiene el efecto Placeholder
@@ -39,8 +39,6 @@
     Private Sub txtBuscar_LostFocus(sender As Object, e As EventArgs) Handles txtBuscar.LostFocus
         AntesDelFocus_txtBuscar()
     End Sub
-    '-------------------------------------------------------------------------------------------------------------
-
     Private Sub btnNuevaSesionCatacion_Click(sender As Object, e As EventArgs) Handles btnNuevaSesionCatacion.Click
         frmNuevaSesionCatacion.Show()
         frmNuevaSesionCatacion.Focus()
@@ -63,11 +61,11 @@
     End Sub
 
     Sub Total_Registrados() 'Muestra el total de catadores registradores
-        lbTotal.Text = Clase_SesionCatacion.Total_Registros()
+        lbTotal.Text = Fun_sesion.Total_Registros
     End Sub
 
     Sub CargarGrilla() 'Carga todos los registros de sesiones de catacion en la tabla
-        Tabla_SesionesCatacion.DataSource = Clase_SesionCatacion.Lista_SesionCatacion()
+        Tabla_SesionesCatacion.DataSource = Fun_sesion.Tabla_sesiones
         dgListaSesionesCataciones.DataSource = Tabla_SesionesCatacion
     End Sub
 
@@ -79,4 +77,5 @@
     Private Sub dgListaSesionesCataciones_BindingContextChanged(sender As Object, e As EventArgs) Handles dgListaSesionesCataciones.BindingContextChanged
         Contar_Registros()
     End Sub
+
 End Class

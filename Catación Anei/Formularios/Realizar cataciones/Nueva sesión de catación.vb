@@ -1,5 +1,6 @@
 ﻿Public Class frmNuevaSesionCatacion
     Private Clase_SesionCatacion As New Clase_Sesion_de_catacion
+    Private Fun_sesion As New Gestor_Sesion_Catado
     Private Clase_CatacionArabiba As New Clase_Catacion_Arabica
     Private Sub frmNuevaSesionCatacion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         tmFecha.Start()
@@ -8,10 +9,10 @@
 
     'BOTON GUARDAR
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
-        Dim CodigoSesionCatacion As String = Clase_SesionCatacion.Codigo()
+        Dim CodigoSesionCatacion As String = Fun_sesion.Codigo()
 
-        Dim i As Boolean = Clase_SesionCatacion.Guardar_SesionCatacion(CodigoSesionCatacion, lbFechaInicio.Text, lbHoraInicio.Text, txtDescripcion.Text, txtLugar.Text,
-                                                                       IdentificadorMuestra(), ProtocoloCatacion(), nuNumeroMuestras.Value, Clase_SesionCatacion.Buscar_CodigoUsuario)
+        Dim i As Boolean = Fun_sesion.Guardar_SesionCatacion(CodigoSesionCatacion, lbFechaInicio.Text, lbHoraInicio.Text, txtDescripcion.Text, txtLugar.Text,
+                                                                       IdentificadorMuestra(), ProtocoloCatacion(), nuNumeroMuestras.Value, Fun_sesion.Buscar_CodigoUsuario)
 
         If i = True Then
             LimpiarCampos()
