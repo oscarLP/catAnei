@@ -41,11 +41,11 @@
     End Sub
     'Obtiene y envia el Identificador de la muestra seleccionada
     Function IdentificadorMuestra() As String
-        Dim IDMuestra As String = "Letras"
+        Dim IDMuestra As String = "Letra"
         If rbLetras.Checked = True Then
-            IDMuestra = "Letras"
+            IDMuestra = "Letra"
         ElseIf rbDigitos.Checked = True Then
-            IDMuestra = "Digitos"
+            IDMuestra = "Digito"
         End If
         Return IDMuestra
     End Function

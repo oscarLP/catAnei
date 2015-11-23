@@ -11,8 +11,8 @@ Public Class Gestor_Sesion_Catado
 
         Try
             Dim da As New SqlDataAdapter("SELECT S.fecha_inicio 'Fecha de inicio', S.hora_inicio 'Hora de inicio', S.descripcion 'Descripción', S.lugar, " +
-                                         "S.identificador_muestra 'Identificador de muestra', S.protocolo 'Protocolo de catación', " +
-                                         "S.numero_muestras 'Numero de muestras', U.fk_codigo_usuario 'Creador de la sesión' FROM SESION_CATADO S, USUARIO U WHERE S.fk_codigo_usuario = U.codigo", db.Conexion)
+                                         "S.estructura_identificador 'Identificador de muestra', S.protocolo 'Protocolo de catación', " +
+                                         "S.numero_muestras 'Numero de muestras', U.nombre_usuario 'Creador de la sesión' FROM SESION_CATADO S, USUARIO U WHERE S.fk_codigo_usuario = U.codigo", db.Conexion)
             da.Fill(Tabla)
         Catch ex As Exception
             MsgBox(ex.Message)
@@ -27,8 +27,8 @@ Public Class Gestor_Sesion_Catado
                                     ByVal ProtocoloCatacion As String, ByVal NumeroMuestras As Integer, ByVal CodigoUsuario As String) As Boolean
         Dim i As Integer
         Try
-            Dim _sql As String = String.Format("INSERT INTO Sesion_catacion (Codigo, FechaInicio, HoraInicio, Descripcion, Lugar, IdentificadorMuestra," +
-                                               "ProtocoloCatacion, NumeroMuestras, CodigoUsuario) VALUES('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}')",
+            Dim _sql As String = String.Format("INSERT INTO SESION_CATADO (codigo, fecha_inicio, hora_inicio, descripcion, lugar, estructura_identificador," +
+                                               "protocolo, numero_muestras, fk_codigo_Usuario) VALUES('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}')",
                                                Codigo, FechaInicio, HoraInicio, Descripcion, Lugar, IdentificadorMuestra, ProtocoloCatacion, NumeroMuestras, CodigoUsuario)
             Using cmd As New SqlCommand(_sql, db.Conexion)
                 db.Conexion.Open()
