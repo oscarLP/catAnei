@@ -1,5 +1,4 @@
 ﻿Public Class frmNuevaSesionCatacion
-    Private Clase_SesionCatacion As New Clase_Sesion_de_catacion
     Private Fun_sesion As New Gestor_Sesion_Catado
     Private Clase_CatacionArabiba As New Clase_Catacion_Arabica
     Private Sub frmNuevaSesionCatacion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
