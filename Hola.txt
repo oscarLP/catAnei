@@ -4,3 +4,5 @@ una nueva rama llamada 2.0
 yo soy yesith y estoy interesado
 [Master] to [YESITH] : Tu push ha sido satisfactorio YESITH.
 Yo soy ana y estoy probando el push
+
+hola aqui se van a poner de ahora en adelante los errores del proyecto.
