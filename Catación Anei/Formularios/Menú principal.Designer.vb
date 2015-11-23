@@ -27,15 +27,19 @@ Partial Class frmMenuPrincipal
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
-        Me.ToolStripDropDownButton1 = New System.Windows.Forms.ToolStripDropDownButton()
+        Me.tsNombreUsuario = New System.Windows.Forms.ToolStripDropDownButton()
+        Me.tsPerfil = New System.Windows.Forms.ToolStripMenuItem()
         Me.tsCambiarContraseña = New System.Windows.Forms.ToolStripMenuItem()
         Me.tsCerrarSesión = New System.Windows.Forms.ToolStripMenuItem()
         Me.tsTutoriales = New System.Windows.Forms.ToolStripSplitButton()
+        Me.tsProveedores = New System.Windows.Forms.ToolStripButton()
+        Me.tsProductores = New System.Windows.Forms.ToolStripButton()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.btnConsultasYEstadisticas = New System.Windows.Forms.Button()
         Me.btnRealizarCataciones = New System.Windows.Forms.Button()
         Me.btnGestionarCatadores = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.tsCiudades = New System.Windows.Forms.ToolStripButton()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
@@ -80,7 +84,7 @@ Partial Class frmMenuPrincipal
         '
         'ToolStrip1
         '
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripDropDownButton1, Me.tsTutoriales})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsNombreUsuario, Me.tsTutoriales, Me.tsProveedores, Me.tsProductores, Me.tsCiudades})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
@@ -89,18 +93,25 @@ Partial Class frmMenuPrincipal
         Me.ToolStrip1.TabStop = True
         Me.ToolStrip1.Text = "ToolStrip1"
         '
-        'ToolStripDropDownButton1
+        'tsNombreUsuario
         '
-        Me.ToolStripDropDownButton1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.ToolStripDropDownButton1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsCambiarContraseña, Me.tsCerrarSesión})
-        Me.ToolStripDropDownButton1.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ToolStripDropDownButton1.ForeColor = System.Drawing.Color.Teal
-        Me.ToolStripDropDownButton1.Image = Global.Catación_Anei.My.Resources.Resources.Usuario_32x32
-        Me.ToolStripDropDownButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.ToolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripDropDownButton1.Name = "ToolStripDropDownButton1"
-        Me.ToolStripDropDownButton1.Size = New System.Drawing.Size(107, 36)
-        Me.ToolStripDropDownButton1.Text = "Usuario"
+        Me.tsNombreUsuario.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.tsNombreUsuario.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsPerfil, Me.tsCambiarContraseña, Me.tsCerrarSesión})
+        Me.tsNombreUsuario.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tsNombreUsuario.ForeColor = System.Drawing.Color.Teal
+        Me.tsNombreUsuario.Image = Global.Catación_Anei.My.Resources.Resources.Usuario_32x32
+        Me.tsNombreUsuario.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.tsNombreUsuario.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsNombreUsuario.Name = "tsNombreUsuario"
+        Me.tsNombreUsuario.Size = New System.Drawing.Size(107, 36)
+        Me.tsNombreUsuario.Text = "Usuario"
+        '
+        'tsPerfil
+        '
+        Me.tsPerfil.Image = Global.Catación_Anei.My.Resources.Resources.Administrador_16x16
+        Me.tsPerfil.Name = "tsPerfil"
+        Me.tsPerfil.Size = New System.Drawing.Size(220, 26)
+        Me.tsPerfil.Text = "Perfil"
         '
         'tsCambiarContraseña
         '
@@ -126,6 +137,26 @@ Partial Class frmMenuPrincipal
         Me.tsTutoriales.Name = "tsTutoriales"
         Me.tsTutoriales.Size = New System.Drawing.Size(118, 36)
         Me.tsTutoriales.Text = "Tutoriales"
+        '
+        'tsProveedores
+        '
+        Me.tsProveedores.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tsProveedores.Image = Global.Catación_Anei.My.Resources.Resources.Proveedor
+        Me.tsProveedores.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.tsProveedores.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsProveedores.Name = "tsProveedores"
+        Me.tsProveedores.Size = New System.Drawing.Size(127, 36)
+        Me.tsProveedores.Text = "Proveedores"
+        '
+        'tsProductores
+        '
+        Me.tsProductores.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tsProductores.Image = Global.Catación_Anei.My.Resources.Resources.Productor
+        Me.tsProductores.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.tsProductores.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsProductores.Name = "tsProductores"
+        Me.tsProductores.Size = New System.Drawing.Size(122, 36)
+        Me.tsProductores.Text = "Productores"
         '
         'GroupBox1
         '
@@ -210,6 +241,16 @@ Partial Class frmMenuPrincipal
         Me.PictureBox1.TabIndex = 1
         Me.PictureBox1.TabStop = False
         '
+        'tsCiudades
+        '
+        Me.tsCiudades.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tsCiudades.Image = Global.Catación_Anei.My.Resources.Resources.Ciudad_24x24
+        Me.tsCiudades.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.tsCiudades.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsCiudades.Name = "tsCiudades"
+        Me.tsCiudades.Size = New System.Drawing.Size(102, 36)
+        Me.tsCiudades.Text = "Ciudades"
+        '
         'frmMenuPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -244,11 +285,15 @@ Partial Class frmMenuPrincipal
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
     Friend WithEvents ToolStrip1 As System.Windows.Forms.ToolStrip
     Friend WithEvents tsTutoriales As System.Windows.Forms.ToolStripSplitButton
-    Friend WithEvents ToolStripDropDownButton1 As System.Windows.Forms.ToolStripDropDownButton
+    Friend WithEvents tsNombreUsuario As System.Windows.Forms.ToolStripDropDownButton
     Friend WithEvents tsCerrarSesión As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents btnGestionarCatadores As System.Windows.Forms.Button
     Friend WithEvents btnConsultasYEstadisticas As System.Windows.Forms.Button
     Friend WithEvents btnRealizarCataciones As System.Windows.Forms.Button
     Friend WithEvents tsCambiarContraseña As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents tsProveedores As System.Windows.Forms.ToolStripButton
+    Friend WithEvents tsProductores As System.Windows.Forms.ToolStripButton
+    Friend WithEvents tsPerfil As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents tsCiudades As System.Windows.Forms.ToolStripButton
 End Class
