@@ -26,6 +26,7 @@ Partial Class Pruebas
         Me.Label1 = New System.Windows.Forms.Label()
         Me.lboxListas = New System.Windows.Forms.ListBox()
         Me.btnAceptar = New System.Windows.Forms.Button()
+        Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.SuspendLayout()
         '
         'txtMuestras
@@ -61,12 +62,21 @@ Partial Class Pruebas
         Me.btnAceptar.Text = "Aceptar"
         Me.btnAceptar.UseVisualStyleBackColor = True
         '
+        'ListBox1
+        '
+        Me.ListBox1.FormattingEnabled = True
+        Me.ListBox1.Location = New System.Drawing.Point(139, 46)
+        Me.ListBox1.Name = "ListBox1"
+        Me.ListBox1.Size = New System.Drawing.Size(120, 30)
+        Me.ListBox1.TabIndex = 4
+        '
         'Pruebas
         '
         Me.AcceptButton = Me.btnAceptar
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(284, 540)
+        Me.Controls.Add(Me.ListBox1)
         Me.Controls.Add(Me.btnAceptar)
         Me.Controls.Add(Me.lboxListas)
         Me.Controls.Add(Me.Label1)
@@ -82,4 +92,5 @@ Partial Class Pruebas
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents lboxListas As System.Windows.Forms.ListBox
     Friend WithEvents btnAceptar As System.Windows.Forms.Button
+    Friend WithEvents ListBox1 As System.Windows.Forms.ListBox
 End Class
