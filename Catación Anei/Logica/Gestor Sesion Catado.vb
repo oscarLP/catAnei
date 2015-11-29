@@ -39,6 +39,7 @@ Public Class Gestor_Sesion_Catado
                 db.Conexion.Close()
             End Using
         Catch ex As Exception
+            'DEBEMOS AGREGAR LA EXCEPCION DE ROLLBACK
             MsgBox(ex.Message)
             db.Conexion.Close()
         End Try
