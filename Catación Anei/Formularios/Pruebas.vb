@@ -40,5 +40,14 @@
                 abc = abc + 1
             End If
         Next
+
+        '---------------ahora para listbox1
+        Dim rand As New Random(DateTime.Now.Millisecond)
+
+        Dim letra2 As Char = Convert.ToChar(rand.Next(97, 122))
+        letra2 = UCase(letra2)
+
+        ListBox1.Items.Add(letra2)
     End Sub
+
 End Class

@@ -230,6 +230,7 @@
     <Compile Include="Logica\Clase Catacion Arabica.vb" />
     <Compile Include="Logica\Gestor Catador.vb" />
     <Compile Include="Logica\Gestor Ciudad.vb" />
+    <Compile Include="Logica\Gestor Muestras.vb" />
     <Compile Include="Logica\Gestor Productores.vb" />
     <Compile Include="Logica\Gestor Proveedores.vb" />
     <Compile Include="Logica\Gestor Usuario.vb" />
