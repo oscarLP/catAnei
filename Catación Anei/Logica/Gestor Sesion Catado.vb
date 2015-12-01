@@ -1,7 +1,6 @@
 ﻿Imports System.Data.SqlClient
 Public Class Gestor_Sesion_Catado
     Private fun_muestra As New Gestor_Muestras
-    Private fun_sesion As New Gestor_Sesion_Catado
 
     Private db As New Conexion_BD
     Private Comando As SqlCommand
