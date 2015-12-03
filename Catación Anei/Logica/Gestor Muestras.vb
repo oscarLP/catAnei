@@ -3,6 +3,7 @@ Public Class Gestor_Muestras
     Private db As New Conexion_BD
     Private Comando As SqlCommand
 
+
     'INSERTA UNA MUESTRA EN LA BASE DE DATOS
     Public Function guardar_muestra(ByVal NumeroMuestras As String, ByVal EstructuraIdentificador As String, ByVal CodigoSesion As String,
                                     ByVal CodigoCiudad As String) As Boolean
@@ -20,12 +21,14 @@ Public Class Gestor_Muestras
 
         indexValores = 0
 
+
         For Each Codigo As String In codigos
+            'Para obtener un item del arraylist
             ValorIdentificado = valores(indexValores)
 
             Try
-                Dim _sql As String = String.Format("INSERT INTO MUESTRAS (codigo, valor_identificado, fk_codigo_sesion, fk_codigo_ciudad) VALUES('{0}','{1}','{2}','{3}','{4}')",
-                                                  Codigo, ValorIdentificado, CodigoSesion, CodigoCiudad)
+                Dim _sql As String = String.Format("INSERT INTO MUESTRA (fk_codigo_sesion, codigo, valor_identificado, fk_codigo_ciudad) VALUES('{0}','{1}','{2}','{3}')",
+                                                  CodigoSesion, Codigo, ValorIdentificado, CodigoCiudad)
 
                 Using cmd As New SqlCommand(_sql, db.Conexion)
                     db.Conexion.Open()
@@ -35,12 +38,16 @@ Public Class Gestor_Muestras
             Catch ex As Exception
                 MsgBox(ex.Message)
                 db.Conexion.Close()
+                Return False
+                Exit For
             End Try
 
             'AUMENTAMOS EL INDICE PARA LOS VALORES, EL INDICE DE LOS CODIGOS VA IMPLICITO EL EL FOR EACH
             indexValores += 1
         Next
 
+
+        Return True
     End Function
 
     'GENERA LA LISTA DE CODIGOS DE LAS MUESTRAS
@@ -48,7 +55,7 @@ Public Class Gestor_Muestras
         Dim lista As New ArrayList
         Dim generado As String
 
-        For index As Integer = 0 To cantidad Step +1
+        For index As Integer = 1 To cantidad Step +1
             Randomize() 'Inicia el generador de numeros aleatorios
             generado = CStr(Int((9999999 * Rnd() + 1))) 'La variable 'varCodigo' obtiene un numero aleatorio
             lista.Add(generado)
@@ -69,7 +76,7 @@ Public Class Gestor_Muestras
             Dim caracter As Integer = 65
             Dim letra As String
 
-            For index As Integer = 0 To cantidad
+            For index As Integer = 1 To cantidad
                 letra = Chr(caracter)
                 lista.Add(UCase(letra)) 'QUEREMOS MAYUSCULAS
                 caracter = caracter + 1
