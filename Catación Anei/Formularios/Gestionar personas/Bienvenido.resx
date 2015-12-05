@@ -142,10 +142,16 @@
   <data name="TextBox1.Text" xml:space="preserve">
     <value>¡Un cordial saludo!
 
-Ahora que ya formas parte de nuestra organización queremos que conozcas nuestro sistema integrado de registro de cataciones, nuestro propósito es mejorar la organización en cuando al sistema de control del registro de las cataciones. 
-La empresa Café Anei, productora y comercializadora de productos étnicos y orgánicos como el café, ha tomado conciencia de la importancia de llevar una buena gestion de sus cataciones en un sistema de información para generar consultas con facilidad y a partir de estas tomar decisiones en beneficio de la empresa. Además de esto llevar registros de la gestión de sus catadores, quienes hacen la evaluación del café.
+Ahora que ya formas parte de nuestra organización queremos que conozcas nuestro sistema integrado de registro de cataciones.
 
-Te invitamos a registrarte o crear una cuenta como administrador para poder iniciar sesion y hacer uso de nuestro sistema, te damos una calurosa bienvenida y deseamos que puedas realizar tu trabajo satisfactoriamente.
+La empresa Asoanei, productora y comercializadora de productos étnicos y orgánicos como el café, ha tomado conciencia de la importancia de llevar una buena gestion de sus cataciones mediante sistema de información que registre información concierne a las cataciones del café y genere consultas apropiadas y eficientes que ayuden  en la toma de decisiones en beneficio de la empresa. Además de esto llevar un registros de la gestión de sus catadores, quienes hacen la evaluación del café.
+
+Nuestro propósito es proporcionar una adecuado registro  y control de las cataciones de café que lleva acabo la organización, mediante el presente software apodado "catAnei" . 
+
+Te damos una calurosa bienvenida y deseamos que el programa te brinde las herramientas necesarias para realizar tu trabajo satisfactoriamente.
+
+! EMPECEMOS ! 
+Te invitamos a  crear una cuenta como administrador para poder iniciar sesión y hacer uso de nuestro sistema.
 </value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
