@@ -39,7 +39,7 @@ Partial Class frmBienvenido
         Me.btnCrearPerfil.ForeColor = System.Drawing.Color.Teal
         Me.btnCrearPerfil.Image = Global.Catación_Anei.My.Resources.Resources.Administrador_32x32
         Me.btnCrearPerfil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnCrearPerfil.Location = New System.Drawing.Point(12, 388)
+        Me.btnCrearPerfil.Location = New System.Drawing.Point(12, 427)
         Me.btnCrearPerfil.Name = "btnCrearPerfil"
         Me.btnCrearPerfil.Size = New System.Drawing.Size(298, 40)
         Me.btnCrearPerfil.TabIndex = 11
@@ -54,7 +54,7 @@ Partial Class frmBienvenido
         Me.btnCancelar.ForeColor = System.Drawing.Color.Maroon
         Me.btnCancelar.Image = CType(resources.GetObject("btnCancelar.Image"), System.Drawing.Image)
         Me.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnCancelar.Location = New System.Drawing.Point(417, 388)
+        Me.btnCancelar.Location = New System.Drawing.Point(417, 427)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(103, 40)
         Me.btnCancelar.TabIndex = 22
@@ -69,7 +69,7 @@ Partial Class frmBienvenido
         Me.GroupBox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.GroupBox1.Location = New System.Drawing.Point(12, 81)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(508, 301)
+        Me.GroupBox1.Size = New System.Drawing.Size(508, 340)
         Me.GroupBox1.TabIndex = 23
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Mensaje"
@@ -77,11 +77,11 @@ Partial Class frmBienvenido
         'TextBox1
         '
         Me.TextBox1.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(7, 23)
+        Me.TextBox1.Location = New System.Drawing.Point(7, 22)
         Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.ReadOnly = True
-        Me.TextBox1.Size = New System.Drawing.Size(495, 272)
+        Me.TextBox1.Size = New System.Drawing.Size(495, 311)
         Me.TextBox1.TabIndex = 0
         Me.TextBox1.Text = resources.GetString("TextBox1.Text")
         '
@@ -113,7 +113,7 @@ Partial Class frmBienvenido
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(530, 440)
+        Me.ClientSize = New System.Drawing.Size(530, 479)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.lbAdministrador)
         Me.Controls.Add(Me.GroupBox1)
