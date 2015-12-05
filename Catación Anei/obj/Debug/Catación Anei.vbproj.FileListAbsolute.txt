@@ -12,7 +12,6 @@ E:\Universidad Popular del Cesar (UPC)\Programación\Visual Studio\Catación Ane
 E:\Universidad Popular del Cesar (UPC)\Programación\Visual Studio\Catación Anei\Catación Anei\obj\Debug\Catación_Anei.frmGestionarCatadores.resources
 E:\Universidad Popular del Cesar (UPC)\Programación\Visual Studio\Catación Anei\Catación Anei\obj\Debug\Catación_Anei.frmRealizarCataciones.resources
 E:\Universidad Popular del Cesar (UPC)\Programación\Visual Studio\Catación Anei\Catación Anei\obj\Debug\Catación_Anei.frmNuevaSesionCatacion.resources
-E:\Universidad Popular del Cesar (UPC)\Programación\Visual Studio\Catación Anei\Catación Anei\obj\Debug\Catación_Anei.frmEliminarSesionCatacion.resources
 E:\Universidad Popular del Cesar (UPC)\Programación\Visual Studio\Catación Anei\Catación Anei\obj\Debug\Catación_Anei.frmModicarSesionCatacion.resources
 E:\Universidad Popular del Cesar (UPC)\Programación\Visual Studio\Catación Anei\Catación Anei\obj\Debug\Catación_Anei.frmCatarRobusta.resources
 E:\Universidad Popular del Cesar (UPC)\Programación\Visual Studio\Catación Anei\Catación Anei\obj\Debug\Catación_Anei.frmCatarArabica.resources
@@ -27,12 +26,12 @@ E:\Universidad Popular del Cesar (UPC)\Programación\Visual Studio\Catación Ane
 E:\Universidad Popular del Cesar (UPC)\Programación\Visual Studio\Catación Anei\Catación Anei\obj\Debug\Catación_Anei.frmDescriptores_Defectos.resources
 E:\Universidad Popular del Cesar (UPC)\Programación\Visual Studio\Catación Anei\Catación Anei\obj\Debug\Catación_Anei.frmCambiarContraseña.resources
 E:\Universidad Popular del Cesar (UPC)\Programación\Visual Studio\Catación Anei\Catación Anei\obj\Debug\Catación_Anei.frmIniciarSesion.resources
-E:\Universidad Popular del Cesar (UPC)\Programación\Visual Studio\Catación Anei\Catación Anei\obj\Debug\Catación_Anei.Pruebas.resources
 E:\Universidad Popular del Cesar (UPC)\Programación\Visual Studio\Catación Anei\Catación Anei\obj\Debug\Catación_Anei.frmPerfil.resources
 E:\Universidad Popular del Cesar (UPC)\Programación\Visual Studio\Catación Anei\Catación Anei\obj\Debug\Catación_Anei.frmProveedores.resources
 E:\Universidad Popular del Cesar (UPC)\Programación\Visual Studio\Catación Anei\Catación Anei\obj\Debug\Catación_Anei.frmProductores.resources
 E:\Universidad Popular del Cesar (UPC)\Programación\Visual Studio\Catación Anei\Catación Anei\obj\Debug\Catación_Anei.frmCiudad.resources
 E:\Universidad Popular del Cesar (UPC)\Programación\Visual Studio\Catación Anei\Catación Anei\obj\Debug\Catación_Anei.frmBienvenido.resources
+E:\Universidad Popular del Cesar (UPC)\Programación\Visual Studio\Catación Anei\Catación Anei\obj\Debug\Catación_Anei.frmMuestra.resources
 C:\Users\SONY\Downloads\Catación-Anei\Catación Anei\Catación Anei\bin\Debug\Catación Anei.exe.config
 C:\Users\SONY\Downloads\Catación-Anei\Catación Anei\Catación Anei\obj\Debug\Catación Anei.exe
 C:\Users\SONY\Downloads\Catación-Anei\Catación Anei\Catación Anei\obj\Debug\Catación Anei.xml
@@ -56,80 +55,13 @@ C:\Users\SONY\Downloads\Catación-Anei\Catación Anei\Catación Anei\obj\Debug\C
 C:\Users\SONY\Downloads\Catación-Anei\Catación Anei\Catación Anei\obj\Debug\Catación_Anei.frmProveedores.resources
 C:\Users\SONY\Downloads\Catación-Anei\Catación Anei\Catación Anei\obj\Debug\Catación_Anei.frmIniciarSesion.resources
 C:\Users\SONY\Downloads\Catación-Anei\Catación Anei\Catación Anei\obj\Debug\Catación_Anei.frmMenuPrincipal.resources
-C:\Users\SONY\Downloads\Catación-Anei\Catación Anei\Catación Anei\obj\Debug\Catación_Anei.Pruebas.resources
 C:\Users\SONY\Downloads\Catación-Anei\Catación Anei\Catación Anei\obj\Debug\Catación_Anei.frmCatarRobusta.resources
 C:\Users\SONY\Downloads\Catación-Anei\Catación Anei\Catación Anei\obj\Debug\Catación_Anei.frmCatarArabica.resources
 C:\Users\SONY\Downloads\Catación-Anei\Catación Anei\Catación Anei\obj\Debug\Catación_Anei.frmDescriptores_Defectos.resources
-C:\Users\SONY\Downloads\Catación-Anei\Catación Anei\Catación Anei\obj\Debug\Catación_Anei.frmEliminarSesionCatacion.resources
 C:\Users\SONY\Downloads\Catación-Anei\Catación Anei\Catación Anei\obj\Debug\Catación_Anei.frmDescriptores_FraganciaAroma.resources
 C:\Users\SONY\Downloads\Catación-Anei\Catación Anei\Catación Anei\obj\Debug\Catación_Anei.frmModicarSesionCatacion.resources
+C:\Users\SONY\Downloads\Catación-Anei\Catación Anei\Catación Anei\obj\Debug\Catación_Anei.frmMuestra.resources
 C:\Users\SONY\Downloads\Catación-Anei\Catación Anei\Catación Anei\obj\Debug\Catación_Anei.frmNuevaSesionCatacion.resources
 C:\Users\SONY\Downloads\Catación-Anei\Catación Anei\Catación Anei\obj\Debug\Catación_Anei.frmRealizarCataciones.resources
 C:\Users\SONY\Downloads\Catación-Anei\Catación Anei\Catación Anei\obj\Debug\Catación_Anei.Resources.resources
 C:\Users\SONY\Downloads\Catación-Anei\Catación Anei\Catación Anei\obj\Debug\Catación Anei.vbproj.GenerateResource.Cache
-E:\Users\SONY\Documents\GitHub\catAnei\Catación Anei\bin\Debug\Catación Anei.exe.config
-E:\Users\SONY\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación Anei.exe
-E:\Users\SONY\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación Anei.xml
-E:\Users\SONY\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación Anei.pdb
-E:\Users\SONY\Documents\GitHub\catAnei\Catación Anei\bin\Debug\Catación Anei.exe
-E:\Users\SONY\Documents\GitHub\catAnei\Catación Anei\bin\Debug\Catación Anei.pdb
-E:\Users\SONY\Documents\GitHub\catAnei\Catación Anei\bin\Debug\Catación Anei.xml
-E:\Users\SONY\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación_Anei.frmDescriptores_Acidez.resources
-E:\Users\SONY\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación_Anei.frmDescriptores_Balance.resources
-E:\Users\SONY\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación_Anei.frmDescriptores_Cuerpo.resources
-E:\Users\SONY\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación_Anei.frmDescriptores_SaborBoca.resources
-E:\Users\SONY\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación_Anei.frmDescriptores_Sabor.resources
-E:\Users\SONY\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación_Anei.frmDescriptores_SalÁcido.resources
-E:\Users\SONY\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación_Anei.frmDescriptores_SensaciónBoca.resources
-E:\Users\SONY\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación_Anei.frmBienvenido.resources
-E:\Users\SONY\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación_Anei.frmCambiarContraseña.resources
-E:\Users\SONY\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación_Anei.frmCiudad.resources
-E:\Users\SONY\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación_Anei.frmGestionarCatadores.resources
-E:\Users\SONY\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación_Anei.frmPerfil.resources
-E:\Users\SONY\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación_Anei.frmProductores.resources
-E:\Users\SONY\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación_Anei.frmProveedores.resources
-E:\Users\SONY\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación_Anei.frmIniciarSesion.resources
-E:\Users\SONY\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación_Anei.frmMenuPrincipal.resources
-E:\Users\SONY\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación_Anei.Pruebas.resources
-E:\Users\SONY\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación_Anei.frmCatarRobusta.resources
-E:\Users\SONY\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación_Anei.frmCatarArabica.resources
-E:\Users\SONY\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación_Anei.frmDescriptores_Defectos.resources
-E:\Users\SONY\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación_Anei.frmDescriptores_FraganciaAroma.resources
-E:\Users\SONY\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación_Anei.frmModicarSesionCatacion.resources
-E:\Users\SONY\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación_Anei.frmNuevaSesionCatacion.resources
-E:\Users\SONY\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación_Anei.frmRealizarCataciones.resources
-E:\Users\SONY\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación_Anei.Resources.resources
-E:\Users\SONY\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación Anei.vbproj.GenerateResource.Cache
-C:\Users\ana maria\Documents\GitHub\catAnei\Catación Anei\bin\Debug\Catación Anei.exe.config
-C:\Users\ana maria\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación Anei.exe
-C:\Users\ana maria\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación Anei.xml
-C:\Users\ana maria\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación Anei.pdb
-C:\Users\ana maria\Documents\GitHub\catAnei\Catación Anei\bin\Debug\Catación Anei.exe
-C:\Users\ana maria\Documents\GitHub\catAnei\Catación Anei\bin\Debug\Catación Anei.pdb
-C:\Users\ana maria\Documents\GitHub\catAnei\Catación Anei\bin\Debug\Catación Anei.xml
-C:\Users\ana maria\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación_Anei.frmDescriptores_Acidez.resources
-C:\Users\ana maria\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación_Anei.frmDescriptores_Balance.resources
-C:\Users\ana maria\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación_Anei.frmDescriptores_Cuerpo.resources
-C:\Users\ana maria\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación_Anei.frmDescriptores_SaborBoca.resources
-C:\Users\ana maria\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación_Anei.frmDescriptores_Sabor.resources
-C:\Users\ana maria\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación_Anei.frmDescriptores_SalÁcido.resources
-C:\Users\ana maria\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación_Anei.frmDescriptores_SensaciónBoca.resources
-C:\Users\ana maria\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación_Anei.frmBienvenido.resources
-C:\Users\ana maria\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación_Anei.frmCambiarContraseña.resources
-C:\Users\ana maria\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación_Anei.frmCiudad.resources
-C:\Users\ana maria\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación_Anei.frmGestionarCatadores.resources
-C:\Users\ana maria\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación_Anei.frmPerfil.resources
-C:\Users\ana maria\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación_Anei.frmProductores.resources
-C:\Users\ana maria\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación_Anei.frmProveedores.resources
-C:\Users\ana maria\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación_Anei.frmIniciarSesion.resources
-C:\Users\ana maria\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación_Anei.frmMenuPrincipal.resources
-C:\Users\ana maria\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación_Anei.Pruebas.resources
-C:\Users\ana maria\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación_Anei.frmCatarRobusta.resources
-C:\Users\ana maria\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación_Anei.frmCatarArabica.resources
-C:\Users\ana maria\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación_Anei.frmDescriptores_Defectos.resources
-C:\Users\ana maria\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación_Anei.frmDescriptores_FraganciaAroma.resources
-C:\Users\ana maria\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación_Anei.frmModicarSesionCatacion.resources
-C:\Users\ana maria\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación_Anei.frmNuevaSesionCatacion.resources
-C:\Users\ana maria\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación_Anei.frmRealizarCataciones.resources
-C:\Users\ana maria\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación_Anei.Resources.resources
-C:\Users\ana maria\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación Anei.vbproj.GenerateResource.Cache

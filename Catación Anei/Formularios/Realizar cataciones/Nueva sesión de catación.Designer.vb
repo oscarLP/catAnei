@@ -23,6 +23,7 @@ Partial Class frmNuevaSesionCatacion
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmNuevaSesionCatacion))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -37,8 +38,10 @@ Partial Class frmNuevaSesionCatacion
         Me.rbLetras = New System.Windows.Forms.RadioButton()
         Me.rbDigitos = New System.Windows.Forms.RadioButton()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
-        Me.ComboLugar = New System.Windows.Forms.ComboBox()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.btnCiudad = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.cbLugar = New System.Windows.Forms.ComboBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.txtDescripcion = New System.Windows.Forms.TextBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
@@ -52,6 +55,7 @@ Partial Class frmNuevaSesionCatacion
         Me.tmFecha = New System.Windows.Forms.Timer(Me.components)
         Me.lbSesion = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
+        Me.erValidarError = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox3.SuspendLayout()
@@ -62,6 +66,7 @@ Partial Class frmNuevaSesionCatacion
         Me.GroupBox4.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.erValidarError, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -126,7 +131,6 @@ Partial Class frmNuevaSesionCatacion
         'nuNumeroMuestras
         '
         Me.nuNumeroMuestras.Location = New System.Drawing.Point(167, 19)
-        Me.nuNumeroMuestras.Maximum = New Decimal(New Integer() {500, 0, 0, 0})
         Me.nuNumeroMuestras.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.nuNumeroMuestras.Name = "nuNumeroMuestras"
         Me.nuNumeroMuestras.Size = New System.Drawing.Size(214, 23)
@@ -222,8 +226,10 @@ Partial Class frmNuevaSesionCatacion
         '
         'GroupBox4
         '
-        Me.GroupBox4.Controls.Add(Me.ComboLugar)
+        Me.GroupBox4.Controls.Add(Me.Label17)
+        Me.GroupBox4.Controls.Add(Me.btnCiudad)
         Me.GroupBox4.Controls.Add(Me.Label5)
+        Me.GroupBox4.Controls.Add(Me.cbLugar)
         Me.GroupBox4.Controls.Add(Me.Label4)
         Me.GroupBox4.Controls.Add(Me.txtDescripcion)
         Me.GroupBox4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
@@ -234,24 +240,52 @@ Partial Class frmNuevaSesionCatacion
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Descripción y lugar"
         '
-        'ComboLugar
+        'Label17
         '
-        Me.ComboLugar.FormattingEnabled = True
-        Me.ComboLugar.Location = New System.Drawing.Point(102, 53)
-        Me.ComboLugar.Name = "ComboLugar"
-        Me.ComboLugar.Size = New System.Drawing.Size(186, 26)
-        Me.ComboLugar.TabIndex = 23
+        Me.Label17.AutoSize = True
+        Me.Label17.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label17.ForeColor = System.Drawing.Color.Red
+        Me.Label17.Location = New System.Drawing.Point(6, 58)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(16, 22)
+        Me.Label17.TabIndex = 57
+        Me.Label17.Text = "*"
+        '
+        'btnCiudad
+        '
+        Me.btnCiudad.ForeColor = System.Drawing.Color.SaddleBrown
+        Me.btnCiudad.Location = New System.Drawing.Point(355, 52)
+        Me.btnCiudad.Margin = New System.Windows.Forms.Padding(0)
+        Me.btnCiudad.Name = "btnCiudad"
+        Me.btnCiudad.Size = New System.Drawing.Size(26, 28)
+        Me.btnCiudad.TabIndex = 56
+        Me.btnCiudad.Text = "::"
+        Me.btnCiudad.TextAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.btnCiudad.UseVisualStyleBackColor = True
         '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Trebuchet MS", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(6, 55)
+        Me.Label5.Location = New System.Drawing.Point(17, 55)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(53, 20)
         Me.Label5.TabIndex = 22
         Me.Label5.Text = "Lugar:"
+        '
+        'cbLugar
+        '
+        Me.cbLugar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbLugar.Font = New System.Drawing.Font("Trebuchet MS", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cbLugar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.cbLugar.FormattingEnabled = True
+        Me.erValidarError.SetIconAlignment(Me.cbLugar, System.Windows.Forms.ErrorIconAlignment.MiddleLeft)
+        Me.erValidarError.SetIconPadding(Me.cbLugar, 10)
+        Me.cbLugar.Location = New System.Drawing.Point(102, 52)
+        Me.cbLugar.Name = "cbLugar"
+        Me.cbLugar.Size = New System.Drawing.Size(250, 28)
+        Me.cbLugar.TabIndex = 54
         '
         'Label4
         '
@@ -294,7 +328,7 @@ Partial Class frmNuevaSesionCatacion
         Me.lbHoraInicio.AutoSize = True
         Me.lbHoraInicio.Font = New System.Drawing.Font("Trebuchet MS", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbHoraInicio.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.lbHoraInicio.Location = New System.Drawing.Point(127, 57)
+        Me.lbHoraInicio.Location = New System.Drawing.Point(120, 57)
         Me.lbHoraInicio.Name = "lbHoraInicio"
         Me.lbHoraInicio.Size = New System.Drawing.Size(106, 20)
         Me.lbHoraInicio.TabIndex = 18
@@ -305,7 +339,7 @@ Partial Class frmNuevaSesionCatacion
         Me.lbFechaInicio.AutoSize = True
         Me.lbFechaInicio.Font = New System.Drawing.Font("Trebuchet MS", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbFechaInicio.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.lbFechaInicio.Location = New System.Drawing.Point(127, 24)
+        Me.lbFechaInicio.Location = New System.Drawing.Point(120, 24)
         Me.lbFechaInicio.Name = "lbFechaInicio"
         Me.lbFechaInicio.Size = New System.Drawing.Size(116, 20)
         Me.lbFechaInicio.TabIndex = 18
@@ -400,6 +434,11 @@ Partial Class frmNuevaSesionCatacion
         Me.Label10.TabIndex = 31
         Me.Label10.Text = "Sección de catación"
         '
+        'erValidarError
+        '
+        Me.erValidarError.ContainerControl = Me
+        Me.erValidarError.Icon = CType(resources.GetObject("erValidarError.Icon"), System.Drawing.Icon)
+        '
         'frmNuevaSesionCatacion
         '
         Me.AcceptButton = Me.btnGuardar
@@ -434,6 +473,7 @@ Partial Class frmNuevaSesionCatacion
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
+        CType(Me.erValidarError, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -466,5 +506,8 @@ Partial Class frmNuevaSesionCatacion
     Friend WithEvents lbFechaInicio As System.Windows.Forms.Label
     Friend WithEvents lbSesion As System.Windows.Forms.Label
     Friend WithEvents Label10 As System.Windows.Forms.Label
-    Friend WithEvents ComboLugar As System.Windows.Forms.ComboBox
+    Friend WithEvents btnCiudad As System.Windows.Forms.Button
+    Friend WithEvents cbLugar As System.Windows.Forms.ComboBox
+    Friend WithEvents Label17 As System.Windows.Forms.Label
+    Friend WithEvents erValidarError As System.Windows.Forms.ErrorProvider
 End Class

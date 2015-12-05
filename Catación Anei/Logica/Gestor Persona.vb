@@ -14,11 +14,7 @@ Public Class Gestor_Persona
                 db.Conexion.Close()
             End Using
         Catch ex As Exception
-            If Err.Description.Contains("cedula") = True Then
-                MsgBox("Esta cedula ya se encuentra registrada.", vbExclamation, "Seguridad - Persona")
-            ElseIf Err.Description.Contains("codigo") = True Then
-                MsgBox("No se pudo guardar el registro, por favor intente de nuevo.", vbExclamation, "Seguridad - Persona")
-            ElseIf Err.Description.Contains("UNIQUE KEY") = True Then
+            If Err.Description.Contains("UNIQUE KEY") = True Then
                 MsgBox("Esta cedula ya se encuentra registrada.", vbExclamation, "Seguridad - Persona")
             Else
                 MsgBox(ex.Message, vbCritical, "Seguridad - Persona")

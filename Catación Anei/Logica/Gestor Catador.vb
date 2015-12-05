@@ -18,7 +18,7 @@ Public Class Gestor_Catador
     Public Function Buscar_Catador() As DataTable 'Devuelve una tabla con todos los registros de los catadores para agregarlo a la tabla
         Dim Tabla As New DataTable
         Try
-            Dim da As New SqlDataAdapter("SELECT U.codigo 'cod_usuario', P.codigo 'cod_permiso', U.nombre_usuario 'nombre_usuario', U.contrasenia 'contraseña', U.permiso 'permiso', P.cedula 'cedula', P.nombre 'nombre', P.apellido 'apellido', P.telefono 'telefono', " +
+            Dim da As New SqlDataAdapter("SELECT U.codigo 'cod_usuario', P.codigo 'cod_persona', U.nombre_usuario 'nombre_usuario', U.contrasenia 'contraseña', U.permiso 'permiso', P.cedula 'cedula', P.nombre 'nombre', P.apellido 'apellido', P.telefono 'telefono', " +
                                          "P.correo 'correo', U.permiso 'permiso' FROM USUARIO U, PERSONA P WHERE P.codigo = U.fk_codigo_persona ORDER BY nombre_usuario", db.Conexion)
             da.Fill(Tabla)
         Catch ex As Exception

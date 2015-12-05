@@ -117,46 +117,46 @@
     <Compile Include="Formularios\Descriptores\Sensación en boca.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Gestionar personas\Bienvenido.Designer.vb">
+    <Compile Include="Formularios\Gestionar catadores\Bienvenido.Designer.vb">
       <DependentUpon>Bienvenido.vb</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Gestionar personas\Bienvenido.vb">
+    <Compile Include="Formularios\Gestionar catadores\Bienvenido.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Gestionar personas\Cambiar contraseña.Designer.vb">
+    <Compile Include="Formularios\Gestionar catadores\Cambiar contraseña.Designer.vb">
       <DependentUpon>Cambiar contraseña.vb</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Gestionar personas\Cambiar contraseña.vb">
+    <Compile Include="Formularios\Gestionar catadores\Cambiar contraseña.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Gestionar personas\Ciudad.Designer.vb">
+    <Compile Include="Formularios\Gestionar catadores\Ciudad.Designer.vb">
       <DependentUpon>Ciudad.vb</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Gestionar personas\Ciudad.vb">
+    <Compile Include="Formularios\Gestionar catadores\Ciudad.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Gestionar personas\Gestionar catadores.Designer.vb">
+    <Compile Include="Formularios\Gestionar catadores\Gestionar catadores.Designer.vb">
       <DependentUpon>Gestionar catadores.vb</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Gestionar personas\Gestionar catadores.vb">
+    <Compile Include="Formularios\Gestionar catadores\Gestionar catadores.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Gestionar personas\Perfil.Designer.vb">
+    <Compile Include="Formularios\Gestionar catadores\Perfil.Designer.vb">
       <DependentUpon>Perfil.vb</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Gestionar personas\Perfil.vb">
+    <Compile Include="Formularios\Gestionar catadores\Perfil.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Gestionar personas\Productores.Designer.vb">
+    <Compile Include="Formularios\Gestionar catadores\Productores.Designer.vb">
       <DependentUpon>Productores.vb</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Gestionar personas\Productores.vb">
+    <Compile Include="Formularios\Gestionar catadores\Productores.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Gestionar personas\Proveedores.Designer.vb">
+    <Compile Include="Formularios\Gestionar catadores\Proveedores.Designer.vb">
       <DependentUpon>Proveedores.vb</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Gestionar personas\Proveedores.vb">
+    <Compile Include="Formularios\Gestionar catadores\Proveedores.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\Iniciar sesión.vb">
@@ -170,12 +170,6 @@
       <DependentUpon>Menú principal.vb</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Menú principal.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\Pruebas.Designer.vb">
-      <DependentUpon>Pruebas.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\Pruebas.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\Realizar cataciones\Catar - Robusta.Designer.vb">
@@ -208,28 +202,33 @@
     <Compile Include="Formularios\Realizar cataciones\Modicar sesión de catación.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Formularios\Realizar cataciones\Muestra.Designer.vb">
+      <DependentUpon>Muestra.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Realizar cataciones\Muestra.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Formularios\Realizar cataciones\Nueva sesión de catación.Designer.vb">
       <DependentUpon>Nueva sesión de catación.vb</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Realizar cataciones\Nueva sesión de catación.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Realizar cataciones\Menu cataciones.Designer.vb">
-      <DependentUpon>Menu cataciones.vb</DependentUpon>
+    <Compile Include="Formularios\Realizar cataciones\Realizar cataciones.Designer.vb">
+      <DependentUpon>Realizar cataciones.vb</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Realizar cataciones\Menu cataciones.vb">
+    <Compile Include="Formularios\Realizar cataciones\Realizar cataciones.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Logica\Gestor Administrador.vb" />
-    <Compile Include="Logica\Clase Catacion Arabica.vb" />
     <Compile Include="Logica\Gestor Catador.vb" />
     <Compile Include="Logica\Gestor Ciudad.vb" />
-    <Compile Include="Logica\Gestor Muestras.vb" />
+    <Compile Include="Logica\Gestor Muestra.vb" />
     <Compile Include="Logica\Gestor Productores.vb" />
     <Compile Include="Logica\Gestor Proveedores.vb" />
+    <Compile Include="Logica\Gestor Sesion de catacion.vb" />
     <Compile Include="Logica\Gestor Usuario.vb" />
     <Compile Include="Logica\Gestor Persona.vb" />
-    <Compile Include="Logica\Gestor Sesion Catado.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -268,25 +267,25 @@
     <EmbeddedResource Include="Formularios\Descriptores\Sensación en boca.resx">
       <DependentUpon>Sensación en boca.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Gestionar personas\Bienvenido.resx">
+    <EmbeddedResource Include="Formularios\Gestionar catadores\Bienvenido.resx">
       <DependentUpon>Bienvenido.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Gestionar personas\Cambiar contraseña.resx">
+    <EmbeddedResource Include="Formularios\Gestionar catadores\Cambiar contraseña.resx">
       <DependentUpon>Cambiar contraseña.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Gestionar personas\Ciudad.resx">
+    <EmbeddedResource Include="Formularios\Gestionar catadores\Ciudad.resx">
       <DependentUpon>Ciudad.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Gestionar personas\Gestionar catadores.resx">
+    <EmbeddedResource Include="Formularios\Gestionar catadores\Gestionar catadores.resx">
       <DependentUpon>Gestionar catadores.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Gestionar personas\Perfil.resx">
+    <EmbeddedResource Include="Formularios\Gestionar catadores\Perfil.resx">
       <DependentUpon>Perfil.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Gestionar personas\Productores.resx">
+    <EmbeddedResource Include="Formularios\Gestionar catadores\Productores.resx">
       <DependentUpon>Productores.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Gestionar personas\Proveedores.resx">
+    <EmbeddedResource Include="Formularios\Gestionar catadores\Proveedores.resx">
       <DependentUpon>Proveedores.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Iniciar sesión.resx">
@@ -294,9 +293,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Menú principal.resx">
       <DependentUpon>Menú principal.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Pruebas.resx">
-      <DependentUpon>Pruebas.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Realizar cataciones\Catar - Robusta.resx">
       <DependentUpon>Catar - Robusta.vb</DependentUpon>
@@ -313,11 +309,14 @@
     <EmbeddedResource Include="Formularios\Realizar cataciones\Modicar sesión de catación.resx">
       <DependentUpon>Modicar sesión de catación.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Realizar cataciones\Muestra.resx">
+      <DependentUpon>Muestra.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Realizar cataciones\Nueva sesión de catación.resx">
       <DependentUpon>Nueva sesión de catación.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Realizar cataciones\Menu cataciones.resx">
-      <DependentUpon>Menu cataciones.vb</DependentUpon>
+    <EmbeddedResource Include="Formularios\Realizar cataciones\Realizar cataciones.resx">
+      <DependentUpon>Realizar cataciones.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -361,6 +360,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Icon - Café.ico" />
+    <None Include="Resources\Iniciar sesion 32x32.png" />
+    <None Include="Resources\Muestra 48x48.png" />
+    <None Include="Resources\Muestra 32x32.png" />
+    <None Include="Resources\Ingresar 32x321.png" />
     <None Include="Resources\Administrador 32x32.png" />
     <None Include="Resources\No 26x26.png" />
     <None Include="Resources\Si 26x26.png" />

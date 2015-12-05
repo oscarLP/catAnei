@@ -126,18 +126,4 @@ Public Class Gestor_Ciudad
 
         Return Datos(0)("codigo") 'Devuelve el codigo con el nombre de usuario
     End Function
-
-    'DEVUELVE CODIGO Y NOMBRE DE LAS CIUDADES REGISTRADAS
-    Public Function Ciudades() As DataTable
-        Dim lista_ciudades As New DataTable
-
-        Try
-            Dim da As New SqlDataAdapter("SELECT *FROM CIUDAD ", db.Conexion)
-            da.Fill(lista_ciudades)
-        Catch ex As Exception
-            MsgBox(ex.Message)
-        End Try
-
-        Return lista_ciudades
-    End Function
 End Class

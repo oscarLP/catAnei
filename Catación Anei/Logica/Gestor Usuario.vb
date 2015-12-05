@@ -14,8 +14,10 @@ Public Class Gestor_Usuario
                 db.Conexion.Close()
             End Using
         Catch ex As Exception
-            If Err.Description.Contains("nombre_usuario") = True Then
+            If Err.Description.Contains("UNIQUE KEY") = True Then
                 MsgBox("Este nombre de usuario ya se encuentra registrado.", vbExclamation, "Seguridad")
+            Else
+                MsgBox(ex.Message)
             End If
             db.Conexion.Close()
         End Try
@@ -98,9 +100,7 @@ Public Class Gestor_Usuario
             MessageBox.Show(ex.Message)
             db.Conexion.Close()
         End Try
-
         Return Datos.Item(0)("permiso")
-
     End Function
 
     'GENERAR UN CODIGO AL AZAR

@@ -117,10 +117,38 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="tmFecha.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>13, 8</value>
+  <metadata name="erValidarError.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>111, 8</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>38</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="erValidarError.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAEBAAAAAAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAA
+        AAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP//
+        /wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP//
+        /wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP//
+        /wD///8A////AP///wD///8A////AP///wAeHmsAGhp4TwAAwAAAAMAAAADAAAAAwAAAAMAAAADAABER
+        kAAWFoMQ////AP///wD///8A////AP///wD///8AJCRbSxcXf+AREY4VAADAAAAAwAAAAMAAAADAAAwM
+        nwAKCqLMFxd/w////wD///8A////AP///wD///8A////AAAAwAAREY8cCwuh8QwMnRwAAMAAAADAAAkJ
+        pAAGBq/dDAyf3AAAwAD///8A////AP///wD///8A////AP///wAAAMAAAADAAA0NnCUICKr3CgqjIgkJ
+        pQAFBbHhCgqk5AAAwAAAAMAA////AP///wD///8A////AP///wD///8AAADAAAAAwAAAAMAACgqiLAYG
+        rvgGBq7ZCgqi5AAAwAAAAMAAAADAAP///wD///8A////AP///wD///8A////AAAAwAAAAMAAAADAAAoK
+        owAHB6zXBweq9QwMnQUAAMAAAADAAAAAwAD///8A////AP///wD///8A////AP///wAAAMAAAADAAAoK
+        ogAHB63bCgqi3g0NmhEODprxDw+VGwAAwAAAAMAA////AP///wD///8A////AP///wD///8AAADAAAsL
+        nwAICKrZDAyf3QAAwAAAAMAAEBCSIg8PluwQEJMYAADAAP///wD///8A////AP///wD///8A////ABQU
+        iAkKCqXQDQ2b1wAAwAAAAMAAAADAAAAAwAAREZAeDg6Y8RkZeir///8A////AP///wD///8A////AP//
+        /wATE4sbEBCTyAAAwAAAAMAAAADAAAAAwAAAAMAAAADAABMTiiMWFoNi////AP///wD///8A////AP//
+        /wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP//
+        /wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP//
+        /wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP//
+        /wD///8A//8AAP//AAD//wAA9/cAAOPnAADxzwAA+J8AAPw/AAD+PwAA/B8AAPmPAADjxwAA5+cAAP//
+        AAD//wAA//8AAA==
+</value>
+  </data>
+  <metadata name="tmFecha.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>13, 8</value>
   </metadata>
 </root>
