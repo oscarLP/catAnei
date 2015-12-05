@@ -121,7 +121,7 @@
   <data name="btnCancelar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAIGNIUk0AAHolAACAgwAA+f8AAIDoAABS
-        CAABFVgAADqXAAAXb9daH5AAAAAJcEhZcwAACxMAAAsTAQCanBgAAANySURBVFhHxZbbSxRxFMcXdHdm
+        CAABFVgAADqXAAAXb9daH5AAAAAJcEhZcwAACxEAAAsRAX9kX5EAAANySURBVFhHxZbbSxRxFMcXdHdm
         dd2d2d2Z3dmLOVreMoP+DSGfosfK7pAVFYlWWNlVy0yTyqAsVJRMu0k9RKRhBiZIUZuopWDQQ1GGt3rZ
         vkdYGbYjhQ/Tw4eZ+c78zvfM73fm/MYSjUb/K6xoJqxoJqxoJqxoJqxoJqxIPLNYLPtCIfdhTdtJ50th
         bzi8YUdamkTnnAfBikRJMBisUNXiOkl6We73Z8cH/xsHQqGMk4ry5GAwWLQ7NdXPeRCsSBxX1V1XXK6B
@@ -140,9 +140,13 @@
 </value>
   </data>
   <data name="TextBox1.Text" xml:space="preserve">
-    <value>!Bienvenido a Catacion Anei¡
+    <value>¡Un cordial saludo!
 
-La empresa Café Anei, productora y comercializadora de productos étnicos y orgánicos como el café, están adoptando conciencia de la importancia de llevar los registros de sus cataciones en un sistema de información para generar consultas con facilidad y a partir de estas tomar decisiones en beneficio de la empresa. Además de esto llevar registros de la gestión de sus catadores, quienes hacen la evaluación del café.</value>
+Ahora que ya formas parte de nuestra organización queremos que conozcas nuestro sistema integrado de registro de cataciones, nuestro propósito es mejorar la organización en cuando al sistema de control del registro de las cataciones. 
+La empresa Café Anei, productora y comercializadora de productos étnicos y orgánicos como el café, ha tomado conciencia de la importancia de llevar una buena gestion de sus cataciones en un sistema de información para generar consultas con facilidad y a partir de estas tomar decisiones en beneficio de la empresa. Además de esto llevar registros de la gestión de sus catadores, quienes hacen la evaluación del café.
+
+Te invitamos a registrarte o crear una cuenta como administrador para poder iniciar sesion y hacer uso de nuestro sistema, te damos una calurosa bienvenida y deseamos que puedas realizar tu trabajo satisfactoriamente.
+</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
