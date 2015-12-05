@@ -57,7 +57,7 @@
     End Sub
 
     Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
-        frmEliminarSesionCatacion.ShowDialog()
+        'VERIFICAR SI LA SESIÓN PERTENECE AL USUARIO Y SINO SE ENCUENTRA CATADA PARA ENVIARLA A ELIMINAR
     End Sub
 
     Sub Total_Registrados() 'Muestra el total de catadores registradores

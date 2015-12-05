@@ -117,46 +117,46 @@
     <Compile Include="Formularios\Descriptores\Sensación en boca.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Gestionar catadores\Bienvenido.Designer.vb">
+    <Compile Include="Formularios\Gestionar personas\Bienvenido.Designer.vb">
       <DependentUpon>Bienvenido.vb</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Gestionar catadores\Bienvenido.vb">
+    <Compile Include="Formularios\Gestionar personas\Bienvenido.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Gestionar catadores\Cambiar contraseña.Designer.vb">
+    <Compile Include="Formularios\Gestionar personas\Cambiar contraseña.Designer.vb">
       <DependentUpon>Cambiar contraseña.vb</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Gestionar catadores\Cambiar contraseña.vb">
+    <Compile Include="Formularios\Gestionar personas\Cambiar contraseña.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Gestionar catadores\Ciudad.Designer.vb">
+    <Compile Include="Formularios\Gestionar personas\Ciudad.Designer.vb">
       <DependentUpon>Ciudad.vb</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Gestionar catadores\Ciudad.vb">
+    <Compile Include="Formularios\Gestionar personas\Ciudad.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Gestionar catadores\Gestionar catadores.Designer.vb">
+    <Compile Include="Formularios\Gestionar personas\Gestionar catadores.Designer.vb">
       <DependentUpon>Gestionar catadores.vb</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Gestionar catadores\Gestionar catadores.vb">
+    <Compile Include="Formularios\Gestionar personas\Gestionar catadores.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Gestionar catadores\Perfil.Designer.vb">
+    <Compile Include="Formularios\Gestionar personas\Perfil.Designer.vb">
       <DependentUpon>Perfil.vb</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Gestionar catadores\Perfil.vb">
+    <Compile Include="Formularios\Gestionar personas\Perfil.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Gestionar catadores\Productores.Designer.vb">
+    <Compile Include="Formularios\Gestionar personas\Productores.Designer.vb">
       <DependentUpon>Productores.vb</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Gestionar catadores\Productores.vb">
+    <Compile Include="Formularios\Gestionar personas\Productores.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Gestionar catadores\Proveedores.Designer.vb">
+    <Compile Include="Formularios\Gestionar personas\Proveedores.Designer.vb">
       <DependentUpon>Proveedores.vb</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Gestionar catadores\Proveedores.vb">
+    <Compile Include="Formularios\Gestionar personas\Proveedores.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\Iniciar sesión.vb">
@@ -194,12 +194,6 @@
       <DependentUpon>Defectos.vb</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Descriptores\Defectos.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\Realizar cataciones\Eliminar sesión de catación.Designer.vb">
-      <DependentUpon>Eliminar sesión de catación.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\Realizar cataciones\Eliminar sesión de catación.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\Descriptores\Fragancia - Aroma.Designer.vb">
@@ -274,25 +268,25 @@
     <EmbeddedResource Include="Formularios\Descriptores\Sensación en boca.resx">
       <DependentUpon>Sensación en boca.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Gestionar catadores\Bienvenido.resx">
+    <EmbeddedResource Include="Formularios\Gestionar personas\Bienvenido.resx">
       <DependentUpon>Bienvenido.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Gestionar catadores\Cambiar contraseña.resx">
+    <EmbeddedResource Include="Formularios\Gestionar personas\Cambiar contraseña.resx">
       <DependentUpon>Cambiar contraseña.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Gestionar catadores\Ciudad.resx">
+    <EmbeddedResource Include="Formularios\Gestionar personas\Ciudad.resx">
       <DependentUpon>Ciudad.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Gestionar catadores\Gestionar catadores.resx">
+    <EmbeddedResource Include="Formularios\Gestionar personas\Gestionar catadores.resx">
       <DependentUpon>Gestionar catadores.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Gestionar catadores\Perfil.resx">
+    <EmbeddedResource Include="Formularios\Gestionar personas\Perfil.resx">
       <DependentUpon>Perfil.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Gestionar catadores\Productores.resx">
+    <EmbeddedResource Include="Formularios\Gestionar personas\Productores.resx">
       <DependentUpon>Productores.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Gestionar catadores\Proveedores.resx">
+    <EmbeddedResource Include="Formularios\Gestionar personas\Proveedores.resx">
       <DependentUpon>Proveedores.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Iniciar sesión.resx">
@@ -312,9 +306,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Descriptores\Defectos.resx">
       <DependentUpon>Defectos.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Realizar cataciones\Eliminar sesión de catación.resx">
-      <DependentUpon>Eliminar sesión de catación.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Descriptores\Fragancia - Aroma.resx">
       <DependentUpon>Fragancia - Aroma.vb</DependentUpon>

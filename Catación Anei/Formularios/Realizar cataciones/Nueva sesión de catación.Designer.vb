@@ -37,7 +37,7 @@ Partial Class frmNuevaSesionCatacion
         Me.rbLetras = New System.Windows.Forms.RadioButton()
         Me.rbDigitos = New System.Windows.Forms.RadioButton()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
-        Me.txtLugar = New System.Windows.Forms.TextBox()
+        Me.ComboLugar = New System.Windows.Forms.ComboBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.txtDescripcion = New System.Windows.Forms.TextBox()
@@ -222,7 +222,7 @@ Partial Class frmNuevaSesionCatacion
         '
         'GroupBox4
         '
-        Me.GroupBox4.Controls.Add(Me.txtLugar)
+        Me.GroupBox4.Controls.Add(Me.ComboLugar)
         Me.GroupBox4.Controls.Add(Me.Label5)
         Me.GroupBox4.Controls.Add(Me.Label4)
         Me.GroupBox4.Controls.Add(Me.txtDescripcion)
@@ -234,14 +234,13 @@ Partial Class frmNuevaSesionCatacion
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Descripción y lugar"
         '
-        'txtLugar
+        'ComboLugar
         '
-        Me.txtLugar.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtLugar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.txtLugar.Location = New System.Drawing.Point(102, 51)
-        Me.txtLugar.Name = "txtLugar"
-        Me.txtLugar.Size = New System.Drawing.Size(279, 26)
-        Me.txtLugar.TabIndex = 4
+        Me.ComboLugar.FormattingEnabled = True
+        Me.ComboLugar.Location = New System.Drawing.Point(102, 53)
+        Me.ComboLugar.Name = "ComboLugar"
+        Me.ComboLugar.Size = New System.Drawing.Size(186, 26)
+        Me.ComboLugar.TabIndex = 23
         '
         'Label5
         '
@@ -453,7 +452,6 @@ Partial Class frmNuevaSesionCatacion
     Friend WithEvents rbLetras As System.Windows.Forms.RadioButton
     Friend WithEvents rbDigitos As System.Windows.Forms.RadioButton
     Friend WithEvents GroupBox4 As System.Windows.Forms.GroupBox
-    Friend WithEvents txtLugar As System.Windows.Forms.TextBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents txtDescripcion As System.Windows.Forms.TextBox
@@ -468,4 +466,5 @@ Partial Class frmNuevaSesionCatacion
     Friend WithEvents lbFechaInicio As System.Windows.Forms.Label
     Friend WithEvents lbSesion As System.Windows.Forms.Label
     Friend WithEvents Label10 As System.Windows.Forms.Label
+    Friend WithEvents ComboLugar As System.Windows.Forms.ComboBox
 End Class

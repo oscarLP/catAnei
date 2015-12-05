@@ -1,16 +1,23 @@
 ﻿Public Class frmNuevaSesionCatacion
     Private Fun_sesion As New Gestor_Sesion_Catado
+    Private Fun_ciudad As New Gestor_Ciudad
     Private Clase_CatacionArabiba As New Clase_Catacion_Arabica
+
     Private Sub frmNuevaSesionCatacion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         tmFecha.Start()
         LimpiarCampos()
+        cargarLugares()
     End Sub
 
     'BOTON GUARDAR
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
         Dim CodigoSesionCatacion As String = Fun_sesion.Codigo()
+        Dim lugar_save As String
 
-        Dim i As Boolean = Fun_sesion.Guardar_SesionCatacion(CodigoSesionCatacion, lbFechaInicio.Text, lbHoraInicio.Text, txtDescripcion.Text, txtLugar.Text,
+        'valor del comboBox
+        lugar_save = ComboLugar.SelectedValue.ToString
+
+        Dim i As Boolean = Fun_sesion.Guardar_SesionCatacion(CodigoSesionCatacion, lbFechaInicio.Text, lbHoraInicio.Text, txtDescripcion.Text, lugar_save,
                                                                        IdentificadorMuestra(), ProtocoloCatacion(), nuNumeroMuestras.Value, Fun_sesion.Buscar_CodigoUsuario)
 
         If i = True Then
@@ -28,10 +35,16 @@
 
     Sub LimpiarCampos()
         txtDescripcion.Clear()
-        txtLugar.Clear()
         rbLetras.Checked = True
         rbArabica.Checked = True
         txtDescripcion.Focus()
+    End Sub
+
+    'Carga las ciudades registradas en la BD
+    Sub cargarLugares()
+        ComboLugar.DataSource = Fun_ciudad.Ciudades
+        ComboLugar.DisplayMember = "nombre"
+        ComboLugar.ValueMember = "codigo"
     End Sub
 
     'Obtiene la fecha y hora actual del sistema
@@ -60,4 +73,6 @@
         End If
         Return ProtCatacion
     End Function
+    'AL CAMBIAR INDICE SELECCIONADO
+
 End Class

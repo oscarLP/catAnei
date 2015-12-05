@@ -94,7 +94,6 @@ E:\Users\SONY\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación_Anei.P
 E:\Users\SONY\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación_Anei.frmCatarRobusta.resources
 E:\Users\SONY\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación_Anei.frmCatarArabica.resources
 E:\Users\SONY\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación_Anei.frmDescriptores_Defectos.resources
-E:\Users\SONY\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación_Anei.frmEliminarSesionCatacion.resources
 E:\Users\SONY\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación_Anei.frmDescriptores_FraganciaAroma.resources
 E:\Users\SONY\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación_Anei.frmModicarSesionCatacion.resources
 E:\Users\SONY\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación_Anei.frmNuevaSesionCatacion.resources

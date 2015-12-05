@@ -1,7 +1,6 @@
 ﻿Imports System.Data.SqlClient
 Public Class Gestor_Sesion_Catado
     Private fun_muestra As New Gestor_Muestras
-    Private fun_sesion As New Gestor_Sesion_Catado
 
     Private db As New Conexion_BD
     Private Comando As SqlCommand
@@ -48,11 +47,17 @@ Public Class Gestor_Sesion_Catado
 
         If i > 0 Then
             'PROCEDEMOS A INSERT CADA MUESTRA QUE CORRESPONDE A LA SESION
+            Dim guardado_muestra As Boolean
 
-            fun_muestra.guardar_muestra(NumeroMuestras, EstructuraIdentificador, Codigo, "CodigoCiudad")
+            guardado_muestra = fun_muestra.guardar_muestra(NumeroMuestras, EstructuraIdentificador, Codigo, Lugar)
 
             'SI TANTO SESION COMO MUESTRAS HAN SIDO REGISTRADAS DEVOLVEMOS TRUE
-            Return True
+            If guardado_muestra = True Then
+                Return True
+            Else
+                Return False
+            End If
+
         Else
             Return False
         End If
