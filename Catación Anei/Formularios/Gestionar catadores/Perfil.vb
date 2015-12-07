@@ -103,9 +103,11 @@
                     MsgBox("Perfil del administrador: Creado correctamente.", MsgBoxStyle.Information, "Seguridad")
                     frmBienvenido.Iniciar_Sesion() 'Ejecuta el subproceso 'Iniciar_Sesion' del formulario 'Bienvenido' para que se active el boton 'Iniciar Sesion'
                     Mostrar_Administrador()
+                    frmBienvenido.btnCrearPerfil.Enabled = False
                     Me.Close()
                 Else
                     Fun_Persona.Eliminar_Persona(Codigo_Persona)
+                    frmBienvenido.btnCrearPerfil.Enabled = True
                     MsgBox("No se pudo guardar.", vbExclamation, "Seguridad")
                 End If
             End If

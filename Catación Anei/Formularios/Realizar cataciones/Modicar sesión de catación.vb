@@ -4,8 +4,8 @@
     Private SesionCatado_Seleccionada As New BindingSource
     Private Sub frmModicarSesionCatacion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         LimpiarCampos()
-        Mostrar_SesionCatado_Seleccionada()
         Cargar_Ciudades()
+        Mostrar_SesionCatado_Seleccionada()
     End Sub
 
     Private Sub btnModificar_Click(sender As Object, e As EventArgs) Handles btnModificar.Click

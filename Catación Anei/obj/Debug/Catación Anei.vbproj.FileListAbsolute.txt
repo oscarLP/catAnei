@@ -32,6 +32,9 @@ E:\Universidad Popular del Cesar (UPC)\Programación\Visual Studio\Catación Ane
 E:\Universidad Popular del Cesar (UPC)\Programación\Visual Studio\Catación Anei\Catación Anei\obj\Debug\Catación_Anei.frmCiudad.resources
 E:\Universidad Popular del Cesar (UPC)\Programación\Visual Studio\Catación Anei\Catación Anei\obj\Debug\Catación_Anei.frmBienvenido.resources
 E:\Universidad Popular del Cesar (UPC)\Programación\Visual Studio\Catación Anei\Catación Anei\obj\Debug\Catación_Anei.frmMuestra.resources
+E:\Universidad Popular del Cesar (UPC)\Programación\Visual Studio\Catación Anei\Catación Anei\bin\Debug\af\Catación Anei.resources.dll
+E:\Universidad Popular del Cesar (UPC)\Programación\Visual Studio\Catación Anei\Catación Anei\obj\Debug\Catación_Anei.frmGestionarCatadores.af.resources
+E:\Universidad Popular del Cesar (UPC)\Programación\Visual Studio\Catación Anei\Catación Anei\obj\Debug\af\Catación Anei.resources.dll
 C:\Users\SONY\Downloads\Catación-Anei\Catación Anei\Catación Anei\bin\Debug\Catación Anei.exe.config
 C:\Users\SONY\Downloads\Catación-Anei\Catación Anei\Catación Anei\obj\Debug\Catación Anei.exe
 C:\Users\SONY\Downloads\Catación-Anei\Catación Anei\Catación Anei\obj\Debug\Catación Anei.xml
@@ -39,6 +42,7 @@ C:\Users\SONY\Downloads\Catación-Anei\Catación Anei\Catación Anei\obj\Debug\C
 C:\Users\SONY\Downloads\Catación-Anei\Catación Anei\Catación Anei\bin\Debug\Catación Anei.exe
 C:\Users\SONY\Downloads\Catación-Anei\Catación Anei\Catación Anei\bin\Debug\Catación Anei.pdb
 C:\Users\SONY\Downloads\Catación-Anei\Catación Anei\Catación Anei\bin\Debug\Catación Anei.xml
+C:\Users\SONY\Downloads\Catación-Anei\Catación Anei\Catación Anei\bin\Debug\af\Catación Anei.resources.dll
 C:\Users\SONY\Downloads\Catación-Anei\Catación Anei\Catación Anei\obj\Debug\Catación_Anei.frmDescriptores_Acidez.resources
 C:\Users\SONY\Downloads\Catación-Anei\Catación Anei\Catación Anei\obj\Debug\Catación_Anei.frmDescriptores_Balance.resources
 C:\Users\SONY\Downloads\Catación-Anei\Catación Anei\Catación Anei\obj\Debug\Catación_Anei.frmDescriptores_Cuerpo.resources
@@ -64,4 +68,6 @@ C:\Users\SONY\Downloads\Catación-Anei\Catación Anei\Catación Anei\obj\Debug\C
 C:\Users\SONY\Downloads\Catación-Anei\Catación Anei\Catación Anei\obj\Debug\Catación_Anei.frmNuevaSesionCatacion.resources
 C:\Users\SONY\Downloads\Catación-Anei\Catación Anei\Catación Anei\obj\Debug\Catación_Anei.frmRealizarCataciones.resources
 C:\Users\SONY\Downloads\Catación-Anei\Catación Anei\Catación Anei\obj\Debug\Catación_Anei.Resources.resources
+C:\Users\SONY\Downloads\Catación-Anei\Catación Anei\Catación Anei\obj\Debug\Catación_Anei.frmGestionarCatadores.af.resources
 C:\Users\SONY\Downloads\Catación-Anei\Catación Anei\Catación Anei\obj\Debug\Catación Anei.vbproj.GenerateResource.Cache
+C:\Users\SONY\Downloads\Catación-Anei\Catación Anei\Catación Anei\obj\Debug\af\Catación Anei.resources.dll

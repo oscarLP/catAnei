@@ -22,6 +22,7 @@ Partial Class frmIniciarSesion
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmIniciarSesion))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -35,6 +36,7 @@ Partial Class frmIniciarSesion
         Me.txtContraseña = New System.Windows.Forms.TextBox()
         Me.txtUsuario = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.ttAyuda = New System.Windows.Forms.ToolTip(Me.components)
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
@@ -156,6 +158,7 @@ Partial Class frmIniciarSesion
         Me.txtContraseña.Name = "txtContraseña"
         Me.txtContraseña.Size = New System.Drawing.Size(234, 26)
         Me.txtContraseña.TabIndex = 3
+        Me.ttAyuda.SetToolTip(Me.txtContraseña, "Contraseña")
         Me.txtContraseña.UseSystemPasswordChar = True
         '
         'txtUsuario
@@ -169,6 +172,7 @@ Partial Class frmIniciarSesion
         Me.txtUsuario.Size = New System.Drawing.Size(234, 26)
         Me.txtUsuario.TabIndex = 2
         Me.txtUsuario.Tag = ""
+        Me.ttAyuda.SetToolTip(Me.txtUsuario, "Usuario")
         '
         'Label4
         '
@@ -221,5 +225,6 @@ Partial Class frmIniciarSesion
     Friend WithEvents btnIngresar As System.Windows.Forms.Button
     Friend WithEvents PictureBox4 As System.Windows.Forms.PictureBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents ttAyuda As System.Windows.Forms.ToolTip
 
 End Class

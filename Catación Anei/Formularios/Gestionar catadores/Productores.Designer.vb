@@ -25,6 +25,8 @@ Partial Class frmProductores
         Me.components = New System.ComponentModel.Container()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmProductores))
         Me.erValidarError = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.txtCedula = New System.Windows.Forms.TextBox()
@@ -32,6 +34,7 @@ Partial Class frmProductores
         Me.txtNombre = New System.Windows.Forms.TextBox()
         Me.cbCiudad = New System.Windows.Forms.ComboBox()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
+        Me.btnCancelar = New System.Windows.Forms.Button()
         Me.btnEliminar = New System.Windows.Forms.Button()
         Me.btnModificar = New System.Windows.Forms.Button()
         Me.btnNuevoProductorYGuardar = New System.Windows.Forms.Button()
@@ -81,6 +84,21 @@ Partial Class frmProductores
         Me.Label22 = New System.Windows.Forms.Label()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.ToolTip2 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.ToolTip3 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
+        Me.ToolStripLabel5 = New System.Windows.Forms.ToolStripLabel()
+        Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
+        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripLabel3 = New System.Windows.Forms.ToolStripLabel()
+        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripLabel2 = New System.Windows.Forms.ToolStripLabel()
+        Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripLabel4 = New System.Windows.Forms.ToolStripLabel()
+        Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripLabel6 = New System.Windows.Forms.ToolStripLabel()
         CType(Me.erValidarError, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox5.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
@@ -102,6 +120,7 @@ Partial Class frmProductores
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ToolStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'erValidarError
@@ -157,6 +176,7 @@ Partial Class frmProductores
         'GroupBox5
         '
         Me.GroupBox5.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox5.Controls.Add(Me.btnCancelar)
         Me.GroupBox5.Controls.Add(Me.btnEliminar)
         Me.GroupBox5.Controls.Add(Me.btnModificar)
         Me.GroupBox5.Controls.Add(Me.btnNuevoProductorYGuardar)
@@ -169,6 +189,20 @@ Partial Class frmProductores
         Me.GroupBox5.TabStop = False
         Me.GroupBox5.Text = "Opciones"
         '
+        'btnCancelar
+        '
+        Me.btnCancelar.Font = New System.Drawing.Font("Trebuchet MS", 12.0!)
+        Me.btnCancelar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnCancelar.Image = Global.Catación_Anei.My.Resources.Resources.Cancelar_32x32
+        Me.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnCancelar.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.btnCancelar.Location = New System.Drawing.Point(181, 22)
+        Me.btnCancelar.Name = "btnCancelar"
+        Me.btnCancelar.Size = New System.Drawing.Size(159, 35)
+        Me.btnCancelar.TabIndex = 2
+        Me.btnCancelar.Text = "Cancelar"
+        Me.btnCancelar.UseVisualStyleBackColor = True
+        '
         'btnEliminar
         '
         Me.btnEliminar.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -178,7 +212,7 @@ Partial Class frmProductores
         Me.btnEliminar.Location = New System.Drawing.Point(182, 63)
         Me.btnEliminar.Name = "btnEliminar"
         Me.btnEliminar.Size = New System.Drawing.Size(158, 35)
-        Me.btnEliminar.TabIndex = 12
+        Me.btnEliminar.TabIndex = 4
         Me.btnEliminar.Text = "Eliminar"
         Me.btnEliminar.UseVisualStyleBackColor = True
         '
@@ -191,7 +225,7 @@ Partial Class frmProductores
         Me.btnModificar.Location = New System.Drawing.Point(6, 63)
         Me.btnModificar.Name = "btnModificar"
         Me.btnModificar.Size = New System.Drawing.Size(170, 35)
-        Me.btnModificar.TabIndex = 11
+        Me.btnModificar.TabIndex = 3
         Me.btnModificar.Text = "Modificar"
         Me.btnModificar.UseVisualStyleBackColor = True
         '
@@ -203,9 +237,10 @@ Partial Class frmProductores
         Me.btnNuevoProductorYGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnNuevoProductorYGuardar.Location = New System.Drawing.Point(6, 22)
         Me.btnNuevoProductorYGuardar.Name = "btnNuevoProductorYGuardar"
-        Me.btnNuevoProductorYGuardar.Size = New System.Drawing.Size(334, 35)
-        Me.btnNuevoProductorYGuardar.TabIndex = 10
+        Me.btnNuevoProductorYGuardar.Size = New System.Drawing.Size(170, 35)
+        Me.btnNuevoProductorYGuardar.TabIndex = 1
         Me.btnNuevoProductorYGuardar.Text = "Nuevo productor"
+        Me.btnNuevoProductorYGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnNuevoProductorYGuardar.UseVisualStyleBackColor = True
         '
         'txtCorreo
@@ -459,7 +494,7 @@ Partial Class frmProductores
         Me.GroupBox1.Location = New System.Drawing.Point(22, 137)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(553, 87)
-        Me.GroupBox1.TabIndex = 29
+        Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Busqueda"
         '
@@ -514,7 +549,7 @@ Partial Class frmProductores
         Me.txtBuscarPor.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.txtBuscarPor.FormattingEnabled = True
         Me.txtBuscarPor.Items.AddRange(New Object() {"Cedula", "Nombre", "Apellido", "Teléfono", "Correo electrónico", "Ciudad", "Vereda", "Finca"})
-        Me.txtBuscarPor.Location = New System.Drawing.Point(385, 25)
+        Me.txtBuscarPor.Location = New System.Drawing.Point(385, 22)
         Me.txtBuscarPor.Name = "txtBuscarPor"
         Me.txtBuscarPor.Size = New System.Drawing.Size(162, 26)
         Me.txtBuscarPor.TabIndex = 2
@@ -524,7 +559,7 @@ Partial Class frmProductores
         Me.Label18.AutoSize = True
         Me.Label18.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label18.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label18.Location = New System.Drawing.Point(292, 25)
+        Me.Label18.Location = New System.Drawing.Point(292, 24)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(90, 22)
         Me.Label18.TabIndex = 36
@@ -573,7 +608,7 @@ Partial Class frmProductores
         Me.gbLista_Productores.Location = New System.Drawing.Point(16, 233)
         Me.gbLista_Productores.Name = "gbLista_Productores"
         Me.gbLista_Productores.Size = New System.Drawing.Size(559, 378)
-        Me.gbLista_Productores.TabIndex = 31
+        Me.gbLista_Productores.TabIndex = 3
         Me.gbLista_Productores.TabStop = False
         Me.gbLista_Productores.Text = "Lista de productores"
         '
@@ -587,20 +622,36 @@ Partial Class frmProductores
         Me.dgLista_Productores.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders
         Me.dgLista_Productores.BackgroundColor = System.Drawing.Color.White
         Me.dgLista_Productores.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised
-        Me.dgLista_Productores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Trebuchet MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SaddleBrown
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Trebuchet MS", 9.75!)
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgLista_Productores.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgLista_Productores.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        Me.dgLista_Productores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Trebuchet MS", 9.75!)
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SaddleBrown
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgLista_Productores.DefaultCellStyle = DataGridViewCellStyle3
         Me.dgLista_Productores.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgLista_Productores.Location = New System.Drawing.Point(3, 19)
         Me.dgLista_Productores.MultiSelect = False
         Me.dgLista_Productores.Name = "dgLista_Productores"
         Me.dgLista_Productores.ReadOnly = True
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Trebuchet MS", 9.75!)
+        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgLista_Productores.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
         Me.dgLista_Productores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgLista_Productores.Size = New System.Drawing.Size(553, 356)
         Me.dgLista_Productores.TabIndex = 0
@@ -618,7 +669,7 @@ Partial Class frmProductores
         Me.PanelGestion.Location = New System.Drawing.Point(597, 73)
         Me.PanelGestion.Name = "PanelGestion"
         Me.PanelGestion.Size = New System.Drawing.Size(370, 538)
-        Me.PanelGestion.TabIndex = 30
+        Me.PanelGestion.TabIndex = 2
         '
         'GroupBox3
         '
@@ -651,7 +702,7 @@ Partial Class frmProductores
         Me.btnCiudad.Margin = New System.Windows.Forms.Padding(0)
         Me.btnCiudad.Name = "btnCiudad"
         Me.btnCiudad.Size = New System.Drawing.Size(26, 28)
-        Me.btnCiudad.TabIndex = 53
+        Me.btnCiudad.TabIndex = 4
         Me.btnCiudad.Text = "::"
         Me.btnCiudad.TextAlign = System.Drawing.ContentAlignment.TopLeft
         Me.btnCiudad.UseVisualStyleBackColor = True
@@ -766,6 +817,84 @@ Partial Class frmProductores
         Me.PictureBox2.TabIndex = 34
         Me.PictureBox2.TabStop = False
         '
+        'ToolStrip1
+        '
+        Me.ToolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripLabel5, Me.ToolStripSeparator3, Me.ToolStripLabel1, Me.ToolStripSeparator1, Me.ToolStripLabel3, Me.ToolStripSeparator2, Me.ToolStripLabel2, Me.ToolStripSeparator4, Me.ToolStripLabel4, Me.ToolStripSeparator5, Me.ToolStripLabel6})
+        Me.ToolStrip1.Location = New System.Drawing.Point(0, 616)
+        Me.ToolStrip1.Name = "ToolStrip1"
+        Me.ToolStrip1.Size = New System.Drawing.Size(992, 25)
+        Me.ToolStrip1.TabIndex = 35
+        Me.ToolStrip1.Text = "ToolStrip1"
+        '
+        'ToolStripLabel5
+        '
+        Me.ToolStripLabel5.Font = New System.Drawing.Font("Trebuchet MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ToolStripLabel5.Image = Global.Catación_Anei.My.Resources.Resources.Ayuda_16x16
+        Me.ToolStripLabel5.Name = "ToolStripLabel5"
+        Me.ToolStripLabel5.Size = New System.Drawing.Size(82, 22)
+        Me.ToolStripLabel5.Text = "Presione:"
+        '
+        'ToolStripSeparator3
+        '
+        Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 25)
+        '
+        'ToolStripLabel1
+        '
+        Me.ToolStripLabel1.Image = Global.Catación_Anei.My.Resources.Resources.Buscar_26x26
+        Me.ToolStripLabel1.Name = "ToolStripLabel1"
+        Me.ToolStripLabel1.Size = New System.Drawing.Size(125, 22)
+        Me.ToolStripLabel1.Text = "ctrl + B para Buscar"
+        '
+        'ToolStripSeparator1
+        '
+        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 25)
+        '
+        'ToolStripLabel3
+        '
+        Me.ToolStripLabel3.Image = Global.Catación_Anei.My.Resources.Resources.Nuevo_catador_32x32
+        Me.ToolStripLabel3.Name = "ToolStripLabel3"
+        Me.ToolStripLabel3.Size = New System.Drawing.Size(238, 22)
+        Me.ToolStripLabel3.Text = "ctrl + N para Nuevo productor más enter"
+        '
+        'ToolStripSeparator2
+        '
+        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 25)
+        '
+        'ToolStripLabel2
+        '
+        Me.ToolStripLabel2.Image = Global.Catación_Anei.My.Resources.Resources.Modificar_32x32
+        Me.ToolStripLabel2.Name = "ToolStripLabel2"
+        Me.ToolStripLabel2.Size = New System.Drawing.Size(200, 22)
+        Me.ToolStripLabel2.Text = "ctrl + M para Modificar más enter"
+        '
+        'ToolStripSeparator4
+        '
+        Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
+        Me.ToolStripSeparator4.Size = New System.Drawing.Size(6, 25)
+        '
+        'ToolStripLabel4
+        '
+        Me.ToolStripLabel4.Image = Global.Catación_Anei.My.Resources.Resources.Eliminar_32x32
+        Me.ToolStripLabel4.Name = "ToolStripLabel4"
+        Me.ToolStripLabel4.Size = New System.Drawing.Size(187, 22)
+        Me.ToolStripLabel4.Text = "ctrl + E para Eliminar más enter"
+        '
+        'ToolStripSeparator5
+        '
+        Me.ToolStripSeparator5.Name = "ToolStripSeparator5"
+        Me.ToolStripSeparator5.Size = New System.Drawing.Size(6, 25)
+        '
+        'ToolStripLabel6
+        '
+        Me.ToolStripLabel6.Image = Global.Catación_Anei.My.Resources.Resources.Cancelar_32x32
+        Me.ToolStripLabel6.Name = "ToolStripLabel6"
+        Me.ToolStripLabel6.Size = New System.Drawing.Size(87, 22)
+        Me.ToolStripLabel6.Text = "esc cancelar"
+        '
         'frmProductores
         '
         Me.AcceptButton = Me.btnNuevoProductorYGuardar
@@ -773,6 +902,7 @@ Partial Class frmProductores
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(992, 641)
+        Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.GroupBox1)
@@ -782,6 +912,7 @@ Partial Class frmProductores
         Me.Font = New System.Drawing.Font("Trebuchet MS", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.KeyPreview = True
         Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.MinimumSize = New System.Drawing.Size(1008, 680)
         Me.Name = "frmProductores"
@@ -813,6 +944,8 @@ Partial Class frmProductores
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ToolStrip1.ResumeLayout(False)
+        Me.ToolStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -872,4 +1005,20 @@ Partial Class frmProductores
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents btnCiudad As System.Windows.Forms.Button
+    Friend WithEvents ToolTip1 As System.Windows.Forms.ToolTip
+    Friend WithEvents ToolTip2 As System.Windows.Forms.ToolTip
+    Friend WithEvents ToolTip3 As System.Windows.Forms.ToolTip
+    Friend WithEvents ToolStrip1 As System.Windows.Forms.ToolStrip
+    Friend WithEvents ToolStripLabel1 As System.Windows.Forms.ToolStripLabel
+    Friend WithEvents ToolStripSeparator1 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents ToolStripLabel3 As System.Windows.Forms.ToolStripLabel
+    Friend WithEvents ToolStripSeparator2 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents ToolStripLabel2 As System.Windows.Forms.ToolStripLabel
+    Friend WithEvents ToolStripLabel4 As System.Windows.Forms.ToolStripLabel
+    Friend WithEvents btnCancelar As System.Windows.Forms.Button
+    Friend WithEvents ToolStripLabel5 As System.Windows.Forms.ToolStripLabel
+    Friend WithEvents ToolStripSeparator3 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents ToolStripSeparator4 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents ToolStripSeparator5 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents ToolStripLabel6 As System.Windows.Forms.ToolStripLabel
 End Class

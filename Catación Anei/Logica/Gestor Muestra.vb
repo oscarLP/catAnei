@@ -28,22 +28,34 @@ Public Class Gestor_Muestra
         End If
     End Function
 
+    Public Function Modificar_Muestra(codigo, nombre, descripcion, especie, anio_cosecha, humedad, fk_codigo_ciudad, fk_codigo_productor, fk_codigo_proveedor) As Boolean
+        Dim i As Integer
+        Try
+            db.Conexion.Open()
+            Dim sql As String = "UPDATE MUESTRA SET codigo = '" & codigo & "', nombre = '" & nombre & "', descripcion = '" & descripcion & "', especie = '" & especie &
+                                "', anio_cosecha = '" & anio_cosecha & "', humedad = '" & humedad & "', fk_codigo_ciudad = '" & fk_codigo_ciudad & "', fk_codigo_productor = '" & fk_codigo_productor & "', " +
+                                "fk_codigo_proveedor = '" & fk_codigo_proveedor & "' WHERE codigo = '" & codigo & "'"
+            Comando = New SqlCommand(sql, db.Conexion)
+            i = Comando.ExecuteNonQuery()
+            db.Conexion.Close()
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+            db.Conexion.Close()
+        End Try
+        If i > 0 Then
+            Return True
+        Else
+            Return False
+        End If
+    End Function
+
     'GENERAR UN CODIGO AL AZAR
     Public Function Codigo_Azar() As String
         Dim varCodigo As String
 
         Randomize() 'Inicia el generador de numeros aleatorios
         varCodigo = CStr(Int((9999999 * Rnd() + 1))) 'La variable 'varCodigo' obtiene un numero aleatorio
-
-        Return varCodigo
-    End Function
-
-    'GENERAR EL CODIGO DE EXTRUTUCTURA DE IDENTIFICADOR
-    Public Function Digitos_Azar() As String
-        Dim varCodigo As String
-
-        Randomize() 'Inicia el generador de numeros aleatorios
-        varCodigo = CStr(Int((999 * Rnd() + 1))) 'La variable 'varCodigo' obtiene un numero aleatorio
 
         Return varCodigo
     End Function
@@ -92,7 +104,7 @@ Public Class Gestor_Muestra
         Dim Tabla As New DataTable
         Try
             Dim da As New SqlDataAdapter("SELECT codigo, valor_identificado 'Muestras' " +
-                                         "FROM MUESTRA WHERE fk_codigo_sesion = '" & Codigo_Sesion & "'", db.Conexion)
+                                         "FROM MUESTRA WHERE fk_codigo_sesion = '" & Codigo_Sesion & "' ORDER BY valor_identificado", db.Conexion)
             da.Fill(Tabla)
         Catch ex As Exception
             MsgBox(ex.Message)
@@ -100,7 +112,7 @@ Public Class Gestor_Muestra
         Return Tabla
     End Function
 
-    Public Function Buscar_Muestra() As DataTable 'Devuelve una tabla el registro de la muestra seleccionada
+    Public Function Buscar_Muestra(cod_muestra) As DataTable 'Devuelve una tabla el registro de la muestra seleccionada
         Dim Tabla As New DataTable
         Try
             'Dim da As New SqlDataAdapter("SELECT M.codigo 'cod_muestra', M.valor_identificado 'valor_identificado', M.nombre 'nombre_muestra', M.descripcion 'descripcion', " +
@@ -109,9 +121,9 @@ Public Class Gestor_Muestra
             '                             "WHERE M.fk_codigo_sesion = S.codigo OR M.fk_codigo_ciudad = C.codigo OR M.fk_codigo_productor = P.codigo OR M.fk_codigo_proveedor = Q.codigo", db.Conexion)
 
             Dim da As New SqlDataAdapter("SELECT M.codigo 'cod_muestra', M.valor_identificado 'valor_identificado', M.nombre 'nombre_muestra', M.descripcion 'descripcion', " +
-                                         "M.especie 'especie', M.anio_cosecha 'anio_cosecha', M.humedad 'humedad', S.codigo 'cod_sesion', C.nombre 'ciudad' " +
+                                         "M.especie 'especie', M.anio_cosecha 'anio_cosecha', M.humedad 'humedad', S.codigo 'cod_sesion', C.nombre 'ciudad', M.fk_codigo_productor 'productor', M.fk_codigo_proveedor 'proveedor' " +
                                          "FROM MUESTRA M, SESION_CATADO S, CIUDAD C " +
-                                         "WHERE M.fk_codigo_sesion = S.codigo AND M.fk_codigo_ciudad = C.codigo", db.Conexion)
+                                         "WHERE M.fk_codigo_sesion = S.codigo AND M.fk_codigo_ciudad = C.codigo AND M.codigo = '" & cod_muestra & "'", db.Conexion)
             da.Fill(Tabla)
         Catch ex As Exception
             MsgBox(ex.Message)
@@ -171,6 +183,86 @@ Public Class Gestor_Muestra
             MsgBox(ex.Message)
         End Try
         Return Tabla
+    End Function
+
+    Public Function Cedula_Productor(Codigo_Productor) As String 'Esta funcion devuelve el protocolo de catacion para la sesion
+        Dim Datos As New BindingSource
+        Try
+            db.Conexion.Open()
+            Dim Tabla As New DataTable
+            Dim da As New SqlDataAdapter("SELECT cedula FROM PERSONA WHERE codigo = '" & Codigo_Productor & "'", db.Conexion)
+            da.Fill(Tabla)
+            Datos.DataSource = Tabla
+            db.Conexion.Close()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+            db.Conexion.Close()
+        End Try
+        Return Datos.Item(0)("cedula")
+    End Function
+
+    Public Function Cedula_Proveedor(Codigo_Proveedor) As String 'Esta funcion devuelve el protocolo de catacion para la sesion
+        Dim Datos As New BindingSource
+        Try
+            db.Conexion.Open()
+            Dim Tabla As New DataTable
+            Dim da As New SqlDataAdapter("SELECT cedula FROM PERSONA WHERE codigo = '" & Codigo_Proveedor & "'", db.Conexion)
+            da.Fill(Tabla)
+            Datos.DataSource = Tabla
+            db.Conexion.Close()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+            db.Conexion.Close()
+        End Try
+        Return Datos.Item(0)("cedula")
+    End Function
+
+    Public Function Codigo_Productor(Cedula) As String 'Esta funcion devuelve el protocolo de catacion para la sesion
+        Dim Datos As New BindingSource
+        Try
+            db.Conexion.Open()
+            Dim Tabla As New DataTable
+            Dim da As New SqlDataAdapter("SELECT codigo FROM PERSONA WHERE cedula = '" & Cedula & "'", db.Conexion)
+            da.Fill(Tabla)
+            Datos.DataSource = Tabla
+            db.Conexion.Close()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+            db.Conexion.Close()
+        End Try
+        Return Datos.Item(0)("codigo")
+    End Function
+
+    Public Function Codigo_Proveedor(Cedula) As String 'Esta funcion devuelve el protocolo de catacion para la sesion
+        Dim Datos As New BindingSource
+        Try
+            db.Conexion.Open()
+            Dim Tabla As New DataTable
+            Dim da As New SqlDataAdapter("SELECT codigo FROM PERSONA WHERE cedula = '" & Cedula & "'", db.Conexion)
+            da.Fill(Tabla)
+            Datos.DataSource = Tabla
+            db.Conexion.Close()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+            db.Conexion.Close()
+        End Try
+        Return Datos.Item(0)("codigo")
+    End Function
+
+    Public Function Codigo_Ciudad(Nombre) As String 'Esta funcion devuelve el protocolo de catacion para la sesion
+        Dim Datos As New BindingSource
+        Try
+            db.Conexion.Open()
+            Dim Tabla As New DataTable
+            Dim da As New SqlDataAdapter("SELECT codigo FROM CIUDAD WHERE nombre = '" & Nombre & "'", db.Conexion)
+            da.Fill(Tabla)
+            Datos.DataSource = Tabla
+            db.Conexion.Close()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+            db.Conexion.Close()
+        End Try
+        Return Datos.Item(0)("codigo")
     End Function
 
     'Public Function Guardar_Muestra(codigo, valor_identificado, nombre, descripcion, especie, anio_cosecha, humedad, fk_codigo_sesion, fk_codigo_ciudad, fk_codigo_productor, fk_codigo_proveedor) As Boolean

@@ -25,14 +25,14 @@ Partial Class frmBienvenido
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmBienvenido))
         Me.lbAdministrador = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.btnIniciarSesion = New System.Windows.Forms.Button()
+        Me.btnCrearPerfil = New System.Windows.Forms.Button()
+        Me.btnCancelar = New System.Windows.Forms.Button()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.tpIntroduccion = New System.Windows.Forms.TabPage()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.tpConfiguracion = New System.Windows.Forms.TabPage()
         Me.tpTutorial = New System.Windows.Forms.TabPage()
-        Me.btnIniciarSesion = New System.Windows.Forms.Button()
-        Me.btnCrearPerfil = New System.Windows.Forms.Button()
-        Me.btnCancelar = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.GroupBox2.SuspendLayout()
         Me.TabControl1.SuspendLayout()
@@ -68,64 +68,6 @@ Partial Class frmBienvenido
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Opciones"
-        '
-        'TabControl1
-        '
-        Me.TabControl1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TabControl1.Controls.Add(Me.tpIntroduccion)
-        Me.TabControl1.Controls.Add(Me.tpConfiguracion)
-        Me.TabControl1.Controls.Add(Me.tpTutorial)
-        Me.TabControl1.Font = New System.Drawing.Font("Trebuchet MS", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TabControl1.Location = New System.Drawing.Point(35, 81)
-        Me.TabControl1.Name = "TabControl1"
-        Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(925, 461)
-        Me.TabControl1.TabIndex = 2
-        '
-        'tpIntroduccion
-        '
-        Me.tpIntroduccion.Controls.Add(Me.TextBox1)
-        Me.tpIntroduccion.Location = New System.Drawing.Point(4, 27)
-        Me.tpIntroduccion.Name = "tpIntroduccion"
-        Me.tpIntroduccion.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpIntroduccion.Size = New System.Drawing.Size(917, 430)
-        Me.tpIntroduccion.TabIndex = 0
-        Me.tpIntroduccion.Text = "Introducción"
-        Me.tpIntroduccion.UseVisualStyleBackColor = True
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox1.Location = New System.Drawing.Point(6, 6)
-        Me.TextBox1.Multiline = True
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.ReadOnly = True
-        Me.TextBox1.Size = New System.Drawing.Size(905, 418)
-        Me.TextBox1.TabIndex = 1
-        Me.TextBox1.Text = resources.GetString("TextBox1.Text")
-        '
-        'tpConfiguracion
-        '
-        Me.tpConfiguracion.Location = New System.Drawing.Point(4, 27)
-        Me.tpConfiguracion.Name = "tpConfiguracion"
-        Me.tpConfiguracion.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpConfiguracion.Size = New System.Drawing.Size(960, 445)
-        Me.tpConfiguracion.TabIndex = 1
-        Me.tpConfiguracion.Text = "Configuración"
-        Me.tpConfiguracion.UseVisualStyleBackColor = True
-        '
-        'tpTutorial
-        '
-        Me.tpTutorial.Location = New System.Drawing.Point(4, 27)
-        Me.tpTutorial.Name = "tpTutorial"
-        Me.tpTutorial.Size = New System.Drawing.Size(960, 445)
-        Me.tpTutorial.TabIndex = 2
-        Me.tpTutorial.Text = "Tutorial"
-        Me.tpTutorial.UseVisualStyleBackColor = True
         '
         'btnIniciarSesion
         '
@@ -170,6 +112,65 @@ Partial Class frmBienvenido
         Me.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnCancelar.UseVisualStyleBackColor = True
         '
+        'TabControl1
+        '
+        Me.TabControl1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TabControl1.Controls.Add(Me.tpIntroduccion)
+        Me.TabControl1.Controls.Add(Me.tpConfiguracion)
+        Me.TabControl1.Controls.Add(Me.tpTutorial)
+        Me.TabControl1.Font = New System.Drawing.Font("Trebuchet MS", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TabControl1.Location = New System.Drawing.Point(35, 81)
+        Me.TabControl1.Name = "TabControl1"
+        Me.TabControl1.SelectedIndex = 0
+        Me.TabControl1.Size = New System.Drawing.Size(925, 461)
+        Me.TabControl1.TabIndex = 2
+        '
+        'tpIntroduccion
+        '
+        Me.tpIntroduccion.AutoScroll = True
+        Me.tpIntroduccion.Controls.Add(Me.TextBox1)
+        Me.tpIntroduccion.Location = New System.Drawing.Point(4, 27)
+        Me.tpIntroduccion.Name = "tpIntroduccion"
+        Me.tpIntroduccion.Padding = New System.Windows.Forms.Padding(3)
+        Me.tpIntroduccion.Size = New System.Drawing.Size(917, 430)
+        Me.tpIntroduccion.TabIndex = 0
+        Me.tpIntroduccion.Text = "Introducción"
+        Me.tpIntroduccion.UseVisualStyleBackColor = True
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox1.Location = New System.Drawing.Point(34, 23)
+        Me.TextBox1.Multiline = True
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(845, 385)
+        Me.TextBox1.TabIndex = 1
+        Me.TextBox1.Text = resources.GetString("TextBox1.Text")
+        '
+        'tpConfiguracion
+        '
+        Me.tpConfiguracion.Location = New System.Drawing.Point(4, 27)
+        Me.tpConfiguracion.Name = "tpConfiguracion"
+        Me.tpConfiguracion.Padding = New System.Windows.Forms.Padding(3)
+        Me.tpConfiguracion.Size = New System.Drawing.Size(917, 430)
+        Me.tpConfiguracion.TabIndex = 1
+        Me.tpConfiguracion.Text = "Configuración"
+        Me.tpConfiguracion.UseVisualStyleBackColor = True
+        '
+        'tpTutorial
+        '
+        Me.tpTutorial.Location = New System.Drawing.Point(4, 27)
+        Me.tpTutorial.Name = "tpTutorial"
+        Me.tpTutorial.Size = New System.Drawing.Size(917, 430)
+        Me.tpTutorial.TabIndex = 2
+        Me.tpTutorial.Text = "Tutorial"
+        Me.tpTutorial.UseVisualStyleBackColor = True
+        '
         'PictureBox1
         '
         Me.PictureBox1.BackColor = System.Drawing.Color.White
@@ -182,6 +183,7 @@ Partial Class frmBienvenido
         '
         'frmBienvenido
         '
+        Me.AcceptButton = Me.btnCrearPerfil
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
@@ -214,8 +216,8 @@ Partial Class frmBienvenido
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
     Friend WithEvents TabControl1 As System.Windows.Forms.TabControl
     Friend WithEvents tpIntroduccion As System.Windows.Forms.TabPage
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents tpConfiguracion As System.Windows.Forms.TabPage
     Friend WithEvents tpTutorial As System.Windows.Forms.TabPage
     Friend WithEvents btnIniciarSesion As System.Windows.Forms.Button
+    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
 End Class

@@ -9,11 +9,42 @@
     Private TablaProveedores As New BindingSource
 
     Private Sub frmMuestra_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Iniciar_Formulario()
         Cargar_Ciudades()
+        Iniciar_Formulario()
         CargarTabla_Productores()
         CargarTabla_Proveedor()
         Lipiar_Formulario()
+    End Sub
+
+    Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
+        Dim varCod_Muestra As String
+        Dim varCod_Productor As String
+        Dim varCod_Proveedor As String
+        Dim varCod_Ciudad As String
+        Dim i As Boolean
+        Dim row As DataGridViewRow = dgMuestras.CurrentRow
+        varCod_Muestra = CStr(row.Cells("codigo").Value)
+
+        If txtProductor.Text <> "" Then
+            varCod_Productor = Fun_Muestra.Codigo_Productor(txtProductor.Text)
+        Else
+            varCod_Productor = txtProductor.Text
+        End If
+
+        If txtProveedor.Text <> "" Then
+            varCod_Proveedor = Fun_Muestra.Codigo_Proveedor(txtProveedor.Text)
+        Else
+            varCod_Proveedor = txtProveedor.Text
+        End If
+        varCod_Ciudad = Fun_Muestra.Codigo_Ciudad(cbCiudad.Text)
+
+        i = Fun_Muestra.Modificar_Muestra(varCod_Muestra, txtNombre.Text, txtDescripcion.Text, txtEspecie.Text, cbAnio_Cosecha.Text, nuHumedad.Value, varCod_Ciudad, varCod_Productor, varCod_Proveedor)
+
+        If i = True Then
+            MsgBox("Guardo correctamente", vbInformation, "Confirmación")
+        Else
+            MsgBox("Error al Modificar. Vuelva a intentarlo", vbCritical, "Seguridad")
+        End If
     End Sub
 
     Sub Iniciar_Formulario() 'Carga todos los registros de sesiones de catacion en la tabla
@@ -38,12 +69,14 @@
         cbBuscar_Productor.Checked = False
         Desbilitar_Tabla_Productor()
         dgLista_Productores.ClearSelection() 'Cancelo la seleccion de la tabla
+        gbProductor.Visible = False
 
         'Proveedor
         cbBuscarPor_Proveedores.Text = "Cedula"
         cbBuscar_Proveedor.Checked = False
         Desbilitar_Tabla_Proveedor()
         dgLista_Proveedores.ClearSelection() 'Cancelo la seleccion de la tabla
+        gbProveedor.Visible = False
     End Sub
 
     Sub Desbilitar_Tabla_Productor()
@@ -64,6 +97,7 @@
 
     Private Sub cbBuscar_Productor_CheckedChanged(sender As Object, e As EventArgs) Handles cbBuscar_Productor.CheckedChanged
         If cbBuscar_Productor.Checked = True Then
+            gbProductor.Visible = True
             Habilitar_Tabla_Productor()
             dgLista_Productores.ClearSelection() 'Cancelo la seleccion de la tabla
             txtBuscar_Productor.Focus()
@@ -71,11 +105,13 @@
             Desbilitar_Tabla_Productor()
             txtProductor.Clear()
             dgLista_Productores.ClearSelection() 'Cancelo la seleccion de la tabla
+            gbProductor.Visible = False
         End If
     End Sub
 
     Private Sub cbBuscar_Proveedor_CheckedChanged(sender As Object, e As EventArgs) Handles cbBuscar_Proveedor.CheckedChanged
         If cbBuscar_Proveedor.Checked = True Then
+            gbProveedor.Visible = True
             Habilitar_Tabla_Proveedor()
             dgLista_Proveedores.ClearSelection() 'Cancelo la seleccion de la tabla
             txtBuscar_Proveedor.Focus()
@@ -83,6 +119,7 @@
             Desbilitar_Tabla_Proveedor()
             txtProveedor.Clear()
             dgLista_Proveedores.ClearSelection() 'Cancelo la seleccion de la tabla
+            gbProveedor.Visible = False
         End If
     End Sub
 
@@ -131,10 +168,19 @@
     'GRILLA: MUESTRAS - Evento de la grilla para mostrar los identificadores de las muestras selecciona de la sesion de catación
     Private Sub dgMuestras_CellEnter(sender As Object, e As DataGridViewCellEventArgs) Handles dgMuestras.CellEnter
         Dim varCod_Muestra As String
+        Dim cod_Productor As String
+        Dim cod_Proveedor As String
+
+        'Desactiva y oculta el buscar proveedor y productor
+        cbBuscar_Productor.Checked = False
+        cbBuscar_Proveedor.Checked = False
+        gbProductor.Visible = False
+        gbProveedor.Visible = False
+
         Dim row As DataGridViewRow = dgMuestras.CurrentRow
         varCod_Muestra = CStr(row.Cells("codigo").Value)
         Try
-            RegistroSeleccionado.DataSource = Fun_Muestra.Buscar_Muestra() 'Obtiene la muestra de la sesion seleccionada
+            RegistroSeleccionado.DataSource = Fun_Muestra.Buscar_Muestra(varCod_Muestra) 'Obtiene la muestra de la sesion seleccionada
             RegistroSeleccionado.Filter = "cod_muestra = '" & varCod_Muestra & "'"
 
             lbMuestra.Text = RegistroSeleccionado.Item(0)("valor_identificado")
@@ -142,13 +188,30 @@
             txtDescripcion.Text = RegistroSeleccionado.Item(0)("descripcion")
             txtEspecie.Text = RegistroSeleccionado.Item(0)("especie")
             cbAnio_Cosecha.Text = RegistroSeleccionado.Item(0)("anio_cosecha")
-            nuHumedad.Text = RegistroSeleccionado.Item(0)("humedad")
+            If RegistroSeleccionado.Item(0)("humedad") <> "" Then
+                nuHumedad.Value = RegistroSeleccionado.Item(0)("humedad")
+            Else
+                nuHumedad.Value = Nothing
+            End If
             cbCiudad.Text = RegistroSeleccionado.Item(0)("ciudad")
-            'txtProductor.Text = RegistroSeleccionado.Item(0)("finca_productor")
-            'txtProveedor.Text = RegistroSeleccionado.Item(0)("finca_proveedor")
+            cod_Productor = RegistroSeleccionado.Item(0)("productor")
+            cod_Proveedor = RegistroSeleccionado.Item(0)("proveedor")
+
+            If cod_Productor <> "" Then 'Si el codigo del productor ya esta registrado se coloca en el campo 'Productor' la cedula
+                txtProductor.Text = Fun_Muestra.Cedula_Productor(cod_Productor)
+            Else
+                txtProductor.Text = cod_Productor
+            End If
+
+            If cod_Proveedor <> "" Then 'Si el codigo del productor ya esta registrado se coloca en el campo 'Productor' la cedula
+                txtProveedor.Text = Fun_Muestra.Cedula_Proveedor(cod_Proveedor)
+            Else
+                txtProveedor.Text = cod_Proveedor
+            End If
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
+        
     End Sub
 
 

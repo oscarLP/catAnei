@@ -27,8 +27,8 @@
             Tabla_SesionesCatacion.Filter = "Fecha like '%" & txtBuscar.Text & "%'"
         ElseIf txtBuscarPor.Text = "Hora" Then
             Tabla_SesionesCatacion.Filter = "Hora like '%" & txtBuscar.Text & "%'"
-            'ElseIf txtBuscarPor.Text = "Descripción" Then
-            '    Tabla_SesionesCatacion.Filter = "Descripción like '" & txtBuscar.Text & "%'"
+        ElseIf txtBuscarPor.Text = "Descripción" Then
+            Tabla_SesionesCatacion.Filter = "Descripción like '" & txtBuscar.Text & "%'"
         ElseIf txtBuscarPor.Text = "Lugar" Then
             Tabla_SesionesCatacion.Filter = "Lugar like '" & txtBuscar.Text & "%'"
         ElseIf txtBuscarPor.Text = "Identificador" Then
@@ -153,6 +153,7 @@
         Tabla_SesionesCatacion.DataSource = Fun_SesionCatacion.Tabla_SesionCatado()
         dgListaSesionesCataciones.DataSource = Tabla_SesionesCatacion
         dgListaSesionesCataciones.Columns("cod_sesion").Visible = False
+        dgListaSesionesCataciones.Columns("Descripción").Visible = False
     End Sub
 
     Sub Contar_Registros() 'Cuenta los registros filtrados en la tabla

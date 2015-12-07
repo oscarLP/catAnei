@@ -13,6 +13,7 @@
         Total_Registrados() 'Muestra 'Total' el numero de registros
         Des_Campos() 'Desabilita los campos si no se ha registrado ningun registro
         Desibilitar_Modificar_Eliminar()
+        btnCancelar.Enabled = False
         dgLista_Proveedores.ClearSelection()
     End Sub
 
@@ -29,6 +30,7 @@
             Desabilitar_Modificar_Eliminar()
             Mod_Nuevo_Productor()
             LimpiarCampos()
+            btnCancelar.Enabled = True
             txtCedula.Focus() 'Da foco de entrada al campo 'Cedula'
         ElseIf btnNuevoProveedorYGuardar.Text = "Guardar" Then
             If txtCedula.TextLength = 0 Or txtNombre.TextLength = 0 Or txtApellido.TextLength = 0 Or cbCiudad.Text = "" Then
@@ -44,6 +46,7 @@
                     'Modificar boton Guardar
                     btnNuevoProveedorYGuardar.Text = "Nuevo proveedor"
                     btnNuevoProveedorYGuardar.Image = My.Resources.Nuevo_catador_32x32 'Coloca una imagen el boton 'Guardar'
+                    btnCancelar.Enabled = False
                     Des_Campos()
                     LimpiarCampos()
                     CargarGrilla()
@@ -64,6 +67,7 @@
         btnEliminar.Enabled = False
         btnModificar.Text = "Aceptar"
         Me.AcceptButton = btnModificar
+        btnCancelar.Enabled = True
         btnNuevoProveedorYGuardar.Focus()
     End Sub
 
@@ -73,6 +77,7 @@
         btnEliminar.Enabled = True
         btnModificar.Text = "Modificar"
         Me.AcceptButton = btnNuevoProveedorYGuardar
+        btnCancelar.Enabled = False
         txtBuscar.Focus()
     End Sub
 
@@ -267,6 +272,7 @@
                 Else
                     btnModificar.Enabled = False
                     btnEliminar.Enabled = False
+                    btnCancelar.Enabled = False
                     txtCedula.Focus()
                 End If
             ElseIf btnModificar.Text = "Aceptar" Then 'Esto quiere decir que se esta llevando a cabo la modificacion de un catador
@@ -410,5 +416,54 @@
 
     Private Sub txtTelefono_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtTelefono.KeyPress
         Ingresar_SoloNumeros(e)
+    End Sub
+
+    Private Sub frmProveedores_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown
+        If e.Control And e.KeyCode.ToString = "B" Then
+            txtBuscar.Focus()
+        End If
+
+        If e.Control And e.KeyCode.ToString = "M" Then
+            btnModificar.Focus()
+        End If
+
+        If e.Control And e.KeyCode.ToString = "E" Then
+            btnEliminar.Focus()
+        End If
+
+        If e.Control And e.KeyCode.ToString = "N" Then
+            btnNuevoProveedorYGuardar.Focus()
+        End If
+
+        If e.KeyCode.Escape And btnCancelar.Enabled = True Then
+            Boton_Cancelar()
+        End If
+    End Sub
+
+    Sub Boton_Cancelar()
+        If btnNuevoProveedorYGuardar.Text = "Guardar" Then
+            btnNuevoProveedorYGuardar.Text = "Nuevo proveedor"
+            Des_Campos()
+            Desabilitar_Modificar_Eliminar()
+            btnNuevoProveedorYGuardar.Image = My.Resources.Nuevo_catador_32x32
+            btnCancelar.Enabled = False
+
+            erValidarError.SetError(txtCedula, Nothing)
+            txtCedula.BackColor = SystemColors.Window
+            erValidarError.SetError(txtNombre, Nothing)
+            txtNombre.BackColor = SystemColors.Window
+            erValidarError.SetError(txtApellido, Nothing)
+            txtApellido.BackColor = SystemColors.Window
+
+            txtBuscar.Focus()
+        End If
+
+        If btnModificar.Text = "Aceptar" Then
+            Despues_Modificar()
+        End If
+    End Sub
+
+    Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
+        Boton_Cancelar()
     End Sub
 End Class

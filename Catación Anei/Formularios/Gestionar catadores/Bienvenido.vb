@@ -29,4 +29,8 @@
         Me.Close()
         frmIniciarSesion.Close()
     End Sub
+
+    'Private Sub frmBienvenido_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+    '    frmIniciarSesion.Close()
+    'End Sub
 End Class

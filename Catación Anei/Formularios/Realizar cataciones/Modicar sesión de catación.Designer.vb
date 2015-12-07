@@ -40,6 +40,7 @@ Partial Class frmModicarSesionCatacion
         Me.rbLetras = New System.Windows.Forms.RadioButton()
         Me.rbDigitos = New System.Windows.Forms.RadioButton()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.Label17 = New System.Windows.Forms.Label()
         Me.btnCiudad = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.cbLugar = New System.Windows.Forms.ComboBox()
@@ -50,7 +51,6 @@ Partial Class frmModicarSesionCatacion
         Me.dtFechaInicio = New System.Windows.Forms.DateTimePicker()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label17 = New System.Windows.Forms.Label()
         Me.erValidarError = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.GroupBox1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -231,10 +231,10 @@ Partial Class frmModicarSesionCatacion
         Me.rbLetras.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.rbLetras.Location = New System.Drawing.Point(10, 22)
         Me.rbLetras.Name = "rbLetras"
-        Me.rbLetras.Size = New System.Drawing.Size(157, 26)
+        Me.rbLetras.Size = New System.Drawing.Size(65, 26)
         Me.rbLetras.TabIndex = 1
         Me.rbLetras.TabStop = True
-        Me.rbLetras.Text = "Letra (Ej. A, B, C)"
+        Me.rbLetras.Text = "Letra"
         Me.rbLetras.UseVisualStyleBackColor = True
         '
         'rbDigitos
@@ -244,9 +244,9 @@ Partial Class frmModicarSesionCatacion
         Me.rbDigitos.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.rbDigitos.Location = New System.Drawing.Point(201, 22)
         Me.rbDigitos.Name = "rbDigitos"
-        Me.rbDigitos.Size = New System.Drawing.Size(157, 26)
+        Me.rbDigitos.Size = New System.Drawing.Size(77, 26)
         Me.rbDigitos.TabIndex = 2
-        Me.rbDigitos.Text = "3 Digitos (Ej. 542)"
+        Me.rbDigitos.Text = "Digitos"
         Me.rbDigitos.UseVisualStyleBackColor = True
         '
         'GroupBox4
@@ -264,6 +264,17 @@ Partial Class frmModicarSesionCatacion
         Me.GroupBox4.TabIndex = 2
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Descripción y lugar"
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label17.ForeColor = System.Drawing.Color.Red
+        Me.Label17.Location = New System.Drawing.Point(4, 57)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(16, 22)
+        Me.Label17.TabIndex = 59
+        Me.Label17.Text = "*"
         '
         'btnCiudad
         '
@@ -377,17 +388,6 @@ Partial Class frmModicarSesionCatacion
         Me.Label8.Size = New System.Drawing.Size(117, 22)
         Me.Label8.TabIndex = 11
         Me.Label8.Text = "Hora de inicio:"
-        '
-        'Label17
-        '
-        Me.Label17.AutoSize = True
-        Me.Label17.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.ForeColor = System.Drawing.Color.Red
-        Me.Label17.Location = New System.Drawing.Point(4, 57)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(16, 22)
-        Me.Label17.TabIndex = 59
-        Me.Label17.Text = "*"
         '
         'erValidarError
         '

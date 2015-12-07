@@ -276,6 +276,9 @@
     <EmbeddedResource Include="Formularios\Gestionar catadores\Ciudad.resx">
       <DependentUpon>Ciudad.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Gestionar catadores\Gestionar catadores.af.resx">
+      <DependentUpon>Gestionar catadores.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Gestionar catadores\Gestionar catadores.resx">
       <DependentUpon>Gestionar catadores.vb</DependentUpon>
     </EmbeddedResource>

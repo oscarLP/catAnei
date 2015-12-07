@@ -13,6 +13,7 @@
         Total_Registrados() 'Muestra 'Total' el numero de registros
         Des_Campos() 'Desabilita los campos si no se ha registrado ningun registro
         Desabilitar_Modificar_Eliminar()
+        btnCancelar.Enabled = False
         dgListaCatadores.ClearSelection() 'Cancelo la seleccion de la tabla
     End Sub
 
@@ -29,6 +30,7 @@
             Desabilitar_Modificar_Eliminar()
             Mod_Nuevo_Catador()
             LimpiarCampos()
+            btnCancelar.Enabled = True
             txtNombreUsuario.Focus() 'Da foco de entrada al campo 'Usuario'
         ElseIf btnNuevoCatadorYGuardar.Text = "Guardar" Then
             If txtNombreUsuario.TextLength = 0 Or txtContraseña.TextLength = 0 Or txtConfirmarContraseña.TextLength = 0 Or txtCedula.TextLength = 0 Or txtNombre.TextLength = 0 Or txtApellido.TextLength = 0 Then
@@ -53,7 +55,7 @@
                     'Modificar boton Guardar
                     btnNuevoCatadorYGuardar.Text = "Nuevo catador"
                     btnNuevoCatadorYGuardar.Image = My.Resources.Nuevo_catador_32x32 'Coloca una imagen el boton 'Guardar'
-
+                    btnCancelar.Enabled = False
                     Des_Campos()
                     LimpiarCampos()
                     CargarGrilla()
@@ -74,6 +76,7 @@
         btnEliminar.Enabled = False
         btnModificar.Text = "Aceptar"
         Me.AcceptButton = btnModificar
+        btnCancelar.Enabled = True
         txtNombreUsuario.Focus()
     End Sub
 
@@ -83,6 +86,7 @@
         btnEliminar.Enabled = True
         btnModificar.Text = "Modificar"
         Me.AcceptButton = btnNuevoCatadorYGuardar
+        btnCancelar.Enabled = False
         txtBuscar.Focus()
     End Sub
 
@@ -277,6 +281,7 @@
                 Else
                     btnModificar.Enabled = False
                     btnEliminar.Enabled = False
+                    btnCancelar.Enabled = False
                     txtNombreUsuario.Focus()
                 End If
             ElseIf btnModificar.Text = "Aceptar" Then 'Esto quiere decir que se esta llevando a cabo la modificacion de un catador
@@ -463,5 +468,60 @@
         'Else
         '    e.Handled = True
         'End If
+    End Sub
+
+    Private Sub frmGestionarCatadores_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown
+        If e.Control And e.KeyCode.ToString = "B" Then
+            txtBuscar.Focus()
+        End If
+
+        If e.Control And e.KeyCode.ToString = "M" Then
+            btnModificar.Focus()
+        End If
+
+        If e.Control And e.KeyCode.ToString = "E" Then
+            btnEliminar.Focus()
+        End If
+
+        If e.Control And e.KeyCode.ToString = "N" Then
+            btnNuevoCatadorYGuardar.Focus()
+        End If
+
+        If e.KeyCode.Escape And btnCancelar.Enabled = True Then
+            Boton_Cancelar()
+        End If
+    End Sub
+
+    Sub Boton_Cancelar()
+        If btnNuevoCatadorYGuardar.Text = "Guardar" Then
+            btnNuevoCatadorYGuardar.Text = "Nuevo catador"
+            Des_Campos()
+            Desabilitar_Modificar_Eliminar()
+            btnNuevoCatadorYGuardar.Image = My.Resources.Nuevo_catador_32x32
+            btnCancelar.Enabled = False
+
+            erValidarError.SetError(txtNombreUsuario, Nothing)
+            txtNombreUsuario.BackColor = SystemColors.Window
+            erValidarError.SetError(txtContraseña, Nothing)
+            txtContraseña.BackColor = SystemColors.Window
+            erValidarError.SetError(txtConfirmarContraseña, Nothing)
+            txtConfirmarContraseña.BackColor = SystemColors.Window
+            erValidarError.SetError(txtCedula, Nothing)
+            txtCedula.BackColor = SystemColors.Window
+            erValidarError.SetError(txtNombre, Nothing)
+            txtNombre.BackColor = SystemColors.Window
+            erValidarError.SetError(txtApellido, Nothing)
+            txtApellido.BackColor = SystemColors.Window
+
+            txtBuscar.Focus()
+        End If
+
+        If btnModificar.Text = "Aceptar" Then
+            Despues_Modificar()
+        End If
+    End Sub
+
+    Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
+        Boton_Cancelar()
     End Sub
 End Class

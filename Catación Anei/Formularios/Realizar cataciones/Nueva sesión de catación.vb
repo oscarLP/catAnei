@@ -4,9 +4,8 @@
     Private Codigo_SesionCatado As String
 
     Private Sub frmNuevaSesionCatacion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        tmFecha.Start()
-        LimpiarCampos()
         Cargar_Ciudades()
+        LimpiarCampos()
     End Sub
 
     'BOTON GUARDAR
@@ -21,7 +20,7 @@
 
             Codigo_SesionCatado = Fun_SesionCatacion.Codigo_Azar() 'Obtiene un codigo al azar para luego guardarlo
             Codigo_Ciudad = Fun_SesionCatacion.Codigo_Ciudad(cbLugar.Text)
-            i = Fun_SesionCatacion.Guardar_SesionCatacion(Codigo_SesionCatado, lbFechaInicio.Text, lbHoraInicio.Text, txtDescripcion.Text, Codigo_Ciudad,
+            i = Fun_SesionCatacion.Guardar_SesionCatacion(Codigo_SesionCatado, dtpFecha_Inicio.Text, dtpHora_Inicio.Text, txtDescripcion.Text, Codigo_Ciudad,
                                                           IdentificadorMuestra(), ProtocoloCatacion(), nuNumeroMuestras.Value, Fun_SesionCatacion.CodigoUsuario())
             If i = True Then 'Si 'i' es igual a true quiere decir que el registro de esta sesion de catacion se guardo correctamente
                 Guardar_Identificador_Muestras()
@@ -51,15 +50,12 @@
         nuNumeroMuestras.Value = 1
         rbLetras.Checked = True
         rbArabica.Checked = True
+        dtpFecha_Inicio.Text = Now.ToLongDateString
+        dtpHora_Inicio.Text = Now.ToShortTimeString
         lbSesion.Text = frmRealizarCataciones.dgListaSesionesCataciones.RowCount + 1
         txtDescripcion.Focus()
     End Sub
 
-    'Obtiene la fecha y hora actual del sistema
-    Private Sub tmFecha_Tick(sender As Object, e As EventArgs) Handles tmFecha.Tick
-        lbHoraInicio.Text = Now.ToLongTimeString
-        lbFechaInicio.Text = Now.ToLongDateString
-    End Sub
     'Obtiene y envia el Identificador de la muestra seleccionada
     Function IdentificadorMuestra() As String
         Dim IDMuestra As String = "Letras"
@@ -104,7 +100,7 @@
         If IdentificadorMuestra() = "Digitos" Then
             For i = 0 To nuNumeroMuestras.Value - 1
                 Cod_Muestra = Fun_Muestra.Codigo_Azar()
-                Cod_Idenficacion = Fun_Muestra.Digitos_Azar()
+                Cod_Idenficacion = i + 1
 
                 Fun_Muestra.Guardar_Identificadores(Cod_Muestra, Cod_Idenficacion, Codigo_SesionCatado, Especie, Año_Cosecha, Codigo_Ciudad)
             Next

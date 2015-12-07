@@ -113,7 +113,7 @@ Public Class Gestor_Sesion_de_catacion
         Dim Tabla As New DataTable
         Try
             Dim da As New SqlDataAdapter("SELECT S.codigo 'cod_sesion', ROW_NUMBER() OVER(ORDER BY S.fecha_inicio DESC) AS #, S.fecha_inicio 'Fecha', S.hora_inicio 'Hora', " +
-                                         "C.nombre 'Lugar', S.estructura_identificador 'Identificador', " +
+                                         "S.descripcion 'Descripción', C.nombre 'Lugar', S.estructura_identificador 'Identificador', " +
                                          "S.protocolo 'Protocolo', S.numero_muestras 'Muestras', U.nombre_usuario 'Usuario' FROM SESION_CATADO S, USUARIO U, CIUDAD C " +
                                          "WHERE S.fk_codigo_usuario = U.codigo AND S.fk_codigo_ciudad = C.codigo", db.Conexion)
             da.Fill(Tabla)

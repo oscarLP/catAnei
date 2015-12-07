@@ -24,6 +24,7 @@ Partial Class frmRealizarCataciones
     Private Sub InitializeComponent()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmRealizarCataciones))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -47,7 +48,6 @@ Partial Class frmRealizarCataciones
         Me.btnCatar = New System.Windows.Forms.Button()
         Me.btnModificar = New System.Windows.Forms.Button()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -189,7 +189,7 @@ Partial Class frmRealizarCataciones
         Me.txtBuscarPor.Font = New System.Drawing.Font("Trebuchet MS", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtBuscarPor.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.txtBuscarPor.FormattingEnabled = True
-        Me.txtBuscarPor.Items.AddRange(New Object() {"Fecha", "Hora", "Lugar", "Identificador", "Protocolo", "Muestras"})
+        Me.txtBuscarPor.Items.AddRange(New Object() {"Fecha", "Hora", "Descripción", "Lugar", "Identificador", "Protocolo", "Muestras"})
         Me.txtBuscarPor.Location = New System.Drawing.Point(385, 22)
         Me.txtBuscarPor.Name = "txtBuscarPor"
         Me.txtBuscarPor.Size = New System.Drawing.Size(145, 26)
@@ -250,15 +250,23 @@ Partial Class frmRealizarCataciones
         Me.dgListaSesionesCataciones.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.dgListaSesionesCataciones.BackgroundColor = System.Drawing.Color.White
         Me.dgListaSesionesCataciones.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised
-        Me.dgListaSesionesCataciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Trebuchet MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SaddleBrown
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Trebuchet MS", 9.75!)
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgListaSesionesCataciones.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgListaSesionesCataciones.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        Me.dgListaSesionesCataciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Trebuchet MS", 9.75!)
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SaddleBrown
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgListaSesionesCataciones.DefaultCellStyle = DataGridViewCellStyle3
         Me.dgListaSesionesCataciones.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgListaSesionesCataciones.Location = New System.Drawing.Point(3, 19)
         Me.dgListaSesionesCataciones.MultiSelect = False
@@ -292,9 +300,9 @@ Partial Class frmRealizarCataciones
         Me.btnMuestra.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnMuestra.Location = New System.Drawing.Point(6, 63)
         Me.btnMuestra.Name = "btnMuestra"
-        Me.btnMuestra.Size = New System.Drawing.Size(139, 35)
+        Me.btnMuestra.Size = New System.Drawing.Size(139, 56)
         Me.btnMuestra.TabIndex = 2
-        Me.btnMuestra.Text = "Muestras"
+        Me.btnMuestra.Text = "Editar " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Muestras"
         Me.btnMuestra.UseVisualStyleBackColor = True
         '
         'btnEliminar
@@ -303,7 +311,7 @@ Partial Class frmRealizarCataciones
         Me.btnEliminar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.btnEliminar.Image = Global.Catación_Anei.My.Resources.Resources.Eliminar_32x32
         Me.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnEliminar.Location = New System.Drawing.Point(6, 145)
+        Me.btnEliminar.Location = New System.Drawing.Point(6, 166)
         Me.btnEliminar.Name = "btnEliminar"
         Me.btnEliminar.Size = New System.Drawing.Size(139, 35)
         Me.btnEliminar.TabIndex = 4
@@ -329,7 +337,7 @@ Partial Class frmRealizarCataciones
         Me.btnModificar.ForeColor = System.Drawing.Color.Green
         Me.btnModificar.Image = Global.Catación_Anei.My.Resources.Resources.Modificar_32x32
         Me.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnModificar.Location = New System.Drawing.Point(6, 104)
+        Me.btnModificar.Location = New System.Drawing.Point(6, 125)
         Me.btnModificar.Name = "btnModificar"
         Me.btnModificar.Size = New System.Drawing.Size(139, 35)
         Me.btnModificar.TabIndex = 3
@@ -345,17 +353,6 @@ Partial Class frmRealizarCataciones
         Me.PictureBox2.TabIndex = 15
         Me.PictureBox2.TabStop = False
         '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(655, 91)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(90, 22)
-        Me.Label3.TabIndex = 35
-        Me.Label3.Text = "Buscar por:"
-        '
         'frmRealizarCataciones
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 22.0!)
@@ -368,7 +365,6 @@ Partial Class frmRealizarCataciones
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.Label3)
         Me.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -413,5 +409,4 @@ Partial Class frmRealizarCataciones
     Friend WithEvents btnModificar As System.Windows.Forms.Button
     Friend WithEvents btnNuevaSesionCatacion As System.Windows.Forms.Button
     Friend WithEvents btnMuestra As System.Windows.Forms.Button
-    Friend WithEvents Label3 As System.Windows.Forms.Label
 End Class

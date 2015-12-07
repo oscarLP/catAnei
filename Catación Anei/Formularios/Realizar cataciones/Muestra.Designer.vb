@@ -113,10 +113,10 @@ Partial Class frmMuestra
         Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(57, 10)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(123, 35)
+        Me.Label1.Size = New System.Drawing.Size(204, 35)
         Me.Label1.TabIndex = 10
         Me.Label1.Tag = ""
-        Me.Label1.Text = "Muestras"
+        Me.Label1.Text = "Editar Muestras"
         '
         'dgMuestras
         '
@@ -154,7 +154,7 @@ Partial Class frmMuestra
         Me.GroupBox1.Location = New System.Drawing.Point(12, 60)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(124, 569)
-        Me.GroupBox1.TabIndex = 45
+        Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Muestras"
         '
@@ -213,7 +213,7 @@ Partial Class frmMuestra
         Me.txtNombre.Location = New System.Drawing.Point(4, 44)
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(350, 26)
-        Me.txtNombre.TabIndex = 47
+        Me.txtNombre.TabIndex = 1
         '
         'Label8
         '
@@ -251,7 +251,7 @@ Partial Class frmMuestra
         Me.GroupBox2.Location = New System.Drawing.Point(157, 95)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(823, 246)
-        Me.GroupBox2.TabIndex = 49
+        Me.GroupBox2.TabIndex = 2
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Información de la muestra"
         '
@@ -261,7 +261,7 @@ Partial Class frmMuestra
         Me.cbBuscar_Proveedor.Location = New System.Drawing.Point(561, 184)
         Me.cbBuscar_Proveedor.Name = "cbBuscar_Proveedor"
         Me.cbBuscar_Proveedor.Size = New System.Drawing.Size(128, 22)
-        Me.cbBuscar_Proveedor.TabIndex = 56
+        Me.cbBuscar_Proveedor.TabIndex = 10
         Me.cbBuscar_Proveedor.Text = "Buscar proveedor"
         Me.cbBuscar_Proveedor.UseVisualStyleBackColor = True
         '
@@ -271,7 +271,7 @@ Partial Class frmMuestra
         Me.cbBuscar_Productor.Location = New System.Drawing.Point(561, 129)
         Me.cbBuscar_Productor.Name = "cbBuscar_Productor"
         Me.cbBuscar_Productor.Size = New System.Drawing.Size(125, 22)
-        Me.cbBuscar_Productor.TabIndex = 56
+        Me.cbBuscar_Productor.TabIndex = 8
         Me.cbBuscar_Productor.Text = "Buscar productor"
         Me.cbBuscar_Productor.UseVisualStyleBackColor = True
         '
@@ -282,7 +282,7 @@ Partial Class frmMuestra
         Me.btnCiudad.Margin = New System.Windows.Forms.Padding(0)
         Me.btnCiudad.Name = "btnCiudad"
         Me.btnCiudad.Size = New System.Drawing.Size(26, 28)
-        Me.btnCiudad.TabIndex = 54
+        Me.btnCiudad.TabIndex = 7
         Me.btnCiudad.Text = "::"
         Me.btnCiudad.TextAlign = System.Drawing.ContentAlignment.TopLeft
         Me.btnCiudad.UseVisualStyleBackColor = True
@@ -293,7 +293,7 @@ Partial Class frmMuestra
         Me.nuHumedad.Location = New System.Drawing.Point(470, 44)
         Me.nuHumedad.Name = "nuHumedad"
         Me.nuHumedad.Size = New System.Drawing.Size(347, 26)
-        Me.nuHumedad.TabIndex = 50
+        Me.nuHumedad.TabIndex = 5
         '
         'cbCiudad
         '
@@ -303,7 +303,7 @@ Partial Class frmMuestra
         Me.cbCiudad.Location = New System.Drawing.Point(470, 98)
         Me.cbCiudad.Name = "cbCiudad"
         Me.cbCiudad.Size = New System.Drawing.Size(318, 28)
-        Me.cbCiudad.TabIndex = 49
+        Me.cbCiudad.TabIndex = 6
         '
         'cbAnio_Cosecha
         '
@@ -314,7 +314,7 @@ Partial Class frmMuestra
         Me.cbAnio_Cosecha.Location = New System.Drawing.Point(4, 208)
         Me.cbAnio_Cosecha.Name = "cbAnio_Cosecha"
         Me.cbAnio_Cosecha.Size = New System.Drawing.Size(348, 28)
-        Me.cbAnio_Cosecha.TabIndex = 49
+        Me.cbAnio_Cosecha.TabIndex = 4
         '
         'txtEspecie
         '
@@ -325,7 +325,7 @@ Partial Class frmMuestra
         Me.txtEspecie.Location = New System.Drawing.Point(4, 152)
         Me.txtEspecie.Name = "txtEspecie"
         Me.txtEspecie.Size = New System.Drawing.Size(348, 28)
-        Me.txtEspecie.TabIndex = 49
+        Me.txtEspecie.TabIndex = 3
         '
         'Label7
         '
@@ -390,7 +390,7 @@ Partial Class frmMuestra
         Me.txtProveedor.Name = "txtProveedor"
         Me.txtProveedor.ReadOnly = True
         Me.txtProveedor.Size = New System.Drawing.Size(350, 26)
-        Me.txtProveedor.TabIndex = 47
+        Me.txtProveedor.TabIndex = 12
         '
         'Label10
         '
@@ -411,7 +411,7 @@ Partial Class frmMuestra
         Me.txtProductor.Name = "txtProductor"
         Me.txtProductor.ReadOnly = True
         Me.txtProductor.Size = New System.Drawing.Size(350, 26)
-        Me.txtProductor.TabIndex = 47
+        Me.txtProductor.TabIndex = 9
         '
         'Label4
         '
@@ -431,7 +431,7 @@ Partial Class frmMuestra
         Me.txtDescripcion.Location = New System.Drawing.Point(4, 98)
         Me.txtDescripcion.Name = "txtDescripcion"
         Me.txtDescripcion.Size = New System.Drawing.Size(350, 26)
-        Me.txtDescripcion.TabIndex = 47
+        Me.txtDescripcion.TabIndex = 2
         '
         'GroupBox3
         '
@@ -442,7 +442,7 @@ Partial Class frmMuestra
         Me.GroupBox3.Location = New System.Drawing.Point(157, 560)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(823, 66)
-        Me.GroupBox3.TabIndex = 50
+        Me.GroupBox3.TabIndex = 5
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Opciones"
         '
@@ -456,7 +456,7 @@ Partial Class frmMuestra
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(163, 35)
         Me.btnCancelar.TabIndex = 3
-        Me.btnCancelar.Text = "Cancelar"
+        Me.btnCancelar.Text = "Cerrar"
         Me.btnCancelar.UseVisualStyleBackColor = True
         '
         'btnGuardar
@@ -483,7 +483,7 @@ Partial Class frmMuestra
         Me.gbProductor.Location = New System.Drawing.Point(157, 347)
         Me.gbProductor.Name = "gbProductor"
         Me.gbProductor.Size = New System.Drawing.Size(410, 207)
-        Me.gbProductor.TabIndex = 51
+        Me.gbProductor.TabIndex = 3
         Me.gbProductor.TabStop = False
         Me.gbProductor.Text = "Productores"
         '
@@ -568,7 +568,7 @@ Partial Class frmMuestra
         Me.gbProveedor.Location = New System.Drawing.Point(573, 347)
         Me.gbProveedor.Name = "gbProveedor"
         Me.gbProveedor.Size = New System.Drawing.Size(407, 207)
-        Me.gbProveedor.TabIndex = 52
+        Me.gbProveedor.TabIndex = 4
         Me.gbProveedor.TabStop = False
         Me.gbProveedor.Text = "Proveedor"
         '
