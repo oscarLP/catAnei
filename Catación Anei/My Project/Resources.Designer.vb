@@ -1323,6 +1323,26 @@ Namespace My.Resources
         '''<summary>
         '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property Ingresar_32x321() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Ingresar 32x321", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property Iniciar_sesion_32x32() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Iniciar sesion 32x32", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property Izquierda_25x25() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("Izquierda 25x25", resourceCulture)
@@ -1716,6 +1736,26 @@ Namespace My.Resources
         Friend ReadOnly Property moras() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("moras", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property Muestra_32x32() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Muestra 32x32", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property Muestra_48x48() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Muestra 48x48", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

@@ -3,75 +3,60 @@
     Private Fun_Usuario As New Gestor_Usuario
 
     Private Sub frmIniciarSecion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'Bienvenido()
         DespuesDelFocus_txtUsuario()
         AntesDelFocus_txtUsuario()
         'DespuesDelFocus_txtContraseña()
         'AntesDelFocus_txContraseña()
         HabDes_BotonIngresar()
+        Bienvenido()
     End Sub
-    '==Funcion que será usada como mensaje para la primera instalacion.. en proceso de desarrollo...==
-    'Sub Bienvenido()
-    '    MsgBox("No se que pasa")
-    '    Dim Verificar_Administrador As New BindingSource
-    '    Verificar_Administrador.DataSource = Fun_Usuario.Verificar_Administrador()
-    '    If Verificar_Administrador.Count = 0 Then 'Si 'Verificar_Administrador' es igual a 0 quiere decir que no hay un perfil como administrador
-    '        MsgBox("que pasa, que pasa2")
-    '        Me.Visible = False
-    '        If frmBienvenido.Visible = False Then
-    '            frmBienvenido.Visible = True
-    '        Else
-    '            MsgBox("que pasa, que pasa3")
-    '            MsgBox("que pasa, que pasa4")
-    '            frmBienvenido.ShowDialog()
 
-    '        End If
-    '    Else
-    '        MsgBox("No se que pasa5")
-    '    End If
-    'End Sub
+    Sub Bienvenido()
+        Dim Verificar_Administrador As New BindingSource
+        Verificar_Administrador.DataSource = Fun_Usuario.Verificar_Administrador()
+        If Verificar_Administrador.Count = 0 Then 'Si 'Verificar_Administrador' es igual a 0 quiere decir que no hay un perfil como administrador
+            Me.Visible = False
+            frmBienvenido.ShowDialog()
+        End If
+    End Sub
 
     'BOTON INGRESAR
     Private Sub btnIngresar_Click(sender As Object, e As EventArgs) Handles btnIngresar.Click
-
         If Fun_Usuario.IniciarSesion(txtUsuario.Text, txtContraseña.Text) = True Then
-
-            If (Fun_Usuario.Permiso(txtUsuario.Text) = "Si" Or Fun_Usuario.Permiso(txtUsuario.Text) = "SI") Then
+            If Fun_Usuario.Permiso(txtUsuario.Text) = "Si" Then
                 Ingresar_MenuPrincipal()
-
-            ElseIf (Fun_Usuario.Permiso(txtUsuario.Text) = "No" Or Fun_Usuario.Permiso(txtUsuario.Text) = "NO") Then
+            ElseIf Fun_Usuario.Permiso(txtUsuario.Text) = "No" Then
                 MsgBox("Este usuario no tiene permiso para entrar al sistema.", vbExclamation, "Seguridad")
             End If
-
         Else
             MsgBox("La contraseña y/o usuario no se encuentran registrados.", vbExclamation, "Seguridad")
+            txtContraseña.Clear()
+            txtUsuario.Focus()
         End If
-
     End Sub
 
     Sub Ingresar_MenuPrincipal() 'Condiciones para entrar al formulario Menu principal
-
         txtContraseña.Clear() 'Borra el campo 'Contraseña' antes de abrir el menu principal
         frmMenuPrincipal.tsNombreUsuario.Text = txtUsuario.Text 'Coloca el nombre del usuario en el formulario Menu principal
 
         If Fun_Usuario.Tipo_Usuario(txtUsuario.Text) = "Catador" Then 'Si el usuario es un catador entonces desabite el boton 'Gestionar catadores' y 'Cambiar contraseña'
             frmMenuPrincipal.btnGestionarCatadores.Enabled = False
             frmMenuPrincipal.tsCambiarContraseña.Enabled = False
+            frmMenuPrincipal.tsPerfil.Enabled = False
         ElseIf Fun_Usuario.Tipo_Usuario(txtUsuario.Text) = "Administrador" Then 'Si el usuario es un administrador entonces habilite el boton 'Gestionar catadores' y 'Cambiar contraseña'
             frmMenuPrincipal.btnGestionarCatadores.Enabled = True
             frmMenuPrincipal.tsCambiarContraseña.Enabled = True
+            frmMenuPrincipal.tsPerfil.Enabled = True
         Else
             MsgBox("No tiene permiso para entrar al sistema.", vbExclamation, "Seguridad") 'En este caso es porque el usuario no es un catador ni un administrador
         End If
 
         Me.Visible = False
-
         If frmMenuPrincipal.Visible = False Then
             frmMenuPrincipal.Visible = True
-        Else
+        Else            
             frmMenuPrincipal.ShowDialog()
         End If
-
     End Sub
 
     'Habilitar el boton btnIngresar si hay texto en los campos

@@ -12,19 +12,25 @@
         CargarGrilla() 'Carga en la tabla todos los registros
         Total_Registrados() 'Muestra 'Total' el numero de registros
         Des_Campos() 'Desabilita los campos si no se ha registrado ningun registro
+        Desabilitar_Modificar_Eliminar()
+        btnCancelar.Enabled = False
+        dgListaCatadores.ClearSelection() 'Cancelo la seleccion de la tabla
     End Sub
 
     'BOTON GUARDAR
     '---------------------------------------------------------------------------------------------------------------------------
     Private Sub btnNuevoCatadorYGuardar_Click(sender As Object, e As EventArgs) Handles btnNuevoCatadorYGuardar.Click
-        Dim i As Boolean
-        Dim j As Boolean
+        Dim i As Boolean 'Variable utilizada para obtener respuesta si el registro fue guardado correctamente en la tabla 'PERSONA'
+        Dim j As Boolean 'Variable utilizada para obtener respuesta si el registro fue guardado correctamente en la tabla 'USUARIO'
         Dim Codigo_Persona As String
         Dim Codigo_Usuario As String
 
         If btnNuevoCatadorYGuardar.Text = "Nuevo catador" Then
             Hab_Campos() 'Habilita los campos
+            Desabilitar_Modificar_Eliminar()
+            Mod_Nuevo_Catador()
             LimpiarCampos()
+            btnCancelar.Enabled = True
             txtNombreUsuario.Focus() 'Da foco de entrada al campo 'Usuario'
         ElseIf btnNuevoCatadorYGuardar.Text = "Guardar" Then
             If txtNombreUsuario.TextLength = 0 Or txtContraseña.TextLength = 0 Or txtConfirmarContraseña.TextLength = 0 Or txtCedula.TextLength = 0 Or txtNombre.TextLength = 0 Or txtApellido.TextLength = 0 Then
@@ -41,51 +47,86 @@
                 Codigo_Usuario = Fun_Usuario.Codigo_Azar() 'Obtiene un codigo al azar para luego guardarlo
 
                 i = Fun_Persona.Guardar_Persona(Codigo_Persona, txtCedula.Text, txtNombre.Text, txtApellido.Text, txtTelefono.Text, txtCorreo.Text, "Usuario")
-                j = Fun_Usuario.Guardar_Usuario(Codigo_Usuario, txtNombreUsuario.Text, txtContraseña.Text, cbPermiso.Text, "Catador", Codigo_Persona)
+                If i = True Then 'Si 'i' es igual a true quiere decir que el registro de esta persona se guarda correctamente
+                    j = Fun_Usuario.Guardar_Usuario(Codigo_Usuario, txtNombreUsuario.Text, txtContraseña.Text, cbPermiso.Text, "Catador", Codigo_Persona)
+                End If
 
-                If i = True And j = True Then
+                If i = True And j = True Then 'Si 'i' y 'j' son iguales a true quiere decir que se guardo el registro correctamente
+                    'Modificar boton Guardar
+                    btnNuevoCatadorYGuardar.Text = "Nuevo catador"
+                    btnNuevoCatadorYGuardar.Image = My.Resources.Nuevo_catador_32x32 'Coloca una imagen el boton 'Guardar'
+                    btnCancelar.Enabled = False
+                    Des_Campos()
                     LimpiarCampos()
                     CargarGrilla()
                     Total_Registrados()
                     Contar_Registros()
                 Else
-                    MsgBox("No se pudo guardar.", vbExclamation, "Seguridad")
+                    Fun_Persona.Eliminar_Persona(Codigo_Persona) 'Elimina el registro de la persona abado de registrar si no se pudo guardar el registro del Usuario
+                    txtCedula.Focus()
                 End If
             End If
         End If
     End Sub
     '---------------------------------------------------------------------------------------------------------------------------
 
+    Sub Antes_Modificar()
+        Hab_Campos()
+        btnNuevoCatadorYGuardar.Enabled = False
+        btnEliminar.Enabled = False
+        btnModificar.Text = "Aceptar"
+        Me.AcceptButton = btnModificar
+        btnCancelar.Enabled = True
+        txtNombreUsuario.Focus()
+    End Sub
+
+    Sub Despues_Modificar()
+        Des_Campos()
+        btnNuevoCatadorYGuardar.Enabled = True
+        btnEliminar.Enabled = True
+        btnModificar.Text = "Modificar"
+        Me.AcceptButton = btnNuevoCatadorYGuardar
+        btnCancelar.Enabled = False
+        txtBuscar.Focus()
+    End Sub
+
     'BOTON MODIFICAR
     '---------------------------------------------------------------------------------------------------------------------------
     Private Sub btnModificar_Click(sender As Object, e As EventArgs) Handles btnModificar.Click
-        Dim varCod_Persona As String
-        Dim varCod_Usuario As String
-        Dim i As Boolean
-        Dim j As Boolean
+        If btnModificar.Text = "Modificar" Then
+            Antes_Modificar()
+        ElseIf btnModificar.Text = "Aceptar" Then
+            Dim varCod_Persona As String
+            Dim varCod_Usuario As String
+            Dim i As Boolean
+            Dim j As Boolean
 
-        If txtContraseña.Text <> txtConfirmarContraseña.Text Then
-            MsgBox("La contraseña de confirmación de coincien.", vbCritical, "Seguridad")
-            txtConfirmarContraseña.Clear()
-            txtConfirmarContraseña.Focus()
-        ElseIf MsgBox("¿Esta seguro de modificar el registro?", vbQuestion + vbYesNo, "Pregunta") = vbYes Then
+            If txtContraseña.Text <> txtConfirmarContraseña.Text Then
+                MsgBox("La contraseña de confirmación de coincien.", vbCritical, "Seguridad")
+                txtConfirmarContraseña.Clear()
+                txtConfirmarContraseña.Focus()
+            ElseIf MsgBox("¿Esta seguro de modificar el registro?", vbQuestion + vbYesNo, "Pregunta") = vbYes Then
 
-            varCod_Persona = RegistroSeleccionado.Item(0)("cod_persona")
-            varCod_Usuario = RegistroSeleccionado.Item(0)("cod_usuario")
+                varCod_Persona = RegistroSeleccionado.Item(0)("cod_persona")
+                varCod_Usuario = RegistroSeleccionado.Item(0)("cod_usuario")
 
-            i = Fun_Persona.Modificar_Persona(varCod_Persona, txtCedula.Text, txtNombre.Text, txtApellido.Text, txtApellido.Text, txtCorreo.Text, "Catador")
-            j = Fun_Usuario.Modificar_Usuario(varCod_Usuario, txtNombreUsuario.Text, txtContraseña.Text, cbPermiso.Text)
+                i = Fun_Persona.Modificar_Persona(varCod_Persona, txtCedula.Text, txtNombre.Text, txtApellido.Text, txtTelefono.Text, txtCorreo.Text, "Usuario")
 
-            If i = True And j = True Then
-                MessageBox.Show("Modificado correctamente")
-                CargarGrilla()
-                Total_Registrados()
-                Contar_Registros()
+                If i = True Then
+                    j = Fun_Usuario.Modificar_Usuario(varCod_Usuario, txtNombreUsuario.Text, txtContraseña.Text, cbPermiso.Text)
+                End If
 
-            Else
-                MsgBox("Error al Modificar. Vuelva a intentarlo", vbCritical, "Seguridad")
-                txtCedula.Clear()
-                txtCedula.Focus()
+                If i = True And j = True Then
+                    MessageBox.Show("Modificado correctamente")
+                    Despues_Modificar()
+                    CargarGrilla()
+                    Total_Registrados()
+                    Contar_Registros()
+                Else
+                    MsgBox("Error al Modificar. Vuelva a intentarlo", vbCritical, "Seguridad")
+                    txtCedula.Clear()
+                    txtCedula.Focus()
+                End If
             End If
         End If
     End Sub
@@ -160,23 +201,29 @@
     End Sub
 
     Sub Des_Campos() 'Desabitar campos y botones
-        If dgListaCatadores.RowCount = 0 Then
-            'Desabitar campos
-            txtNombreUsuario.Enabled = False
-            txtContraseña.Enabled = False
-            cbVerContraseña.Enabled = False
-            txtConfirmarContraseña.Enabled = False
-            cbPermiso.Enabled = False
-            txtCedula.Enabled = False
-            txtNombre.Enabled = False
-            txtApellido.Enabled = False
-            txtTelefono.Enabled = False
-            txtCorreo.Enabled = False
+        'Desabitar campos
+        txtNombreUsuario.Enabled = False
+        txtContraseña.Enabled = False
+        cbVerContraseña.Enabled = False
+        txtConfirmarContraseña.Enabled = False
+        cbPermiso.Enabled = False
+        txtCedula.Enabled = False
+        txtNombre.Enabled = False
+        txtApellido.Enabled = False
+        txtTelefono.Enabled = False
+        txtCorreo.Enabled = False
+    End Sub
 
-            'Desabitar botones
-            btnModificar.Enabled = False
-            btnEliminar.Enabled = False
-        End If
+    Sub Mod_Nuevo_Catador() 'Modifica el boton 'btnNuevoYGudar' si esta en en 'Nuevo catador'
+        'Modificar boton Nuevo Catador
+        btnNuevoCatadorYGuardar.Text = "Guardar"
+        btnNuevoCatadorYGuardar.Image = My.Resources.Guardar_32x32 'Coloca una imagen el boton 'Guardar'
+    End Sub
+
+    Sub Desabilitar_Modificar_Eliminar()
+        'Desabilitar los botones 'Modificar' y 'Eliminar'
+        btnModificar.Enabled = False
+        btnEliminar.Enabled = False
     End Sub
 
     Sub Hab_Campos() 'Habilitar campos y botones
@@ -191,33 +238,6 @@
         txtApellido.Enabled = True
         txtTelefono.Enabled = True
         txtCorreo.Enabled = True
-
-        'Modificar boton Nuevo Catador
-        btnNuevoCatadorYGuardar.Text = "Guardar"
-        btnNuevoCatadorYGuardar.Image = My.Resources.Guardar_32x32 'Coloca una imagen el boton 'Guardar'
-
-        'Desabilitar los botones 'Modificar' y 'Eliminar'
-        btnModificar.Enabled = False
-        btnEliminar.Enabled = False
-    End Sub
-
-    Sub HabCampos_ModEli() 'Habilita los campos para poder modificar o eliminar
-        txtNombreUsuario.Enabled = True
-        txtContraseña.Enabled = True
-        txtConfirmarContraseña.Enabled = True
-        cbPermiso.Enabled = True
-        txtCedula.Enabled = True
-        txtNombre.Enabled = True
-        txtApellido.Enabled = True
-        txtTelefono.Enabled = True
-        txtCorreo.Enabled = True
-
-        btnModificar.Enabled = True
-        btnEliminar.Enabled = True
-        If btnNuevoCatadorYGuardar.Text = "Guardar" Then
-            btnNuevoCatadorYGuardar.Text = "Nuevo catador"
-            btnNuevoCatadorYGuardar.Image = My.Resources.Nuevo_catador_32x32
-        End If
     End Sub
 
     'Borra el campo 'Buscar' justo antes de escoger otro atributo para filtrar la tabla
@@ -226,8 +246,8 @@
         txtBuscar.Focus()
     End Sub
 
-    'Evento de la grilla para mostrar el registro (fila) en la parte 'Gestion de catador'
-    Private Sub dgListaCatadores_CellEnter(sender As Object, e As DataGridViewCellEventArgs) Handles dgListaCatadores.CellEnter
+    'Subprograma quue muestra el registro del catador seleccionado
+    Sub Mostrar_Catador()
         Dim varCedula As String
         Dim row As DataGridViewRow = dgListaCatadores.CurrentRow
         varCedula = CStr(row.Cells("Cedula").Value)
@@ -235,7 +255,7 @@
         RegistroSeleccionado.DataSource = Fun_Catador.Buscar_Catador() 'Obtiene la tabla de todos los catadores registrados
 
         RegistroSeleccionado.Filter = "cedula = '" & varCedula & "'"
-        HabCampos_ModEli()
+
         txtNombreUsuario.Text = RegistroSeleccionado.Item(0)("nombre_usuario")
         txtContraseña.Text = RegistroSeleccionado.Item(0)("contraseña")
         txtConfirmarContraseña.Text = RegistroSeleccionado.Item(0)("contraseña")
@@ -245,6 +265,36 @@
         txtApellido.Text = RegistroSeleccionado.Item(0)("apellido")
         txtTelefono.Text = RegistroSeleccionado.Item(0)("telefono")
         txtCorreo.Text = RegistroSeleccionado.Item(0)("correo")
+    End Sub
+
+    'Evento de la grilla para mostrar el registro (fila) en la parte 'Gestion de catador'
+    Private Sub dgListaCatadores_CellEnter(sender As Object, e As DataGridViewCellEventArgs) Handles dgListaCatadores.CellEnter
+        If dgListaCatadores.ContainsFocus = True Then
+            If btnNuevoCatadorYGuardar.Text = "Guardar" Then 'Esto quiere decir que se esta llevando el registro de un nuevo catador
+                If MsgBox("Se está llevando a cabo el registro de un nuevo catador. ¿Desea cancelar el registro?", vbQuestion + vbYesNo, "Pregunta") = vbYes Then
+                    Mostrar_Catador()
+
+                    btnNuevoCatadorYGuardar.Text = "Nuevo catador"
+                    Des_Campos()
+                    Desabilitar_Modificar_Eliminar()
+                    btnNuevoCatadorYGuardar.Image = My.Resources.Nuevo_catador_32x32
+                Else
+                    btnModificar.Enabled = False
+                    btnEliminar.Enabled = False
+                    btnCancelar.Enabled = False
+                    txtNombreUsuario.Focus()
+                End If
+            ElseIf btnModificar.Text = "Aceptar" Then 'Esto quiere decir que se esta llevando a cabo la modificacion de un catador
+                If MsgBox("Se está llevando a cabo la modificación de un catador. ¿Desea cancelar la modicación?", vbQuestion + vbYesNo, "Pregunta") = vbYes Then
+                    Mostrar_Catador()
+                    Despues_Modificar()
+                End If
+            Else
+                btnModificar.Enabled = True
+                btnEliminar.Enabled = True
+                Mostrar_Catador()
+            End If
+        End If
     End Sub
 
     Sub Total_Registrados() 'Muestra el total de catadores registradores
@@ -293,32 +343,32 @@
     '-------------------------------------------------------------------------------------------------------------
     Private Sub txtNombreUsuario_TextChanged(sender As Object, e As EventArgs) Handles txtNombreUsuario.TextChanged
         erValidarError.SetError(txtNombreUsuario, Nothing)
-        txtNombreUsuario.BackColor = Color.White
+        txtNombreUsuario.BackColor = SystemColors.Window
     End Sub
 
     Private Sub txtContraseña_TextChanged(sender As Object, e As EventArgs) Handles txtContraseña.TextChanged
         erValidarError.SetError(txtContraseña, Nothing)
-        txtContraseña.BackColor = Color.White
+        txtContraseña.BackColor = SystemColors.Window
     End Sub
 
     Private Sub txtConfirmarContraseña_TextChanged(sender As Object, e As EventArgs) Handles txtConfirmarContraseña.TextChanged
         erValidarError.SetError(txtConfirmarContraseña, Nothing)
-        txtConfirmarContraseña.BackColor = Color.White
+        txtConfirmarContraseña.BackColor = SystemColors.Window
     End Sub
 
     Private Sub txtCedula_TextChanged(sender As Object, e As EventArgs) Handles txtCedula.TextChanged
         erValidarError.SetError(txtCedula, Nothing)
-        txtCedula.BackColor = Color.White
+        txtCedula.BackColor = SystemColors.Window
     End Sub
 
     Private Sub txtNombre_TextChanged(sender As Object, e As EventArgs) Handles txtNombre.TextChanged
         erValidarError.SetError(txtNombre, Nothing)
-        txtNombre.BackColor = Color.White
+        txtNombre.BackColor = SystemColors.Window
     End Sub
 
     Private Sub txtApellidos_TextChanged(sender As Object, e As EventArgs) Handles txtApellido.TextChanged
         erValidarError.SetError(txtApellido, Nothing)
-        txtApellido.BackColor = Color.White
+        txtApellido.BackColor = SystemColors.Window
     End Sub
 
     'validating
@@ -327,7 +377,7 @@
             erValidarError.SetError(txtNombreUsuario, "Este campo es obligatorio")
             txtNombreUsuario.BackColor = Color.MistyRose
         Else
-            txtNombreUsuario.BackColor = Color.White
+            txtNombreUsuario.BackColor = SystemColors.Window
         End If
     End Sub
 
@@ -339,7 +389,7 @@
             erValidarError.SetError(txtContraseña, "La contraseña debe contener al menos 6 caracteres.")
             txtContraseña.BackColor = Color.MistyRose
         Else
-            txtContraseña.BackColor = Color.White
+            txtContraseña.BackColor = SystemColors.Window
         End If
     End Sub
 
@@ -348,7 +398,7 @@
             erValidarError.SetError(txtConfirmarContraseña, "Este campo es obligatorio")
             txtConfirmarContraseña.BackColor = Color.MistyRose
         Else
-            txtConfirmarContraseña.BackColor = Color.White
+            txtConfirmarContraseña.BackColor = SystemColors.Window
         End If
     End Sub
 
@@ -357,7 +407,7 @@
             erValidarError.SetError(txtCedula, "Este campo es obligatorio")
             txtCedula.BackColor = Color.MistyRose
         Else
-            txtCedula.BackColor = Color.White
+            txtCedula.BackColor = SystemColors.Window
         End If
     End Sub
 
@@ -366,7 +416,7 @@
             erValidarError.SetError(txtNombre, "Este campo es obligatorio")
             txtNombre.BackColor = Color.MistyRose
         Else
-            txtNombre.BackColor = Color.White
+            txtNombre.BackColor = SystemColors.Window
         End If
     End Sub
 
@@ -375,16 +425,103 @@
             erValidarError.SetError(txtApellido, "Este campo es obligatorio")
             txtApellido.BackColor = Color.MistyRose
         Else
-            txtApellido.BackColor = Color.White
+            txtApellido.BackColor = SystemColors.Window
         End If
     End Sub
     '---------------------------------------------------------------------------------------------------------------------------------
 
+    'Cambia el icono de la izquierda del campo 'Permiso'
     Private Sub cbPermiso_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbPermiso.SelectedIndexChanged
         If cbPermiso.Text = "Si" Then
             pxPermiso.Image = My.Resources.Si_26x26
         ElseIf cbPermiso.Text = "No" Then
             pxPermiso.Image = My.Resources.No_26x26
         End If
+    End Sub
+
+    Sub Ingresar_SoloNumeros(ByRef e As KeyPressEventArgs)
+        'Solo permite ingresar numeros
+        If Char.IsDigit(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsControl(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsSeparator(e.KeyChar) Then
+            e.Handled = False
+        Else
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub txtCedula_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtCedula.KeyPress
+        Ingresar_SoloNumeros(e)
+    End Sub
+
+    Private Sub txtTelefono_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtTelefono.KeyPress
+        Ingresar_SoloNumeros(e)
+        ''Solo permite solo ingresar letras
+        'If Char.IsLetter(e.KeyChar) Then
+        '    e.Handled = False
+        'ElseIf Char.IsControl(e.KeyChar) Then
+        '    e.Handled = False
+        'ElseIf Char.IsSeparator(e.KeyChar) Then
+        '    e.Handled = False
+        'Else
+        '    e.Handled = True
+        'End If
+    End Sub
+
+    Private Sub frmGestionarCatadores_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown
+        If e.Control And e.KeyCode.ToString = "B" Then
+            txtBuscar.Focus()
+        End If
+
+        If e.Control And e.KeyCode.ToString = "M" Then
+            btnModificar.Focus()
+        End If
+
+        If e.Control And e.KeyCode.ToString = "E" Then
+            btnEliminar.Focus()
+        End If
+
+        If e.Control And e.KeyCode.ToString = "N" Then
+            btnNuevoCatadorYGuardar.Focus()
+        End If
+
+        If e.KeyCode.Escape And btnCancelar.Enabled = True Then
+            Boton_Cancelar()
+        End If
+    End Sub
+
+    Sub Boton_Cancelar()
+        If btnNuevoCatadorYGuardar.Text = "Guardar" Then
+            btnNuevoCatadorYGuardar.Text = "Nuevo catador"
+            Des_Campos()
+            Desabilitar_Modificar_Eliminar()
+            btnNuevoCatadorYGuardar.Image = My.Resources.Nuevo_catador_32x32
+            btnCancelar.Enabled = False
+
+            erValidarError.SetError(txtNombreUsuario, Nothing)
+            txtNombreUsuario.BackColor = SystemColors.Window
+            erValidarError.SetError(txtContraseña, Nothing)
+            txtContraseña.BackColor = SystemColors.Window
+            erValidarError.SetError(txtConfirmarContraseña, Nothing)
+            txtConfirmarContraseña.BackColor = SystemColors.Window
+            erValidarError.SetError(txtCedula, Nothing)
+            txtCedula.BackColor = SystemColors.Window
+            erValidarError.SetError(txtNombre, Nothing)
+            txtNombre.BackColor = SystemColors.Window
+            erValidarError.SetError(txtApellido, Nothing)
+            txtApellido.BackColor = SystemColors.Window
+
+            txtBuscar.Focus()
+        End If
+
+        If btnModificar.Text = "Aceptar" Then
+            Despues_Modificar()
+        End If
+    End Sub
+
+    Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
+        Boton_Cancelar()
     End Sub
 End Class

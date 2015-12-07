@@ -13,7 +13,10 @@
 
     Private Sub btnAceptar_Click(sender As Object, e As EventArgs) Handles btnAceptar.Click
         If Fun_Administrador.ValidadContraseña(txtContraseña.Text) = True Then 'Si es igual a true quiere decir que la contraseña es correcta
-            If txtNuevaContraseña.Text <> txtRNuevaContraseña.Text Then
+            If txtNuevaContraseña.TextLength = 0 Or txtRNuevaContraseña.TextLength = 0 Then
+                MsgBox("Por favor, asegúrese de llenar todos los campos obligatorios.", vbExclamation, "Seguridad")
+                txtNuevaContraseña.Focus()
+            ElseIf txtNuevaContraseña.Text <> txtRNuevaContraseña.Text Then
                 MsgBox("La confirmación de la contraseña no coinciden.", vbExclamation, "Seguridad")
                 txtNuevaContraseña.Focus()
             Else

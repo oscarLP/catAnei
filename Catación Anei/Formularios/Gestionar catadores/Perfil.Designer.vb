@@ -22,6 +22,7 @@ Partial Class frmPerfil
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmPerfil))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
@@ -63,6 +64,7 @@ Partial Class frmPerfil
         Me.btnModificar = New System.Windows.Forms.Button()
         Me.btnCancelar = New System.Windows.Forms.Button()
         Me.btnAceptar = New System.Windows.Forms.Button()
+        Me.erValidarError = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -76,6 +78,7 @@ Partial Class frmPerfil
         CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox3.SuspendLayout()
+        CType(Me.erValidarError, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -214,6 +217,8 @@ Partial Class frmPerfil
         '
         Me.txtRContrasenia.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtRContrasenia.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.erValidarError.SetIconAlignment(Me.txtRContrasenia, System.Windows.Forms.ErrorIconAlignment.MiddleLeft)
+        Me.erValidarError.SetIconPadding(Me.txtRContrasenia, 25)
         Me.txtRContrasenia.Location = New System.Drawing.Point(194, 86)
         Me.txtRContrasenia.Name = "txtRContrasenia"
         Me.txtRContrasenia.Size = New System.Drawing.Size(197, 26)
@@ -224,6 +229,8 @@ Partial Class frmPerfil
         '
         Me.txtContrasenia.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtContrasenia.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.erValidarError.SetIconAlignment(Me.txtContrasenia, System.Windows.Forms.ErrorIconAlignment.MiddleLeft)
+        Me.erValidarError.SetIconPadding(Me.txtContrasenia, 25)
         Me.txtContrasenia.Location = New System.Drawing.Point(194, 54)
         Me.txtContrasenia.Name = "txtContrasenia"
         Me.txtContrasenia.Size = New System.Drawing.Size(197, 26)
@@ -234,6 +241,8 @@ Partial Class frmPerfil
         '
         Me.txtNombreUsuario.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtNombreUsuario.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.erValidarError.SetIconAlignment(Me.txtNombreUsuario, System.Windows.Forms.ErrorIconAlignment.MiddleLeft)
+        Me.erValidarError.SetIconPadding(Me.txtNombreUsuario, 25)
         Me.txtNombreUsuario.Location = New System.Drawing.Point(194, 22)
         Me.txtNombreUsuario.Name = "txtNombreUsuario"
         Me.txtNombreUsuario.Size = New System.Drawing.Size(197, 26)
@@ -438,6 +447,8 @@ Partial Class frmPerfil
         '
         Me.txtApellido.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtApellido.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.erValidarError.SetIconAlignment(Me.txtApellido, System.Windows.Forms.ErrorIconAlignment.MiddleLeft)
+        Me.erValidarError.SetIconPadding(Me.txtApellido, 25)
         Me.txtApellido.Location = New System.Drawing.Point(133, 86)
         Me.txtApellido.Name = "txtApellido"
         Me.txtApellido.Size = New System.Drawing.Size(258, 26)
@@ -447,6 +458,8 @@ Partial Class frmPerfil
         '
         Me.txtNombre.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtNombre.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.erValidarError.SetIconAlignment(Me.txtNombre, System.Windows.Forms.ErrorIconAlignment.MiddleLeft)
+        Me.erValidarError.SetIconPadding(Me.txtNombre, 25)
         Me.txtNombre.Location = New System.Drawing.Point(133, 54)
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(258, 26)
@@ -456,6 +469,8 @@ Partial Class frmPerfil
         '
         Me.txtCedula.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtCedula.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.erValidarError.SetIconAlignment(Me.txtCedula, System.Windows.Forms.ErrorIconAlignment.MiddleLeft)
+        Me.erValidarError.SetIconPadding(Me.txtCedula, 25)
         Me.txtCedula.Location = New System.Drawing.Point(133, 22)
         Me.txtCedula.Name = "txtCedula"
         Me.txtCedula.Size = New System.Drawing.Size(258, 26)
@@ -530,7 +545,7 @@ Partial Class frmPerfil
         Me.btnAceptar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.btnAceptar.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAceptar.ForeColor = System.Drawing.Color.Green
-        Me.btnAceptar.Image = CType(resources.GetObject("btnAceptar.Image"), System.Drawing.Image)
+        Me.btnAceptar.Image = Global.Catación_Anei.My.Resources.Resources.Ingresar_32x321
         Me.btnAceptar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnAceptar.Location = New System.Drawing.Point(6, 22)
         Me.btnAceptar.Name = "btnAceptar"
@@ -539,6 +554,11 @@ Partial Class frmPerfil
         Me.btnAceptar.Text = "Aceptar"
         Me.btnAceptar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnAceptar.UseVisualStyleBackColor = True
+        '
+        'erValidarError
+        '
+        Me.erValidarError.ContainerControl = Me
+        Me.erValidarError.Icon = CType(resources.GetObject("erValidarError.Icon"), System.Drawing.Icon)
         '
         'frmPerfil
         '
@@ -576,6 +596,7 @@ Partial Class frmPerfil
         CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox3.ResumeLayout(False)
+        CType(Me.erValidarError, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -620,4 +641,5 @@ Partial Class frmPerfil
     Friend WithEvents btnCancelar As System.Windows.Forms.Button
     Friend WithEvents btnAceptar As System.Windows.Forms.Button
     Friend WithEvents btnModificar As System.Windows.Forms.Button
+    Friend WithEvents erValidarError As System.Windows.Forms.ErrorProvider
 End Class

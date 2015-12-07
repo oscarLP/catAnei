@@ -1,5 +1,7 @@
 ﻿Imports System.Data.SqlClient
 Public Class Gestor_Sesion_Catado
+    Private fun_muestra As New Gestor_Muestras
+
     Private db As New Conexion_BD
     Private Comando As SqlCommand
 
@@ -23,29 +25,39 @@ Public Class Gestor_Sesion_Catado
 
     End Function
     Public Function Guardar_SesionCatacion(ByVal Codigo As String, ByVal FechaInicio As String, ByVal HoraInicio As String,
-                                    ByVal Descripcion As String, ByVal Lugar As String, ByVal IdentificadorMuestra As String,
+                                    ByVal Descripcion As String, ByVal Lugar As String, ByVal EstructuraIdentificador As String,
                                     ByVal ProtocoloCatacion As String, ByVal NumeroMuestras As Integer, ByVal CodigoUsuario As String) As Boolean
         Dim i As Integer
         Try
             Dim _sql As String = String.Format("INSERT INTO SESION_CATADO (codigo, fecha_inicio, hora_inicio, descripcion, lugar, estructura_identificador," +
                                                "protocolo, numero_muestras, fk_codigo_Usuario) VALUES('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}')",
-                                               Codigo, FechaInicio, HoraInicio, Descripcion, Lugar, IdentificadorMuestra, ProtocoloCatacion, NumeroMuestras, CodigoUsuario)
+                                               Codigo, FechaInicio, HoraInicio, Descripcion, Lugar, EstructuraIdentificador, ProtocoloCatacion, NumeroMuestras, CodigoUsuario)
             Using cmd As New SqlCommand(_sql, db.Conexion)
                 db.Conexion.Open()
                 i = cmd.ExecuteNonQuery
                 db.Conexion.Close()
             End Using
         Catch ex As Exception
-            'If Err.Description.Contains("NombreUsuario") = True Then
-            '    MsgBox("Este nombre de usuario ya se encuentra registrado.", vbExclamation, "Seguridad")
-            'ElseIf Err.Description.Contains("Cedula") = True Then
-            '    MsgBox("Esta cedula ya se encuentra registrada.", vbExclamation, "Seguridad")
-            'End If
+            'DEBEMOS AGREGAR LA EXCEPCION DE ROLLBACK
             MsgBox(ex.Message)
             db.Conexion.Close()
         End Try
+
+        'SI DEVUELVE MAYOR A 0 ENTONCES HA SIDO INSERTADA LA SESION
+
         If i > 0 Then
-            Return True
+            'PROCEDEMOS A INSERT CADA MUESTRA QUE CORRESPONDE A LA SESION
+            Dim guardado_muestra As Boolean
+
+            guardado_muestra = fun_muestra.guardar_muestra(NumeroMuestras, EstructuraIdentificador, Codigo, Lugar)
+
+            'SI TANTO SESION COMO MUESTRAS HAN SIDO REGISTRADAS DEVOLVEMOS TRUE
+            If guardado_muestra = True Then
+                Return True
+            Else
+                Return False
+            End If
+
         Else
             Return False
         End If

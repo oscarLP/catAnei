@@ -17,7 +17,7 @@
     End Sub
 
     Private Sub tsPerfil_Click(sender As Object, e As EventArgs) Handles tsPerfil.Click
-        frmPerfil.Show()
+        frmPerfil.ShowDialog()
     End Sub
 
     Private Sub tsCambiarContraseña_Click(sender As Object, e As EventArgs) Handles tsCambiarContraseña.Click

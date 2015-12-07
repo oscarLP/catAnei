@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnCancelar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAIGNIUk0AAHolAACAgwAA+f8AAIDoAABS
+        CAABFVgAADqXAAAXb9daH5AAAAAJcEhZcwAACxEAAAsRAX9kX5EAAANySURBVFhHxZbbSxRxFMcXdHdm
+        dd2d2d2Z3dmLOVreMoP+DSGfosfK7pAVFYlWWNlVy0yTyqAsVJRMu0k9RKRhBiZIUZuopWDQQ1GGt3rZ
+        vkdYGbYjhQ/Tw4eZ+c78zvfM73fm/MYSjUb/K6xoJqxoJqxoJqxoJqxoJqxIPLNYLPtCIfdhTdtJ50th
+        bzi8YUdamkTnnAfBikRJMBisUNXiOkl6We73Z8cH/xsHQqGMk4ry5GAwWLQ7NdXPeRCsSBxX1V1XXK6B
+        26I4fc3pHDjm8wU5I47SQEA97/E8ve5wfK/yeruRxEbOg2BFAgnYTynKmhsOx2CnIMw0JidHqjyeTM7Q
+        CMxTa2T5RVNS0uRFWe4u07TcPeGwwHkQrEjEAla53VkINnzXZpu9lZz87qzXGzYaGjmkaVo13rzR4fhW
+        73L143pZ7B7nQbAiYQxc7XantSQlDT2wWmdxHMX05hjvE0f9/nQ819vgdH6pleUe1I3feJ/zIFiRMA4m
+        atzula2i+PGh1TrXjGRqJSktdq9CUUJ1styLWvkKvQ/1km4cS3AeBCsS8QEIrK3earcPUxI4fsAaK6cV
+        RUadvEVSk5ddrr4TqsoWK+dBsCLBBSHwpqvaRHH8vtU6g+V4jfoY7BDFqZso0vOoF24MwXkQrEhwQWLg
+        zW1YjgiSmALTLaL45ozXa+WejcF5EKxIcEFixBLAUsygMKfb7PaIaQmgDvKwBGMwnsMxAoa6EhLm7ths
+        E/WSlM+NITgPghUJLkil15uKNY/cQ0+gOrgkSSpatdphs316lJDwqx0arjO4sZwHwYpEfAD09RVoREPU
+        kCgJzMTCp4bCXN4uCOOPKQlBmEAfyDOOJTgPghUJ42DsiL6rTmd/hyBMI4n3qPY/GhGmfzXM52cCszNy
+        zuNZ6IIE50GwIhEbuD8YDFGHo++cksB3HzIGNoImpKMgR7sSE3/iEx2pNOwdnAfBikRhTo61KD1dLwsE
+        2lH1nymJI37/QvdbjAuYHSQ7v3c0pKT0oyvmI4bIeRCsSKzLyirYputNpZo2hk2lEzuawhly0IaFtvwK
+        tfID+8bzkkBgE+dBsCJRkJvrXp+ZuXa7rjdv0fVFd8DFKPf5smHeg+15a/FSfkgoCJJwIInC+OD/Cn5E
+        Ni/5l8wsWNFMWNFMWNFMWNFMWNE8opbf5VPK8o1wj/gAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="TextBox1.Text" xml:space="preserve">
+    <value>¡Un cordial saludo!
+
+Ahora que ya formas parte de nuestra organización queremos que conozcas nuestro sistema integrado de registro de cataciones.
+
+La empresa Asoanei, productora y comercializadora de productos étnicos y orgánicos como el café, ha tomado conciencia de la importancia de llevar una buena gestion de sus cataciones mediante sistema de información que registre información concierne a las cataciones del café y genere consultas apropiadas y eficientes que ayuden  en la toma de decisiones en beneficio de la empresa. Además de esto llevar un registros de la gestión de sus catadores, quienes hacen la evaluación del café.
+
+Nuestro propósito es proporcionar una adecuado registro  y control de las cataciones de café que lleva acabo la organización, mediante el presente software apodado "catAnei" . 
+
+Te damos una calurosa bienvenida y deseamos que el programa te brinde las herramientas necesarias para realizar tu trabajo satisfactoriamente.
+
+! EMPECEMOS ! 
+Te invitamos a  crear una cuenta como administrador para poder iniciar sesión y hacer uso de nuestro sistema.
+</value>
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAICAAAAAAIACoEAAAFgAAACgAAAAgAAAAQAAAAAEAIAAAAAAAABAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAESUvAC5lfwBFl78AXMr/DFzK
+        /59cyv//XMr//1zK/+Ncyv+DRZe/AC5lfwARJS8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIktfAEqkzwBcyv+fXMr//1zK
+        //9cyv//XMr//1zK//9cyv//XMr//1zK//9cyv//XMr//1zK//9KpM84IktfAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAChceAESXvgBcyv/PXMr//1zK
+        //9cyv//XMr//1zK//9cyv//XMr//1zK//9cyv//XMr//1zK//9cyv//XMr//1zK//9cyv//RZe/PAsZ
+        HwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABk3RQBLpdAAUrXl/1e/
+        8f9byP3/XMr//1zK//9cyv//XMr//1zK//9cyv//XMr//1zK//9cyv//XMr//1zK//9cyv//XMr//1zK
+        //9cyv//Vr3v/xw/TwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAeQlMAULDeKlCw
+        3v9QsN7/ULDe/1Cx3/9Uuer/WcP3/1vJ/v9cyv//XMr//1zK//9cyv//XMr//1zK//9cyv//XMr//1zK
+        //9cyv//XMr//1zK//9cyv//XMr//yJLXwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGTdFAFCw
+        3ipQsN7/ULDe/1Cw3v9QsN7/ULDe/1Cw3v9QsN7/UbPi/1a97/9ax/v/XMr//1zK//9cyv//XMr//1zK
+        //9cyv//XMr//1zK//9cyv//XMr//1zK//9cyv//XMr//xw/TwAAAAAAAAAAAAAAAAAAAAAAAAAAAAoW
+        GwBLpdAAULDe/1Cw3v9QsN7/ULDe/1Cw3v9QsN7/ULDe/1Cw3v9QsN7/ULDe/1Cw3v9Tt+f/WMH0/1vJ
+        /v9cyv//XMr//1zK//9cyv//XMr//1zK//9cyv//XMr//1zK//9cyv//Vr3v/wsZHwAAAAAAAAAAAAAA
+        AAAAAAAAPISmAFCw3v9QsN7/ULDe/1Cw3v9QsN7/ULDe/1Cw3v9QsN7/ULDe/02p1v80b5H/H0Fa/xs3
+        Tf9Dk7z/ULLg/0yn1f9Wve//XMr//1zK//9cyv//XMr//1zK//9cyv//XMr//1zK//9cyv//RZe//wAA
+        AAAAAAAAAAAAAB5CUwBQsN7SULDe/1Cw3v9QsN7/ULDe/1Cw3v9QsN7/ULDe/1Cw3v9FmML/Hj5W/xct
+        Qv8XLUL/Fy1C/ypZdv9QsN7/OHqe/x8/WP9Prt7/XMr//1zK//9cyv//XMr//1zK//9cyv//XMr//1zK
+        //9cyv//IktfBAAAAAAAAAAAQY+0AFCw3v9QsN7/ULDe/1Cw3v9QsN7/ULDe/1Cw3v9QsN7/SJ/J/xs3
+        Tv8XLUL/Fy1C/xctQv8XLUL/Hj5W/1Cw3v9Elr//Fy1C/xw5Uf9Tteb/XMr//1zK//9cyv//XMr//1zK
+        //9cyv//XMr//1zK//9KpM//AAAAAA8hKQBQsN6iULDe/1Cw3v9QsN7/ULDe/1Cw3v9QsN7/ULDe/0+v
+        3f8kTGf/Fy1C/xctQv8XLUL/Fy1C/xctQv8bOE//ULDe/0ebxf8XLUL/Fy1C/ydSb/9byf7/XMr//1zK
+        //9cyv//XMr//1zK//9cyv//XMr//1zK//8RJS8AKFhvAFCw3v9QsN7/ULDe/1Cw3v9QsN7/ULDe/1Cw
+        3v9QsN7/Poiu/xctQv8XLUL/Fy1C/xctQv8XLUL/Fy1C/x9AWf9QsN7/Q5S8/xctQv8XLUL/Fy1C/0aa
+        xf9cyv//XMr//1zK//9cyv//XMr//1zK//9cyv//XMr//y5lf/s8hKYAULDe/1Cw3v9QsN7/ULDe/1Cw
+        3v9QsN7/ULDe/1Cw3v8oVHD/Fy1C/xctQv8XLUL/Fy1C/xctQv8XLUL/Klp4/1Cw3v86f6P/Fy1C/xct
+        Qv8XLUL/K1x6/1zK//9cyv//XMr//1zK//9cyv//XMr//1zK//9cyv//RZe//1Cw3g1QsN7/ULDe/1Cw
+        3v9QsN7/ULDe/1Cw3v9QsN7/Tq3a/xkxR/8XLUL/Fy1C/xctQv8XLUL/Fy1C/xctQv88g6n/ULDe/ytd
+        e/8XLUL/Fy1C/xctQv8ZMkj/Wsb7/1zK//9cyv//XMr//1zK//9cyv//XMr//1zK//9cyv//ULDeo1Cw
+        3v9QsN7/ULDe/1Cw3v9QsN7/ULDe/1Cw3v9GmcP/Fy1C/xctQv8XLUL/Fy1C/xctQv8XLUL/Hj1W/06t
+        2v9Nqdb/GjRK/xctQv8XLUL/Fy1C/xctQv9Qr9//XMr//1zK//9cyv//XMr//1zK//9cyv//XMr//1zK
+        //9QsN7/ULDe/1Cw3v9QsN7/ULDe/1Cw3v9QsN7/ULDe/0GOtf8XLUL/Fy1C/xctQv8XLUL/Fy1C/xct
+        Qv83eJz/ULDe/zZ0l/8XLUL/Fy1C/xctQv8XLUL/Fy1C/0qhzv9cyv//XMr//1zK//9cyv//XMr//1zK
+        //9cyv//XMr//1Cw3v9QsN7/ULDe/1Cw3v9QsN7/ULDe/1Cw3v9QsN7/QI20/xctQv8XLUL/Fy1C/xct
+        Qv8XLUL/GTJI/0yo1f9Ordr/HDlR/xctQv8XLUL/Fy1C/xctQv8XLUL/SaDM/1zK//9cyv//XMr//1zK
+        //9cyv//XMr//1zK//9cyv//ULDe5lCw3v9QsN7/ULDe/1Cw3v9QsN7/ULDe/1Cw3v9FmML/Fy1C/xct
+        Qv8XLUL/Fy1C/xctQv8oVXL/ULDe/z6Jr/8XLUL/Fy1C/xctQv8XLUL/Fy1C/xctQv9Prt3/XMr//1zK
+        //9cyv//XMr//1zK//9cyv//XMr//1zK//9QsN6EULDe/1Cw3v9QsN7/ULDe/1Cw3v9QsN7/ULDe/06s
+        2f8YMEb/Fy1C/xctQv8XLUL/Fy1C/zZ1mP9QsN7/LmOC/xctQv8XLUL/Fy1C/xctQv8XLUL/GDFH/1nF
+        +f9cyv//XMr//1zK//9cyv//XMr//1zK//9cyv//XMr//z+MsQBRs+L/ULDe/1Cw3v9QsN7/ULDe/1Cw
+        3v9QsN7/ULDe/yZQbP8XLUL/Fy1C/xctQv8XLUL/P4qx/1Cw3v8jSmX/Fy1C/xctQv8XLUL/Fy1C/xct
+        Qv8pV3X/XMr//1zK//9cyv//XMr//1zK//9cyv//XMr//1zK//9Fl7//LWR/AFvJ/v9Yw/b/VLjp/1Cw
+        3v9QsN7/ULDe/1Cw3v9QsN7/PIOo/xctQv8XLUL/Fy1C/xctQv9Dk7v/ULDe/x9BWv8XLUL/Fy1C/xct
+        Qv8XLUL/Fy1C/0SUvv9cyv//XMr//1zK//9cyv//XMr//1zK//9cyv//XMr//y5lf/8RJS8AXMr//1zK
+        //9cyv//W8j8/1a+8P9RtOP/ULDe/1Cw3v9Prtz/IkZg/xctQv8XLUL/Fy1C/0GOtv9QsN7/Ikdh/xct
+        Qv8XLUL/Fy1C/xctQv8kS2b/W8j9/1zK//9cyv//XMr//1zK//9cyv//XMr//1zK//9cyv//ESUvuwAA
+        AABKpM84XMr//1zK//9cyv//XMr//1vJ/v9Zw/f/VLnq/1Cx3/9GmsP/GjRK/xctQv8XLUL/OXyh/1Cw
+        3v8tYH//Fy1C/xctQv8XLUL/GjVM/1Cv3/9cyv//XMr//1zK//9cyv//XMr//1zK//9cyv//XMr//0qk
+        z/8AAAAAAAAAACJLXwBcyv//XMr//1zK//9cyv//XMr//1zK//9cyv//W8j9/1e/8f9Fl8H/GzdP/xct
+        Qv8rXHr/WMP2/0SWv/8XLUL/Fy1C/xw6Uf9MpdP/XMr//1zK//9cyv//XMr//1zK//9cyv//XMr//1zK
+        //9cyv//Iktf/wAAAAAAAAAAAAAAAEWXvzxcyv//XMr//1zK//9cyv//XMr//1zK//9cyv//XMr//1zK
+        //9Uuer/NG+S/x08VP9Uuev/W8n+/zyCqP81cpX/Vbvt/1zK//9cyv//XMr//1zK//9cyv//XMr//1zK
+        //9cyv//XMr//0WXv/8AAAAAAAAAAAAAAAAAAAAACxkfAFa97/9cyv//XMr//1zK//9cyv//XMr//1zK
+        //9cyv//XMr//1zK//9cyv//XMr//1zK//9cyv//XMr//1zK//9cyv//XMr//1zK//9cyv//XMr//1zK
+        //9cyv//XMr//1zK//9Wve//CxkfrwAAAAAAAAAAAAAAAAAAAAAAAAAAHD9PAFzK//9cyv//XMr//1zK
+        //9cyv//XMr//1zK//9cyv//XMr//1zK//9cyv//XMr//1zK//9cyv//XMr//1zK//9cyv//XMr//1zK
+        //9cyv//XMr//1zK//9cyv//XMr//xw/T/8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIktfAFzK
+        //9cyv//XMr//1zK//9cyv//XMr//1zK//9cyv//XMr//1zK//9cyv//XMr//1zK//9cyv//XMr//1zK
+        //9cyv//XMr//1zK//9cyv//XMr//1zK//8iS1//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAHD9PAFa97/9cyv//XMr//1zK//9cyv//XMr//1zK//9cyv//XMr//1zK//9cyv//XMr//1zK
+        //9cyv//XMr//1zK//9cyv//XMr//1zK//9Wve//HD9P/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAACxkfAEWXv/9cyv//XMr//1zK//9cyv//XMr//1zK//9cyv//XMr//1zK
+        //9cyv//XMr//1zK//9cyv//XMr//1zK//9cyv//RZe//wsZH68AAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACJLXwRKpM//XMr//1zK//9cyv//XMr//1zK
+        //9cyv//XMr//1zK//9cyv//XMr//1zK//9cyv//SqTP/yJLX/8AAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARJS8ALmV/+0WX
+        v/9cyv//XMr//1zK//9cyv//XMr//1zK//9Fl7//LmV//xElL7sAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAA//gf///AAf//AAB//gAAP/gAAB/wAAAP8AAAB+AAAAPAAAABwAAAAYAA
+        AAGAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAACAAAAAgAAAAIAAAAHAAAABwAAAA+AA
+        AAPwAAAH+AAAD/wAAB/+AAA//wAA///gA/8=
+</value>
+  </data>
+</root>

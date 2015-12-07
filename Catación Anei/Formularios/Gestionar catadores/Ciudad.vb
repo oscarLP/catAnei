@@ -11,6 +11,8 @@
         CargarGrilla() 'Carga en la tabla todos los registros
         Total_Registrados() 'Muestra 'Total' el numero de registros
         Des_Campos() 'Desabilita los campos si no se ha registrado ningun registro
+        Desabilitar_Modificar_Eliminar()
+        dgListaCiudad.ClearSelection() 'Cancelo la seleccion de la tabla
     End Sub
 
     'BOTON GUARDAR
@@ -21,44 +23,80 @@
 
         If btnNuevoCiudadYGuardar.Text = "Nueva ciudad" Then
             Hab_Campos() 'Habilita los campos
+            Desabilitar_Modificar_Eliminar()
+            Mod_Nueva_Ciudad()
             LimpiarCampos()
             txtCiudad.Focus() 'Da foco de entrada al campo 'Ciudad'
         ElseIf btnNuevoCiudadYGuardar.Text = "Guardar" Then
-            Codigo_Ciudad = Fun_Ciudad.Codigo_Azar() 'Obtiene un codigo al azar para luego guardarlo
-
-            If i = Fun_Ciudad.Guardar_Ciudad(Codigo_Ciudad, txtCiudad.Text, Fun_Ciudad.Codigo_Pais("Colombia")) = False Then
-                LimpiarCampos()
-                CargarGrilla()
-                Total_Registrados()
-                Contar_Registros()
+            If txtCiudad.TextLength = 0 Then
+                MsgBox("Por favor, escriva el nombre de la canción.", vbExclamation, "Seguridad")
             Else
-                MsgBox("No se pudo guardar.", vbExclamation, "Seguridad")
+                Codigo_Ciudad = Fun_Ciudad.Codigo_Azar() 'Obtiene un codigo al azar para luego guardarlo
+                If i = Fun_Ciudad.Guardar_Ciudad(Codigo_Ciudad, txtCiudad.Text, Fun_Ciudad.Codigo_Pais("Colombia")) = False Then
+                    'Modificar boton Guardar
+                    btnNuevoCiudadYGuardar.Text = "Nueva ciudad"
+                    btnNuevoCiudadYGuardar.Image = My.Resources.Ciudad_32x32 'Coloca una imagen el boton 'Guardar'
+
+                    Des_Campos()
+                    LimpiarCampos()
+                    CargarGrilla()
+                    Total_Registrados()
+                    Contar_Registros()
+                    Actualizar_Lista_Ciudades()
+                Else
+                    MsgBox("No se pudo guardar.", vbExclamation, "Seguridad")
+                    txtCiudad.Focus()
+                End If
             End If
         End If
     End Sub
     '---------------------------------------------------------------------------------------------------------------------------
 
+    Sub Antes_Modificar()
+        Hab_Campos()
+        btnNuevoCiudadYGuardar.Enabled = False
+        btnEliminar.Enabled = False
+        btnModificar.Text = "Aceptar"
+        Me.AcceptButton = btnModificar
+        txtCiudad.Focus()
+    End Sub
+
+    Sub Despues_Modificar()
+        Des_Campos()
+        btnNuevoCiudadYGuardar.Enabled = True
+        btnEliminar.Enabled = True
+        btnModificar.Text = "Modificar"
+        Me.AcceptButton = btnNuevoCiudadYGuardar
+        txtBuscar.Focus()
+    End Sub
+
     'BOTON MODIFICAR
     '---------------------------------------------------------------------------------------------------------------------------
     Private Sub btnModificar_Click(sender As Object, e As EventArgs) Handles btnModificar.Click
-        Dim varCod_Ciudad As String
-        Dim varCod_Pais As String
-        Dim i As Boolean
+        If btnModificar.Text = "Modificar" Then
+            Antes_Modificar()
+        ElseIf btnModificar.Text = "Aceptar" Then
+            Dim varCod_Ciudad As String
+            Dim varCod_Pais As String
+            Dim i As Boolean
 
-        If MsgBox("¿Esta seguro de modificar el registro?", vbQuestion + vbYesNo, "Pregunta") = vbYes Then
+            If MsgBox("¿Esta seguro de modificar el registro?", vbQuestion + vbYesNo, "Pregunta") = vbYes Then
 
-            varCod_Ciudad = RegistroSeleccionado.Item(0)("cod_ciudad")
-            varCod_Pais = RegistroSeleccionado.Item(0)("cod_pais")
+                varCod_Ciudad = RegistroSeleccionado.Item(0)("cod_ciudad")
+                varCod_Pais = RegistroSeleccionado.Item(0)("cod_pais")
 
-            If i = Fun_Ciudad.Modificar_Ciudad(varCod_Ciudad, txtCiudad.Text, varCod_Pais) = False Then
-                MessageBox.Show("Modificado correctamente")
-                CargarGrilla()
-                Total_Registrados()
-                Contar_Registros()
-            Else
-                MsgBox("Error al Modificar. Vuelva a intentarlo", vbCritical, "Seguridad")
-                txtCiudad.Clear()
-                txtCiudad.Focus()
+                If i = Fun_Ciudad.Modificar_Ciudad(varCod_Ciudad, txtCiudad.Text, varCod_Pais) = False Then
+                    MessageBox.Show("Modificado correctamente")
+                    Despues_Modificar()
+                    CargarGrilla()
+                    Total_Registrados()
+                    Contar_Registros()
+                    Actualizar_Lista_Ciudades()
+                Else
+                    MsgBox("Error al Modificar. Vuelva a intentarlo", vbCritical, "Seguridad")
+                    txtCiudad.Clear()
+                    txtCiudad.Focus()
+                End If
             End If
         End If
     End Sub
@@ -75,6 +113,7 @@
                 CargarGrilla()
                 Total_Registrados()
                 Contar_Registros()
+                Actualizar_Lista_Ciudades()
             Else
                 MsgBox("Error al Eliminar. Vuelva a intentarlo", vbCritical, "Seguridad")
             End If
@@ -100,43 +139,29 @@
         txtCiudad.Focus()
     End Sub
 
-    Sub Des_Campos() 'Desabitar campos y botones
-        If dgListaCiudad.RowCount = 0 Then
-            'Desabitar campos
-            txtCiudad.Enabled = False
-
-            'Desabitar botones
-            btnModificar.Enabled = False
-            btnEliminar.Enabled = False
-        End If
-    End Sub
-
-    Sub Hab_Campos() 'Habilitar campos y botones
-        'Desabitar campos
-        txtCiudad.Enabled = True
-
-        'Modificar boton Nuevo catador
-        btnNuevoCiudadYGuardar.Text = "Guardar"
-        btnNuevoCiudadYGuardar.Image = My.Resources.Guardar_32x32 'Coloca una imagen el boton 'Guardar'
-
+    Sub Desabilitar_Modificar_Eliminar()
         'Desabilitar los botones 'Modificar' y 'Eliminar'
         btnModificar.Enabled = False
         btnEliminar.Enabled = False
     End Sub
 
-    Sub HabCampos_ModEli() 'Habilita los campos para poder modificar o eliminar
-        txtCiudad.Enabled = True
-
-        btnModificar.Enabled = True
-        btnEliminar.Enabled = True
-        If btnNuevoCiudadYGuardar.Text = "Guardar" Then
-            btnNuevoCiudadYGuardar.Text = "Nueva ciudad"
-            btnNuevoCiudadYGuardar.Image = My.Resources.Ciudad_32x32
-        End If
+    Sub Des_Campos() 'Desabitar campos y botones
+        'Desabitar campos
+        txtCiudad.Enabled = False
     End Sub
 
-    'Evento de la grilla para mostrar el registro (fila) en la parte 'Gestion de catador'
-    Private Sub dgListaCiudad_CellEnter(sender As Object, e As DataGridViewCellEventArgs) Handles dgListaCiudad.CellEnter
+    Sub Mod_Nueva_Ciudad() 'Modifica el boton 'btnNuevoYGudar' si esta en en 'Nueva ciudad'
+        'Modificar boton Nuevo Catador
+        btnNuevoCiudadYGuardar.Text = "Guardar"
+        btnNuevoCiudadYGuardar.Image = My.Resources.Guardar_32x32 'Coloca una imagen el boton 'Guardar'
+    End Sub
+
+    Sub Hab_Campos() 'Habilitar campos y botones
+        'Desabitar campos
+        txtCiudad.Enabled = True
+    End Sub
+
+    Sub Mostrar_Ciudad()
         Dim varNombre As String
         Dim row As DataGridViewRow = dgListaCiudad.CurrentRow
         varNombre = CStr(row.Cells("Nombre").Value) 'Obtiene el dato que contiene la columna 'Nombre' de la celda seleccionada
@@ -144,8 +169,36 @@
         RegistroSeleccionado.DataSource = Fun_Ciudad.Buscar_Ciudad() 'Obtiene la tabla de todos los catadores registrados
 
         RegistroSeleccionado.Filter = "nombre = '" & varNombre & "'"
-        HabCampos_ModEli()
         txtCiudad.Text = RegistroSeleccionado.Item(0)("nombre")
+    End Sub
+
+    'Evento de la grilla para mostrar el registro (fila) en la parte 'Gestion de catador'
+    Private Sub dgListaCiudad_CellEnter(sender As Object, e As DataGridViewCellEventArgs) Handles dgListaCiudad.CellEnter
+        If dgListaCiudad.ContainsFocus = True Then
+            If btnNuevoCiudadYGuardar.Text = "Guardar" Then 'Esto quiere decir que se esta llevando el registro de una nueva ciudad
+                If MsgBox("Se está llevando a cabo el registro de una nueva ciudad. ¿Desea cancelar el registro?", vbQuestion + vbYesNo, "Pregunta") = vbYes Then
+                    Mostrar_Ciudad()
+
+                    btnNuevoCiudadYGuardar.Text = "Nueva ciudad"
+                    Des_Campos()
+                    Desabilitar_Modificar_Eliminar()
+                    btnNuevoCiudadYGuardar.Image = My.Resources.Ciudad_32x32
+                Else
+                    btnModificar.Enabled = False
+                    btnEliminar.Enabled = False
+                    txtCiudad.Focus()
+                End If
+            ElseIf btnModificar.Text = "Aceptar" Then 'Esto quiere decir que se esta llevando a cabo la modificacion de una ciudad
+                If MsgBox("Se está llevando a cabo la modificación de una ciudad. ¿Desea cancelar la modicación?", vbQuestion + vbYesNo, "Pregunta") = vbYes Then
+                    Mostrar_Ciudad()
+                    Despues_Modificar()
+                End If
+            Else
+                btnModificar.Enabled = True
+                btnEliminar.Enabled = True
+                Mostrar_Ciudad()
+            End If
+        End If
     End Sub
 
     Sub Total_Registrados() 'Muestra el total de las ciudades registradas
@@ -195,7 +248,7 @@
     '-------------------------------------------------------------------------------------------------------------
     Private Sub txtCiudad_TextChanged(sender As Object, e As EventArgs) Handles txtCiudad.TextChanged
         erValidarError.SetError(txtCiudad, Nothing)
-        txtCiudad.BackColor = Color.White
+        txtCiudad.BackColor = SystemColors.Window
     End Sub
 
     'validating
@@ -204,12 +257,19 @@
             erValidarError.SetError(txtCiudad, "Este campo es obligatorio")
             txtCiudad.BackColor = Color.MistyRose
         Else
-            txtCiudad.BackColor = Color.White
+            txtCiudad.BackColor = SystemColors.Window
         End If
     End Sub
     '---------------------------------------------------------------------------------------------------------------------------------
 
     Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
         Me.Close()
+    End Sub
+
+    Sub Actualizar_Lista_Ciudades()
+        frmProveedores.Cargar_Ciudades()
+        frmProductores.Cargar_Ciudades()
+        frmNuevaSesionCatacion.Cargar_Ciudades()
+        frmMuestra.Cargar_Ciudades()
     End Sub
 End Class

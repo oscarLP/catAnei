@@ -47,7 +47,7 @@ Public Class Gestor_Administrador
     Public Function Datos_Administrador() As DataTable 'Devuelve el registro del administrador
         Dim Tabla As New DataTable
         Try
-            Dim da As New SqlDataAdapter("SELECT U.nombre_usuario 'nombre_usuario', U.contrasenia 'contrasenia', P.cedula 'cedula', P.nombre 'nombre', " +
+            Dim da As New SqlDataAdapter("SELECT P.codigo 'cod_persona', U.codigo 'cod_usuario', U.nombre_usuario 'nombre_usuario', U.contrasenia 'contrasenia', P.cedula 'cedula', P.nombre 'nombre', " +
                                          "P.apellido 'apellido', P.telefono 'telefono', P.correo 'correo' FROM USUARIO U, PERSONA P " +
                                          "WHERE P.codigo = U.fk_codigo_persona AND U.tipo_usuario = 'Administrador'", db.Conexion)
             da.Fill(Tabla)

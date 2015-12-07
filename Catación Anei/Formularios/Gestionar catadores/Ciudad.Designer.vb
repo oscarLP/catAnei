@@ -73,7 +73,7 @@ Partial Class frmCiudad
         Me.Panel1.Controls.Add(Me.Label4)
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(597, 54)
+        Me.Panel1.Size = New System.Drawing.Size(576, 54)
         Me.Panel1.TabIndex = 22
         '
         'PictureBox3
@@ -104,7 +104,7 @@ Partial Class frmCiudad
         Me.lbAdministrador.BackColor = System.Drawing.Color.Transparent
         Me.lbAdministrador.Font = New System.Drawing.Font("Trebuchet MS", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbAdministrador.ForeColor = System.Drawing.Color.Teal
-        Me.lbAdministrador.Location = New System.Drawing.Point(12, 70)
+        Me.lbAdministrador.Location = New System.Drawing.Point(16, 82)
         Me.lbAdministrador.Name = "lbAdministrador"
         Me.lbAdministrador.Size = New System.Drawing.Size(216, 29)
         Me.lbAdministrador.TabIndex = 23
@@ -121,10 +121,10 @@ Partial Class frmCiudad
         Me.GroupBox1.Controls.Add(Me.txtBuscar)
         Me.GroupBox1.Font = New System.Drawing.Font("Trebuchet MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 102)
+        Me.GroupBox1.Location = New System.Drawing.Point(16, 114)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(250, 81)
-        Me.GroupBox1.TabIndex = 24
+        Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Busqueda"
         '
@@ -189,17 +189,17 @@ Partial Class frmCiudad
         Me.txtBuscar.Location = New System.Drawing.Point(32, 22)
         Me.txtBuscar.Name = "txtBuscar"
         Me.txtBuscar.Size = New System.Drawing.Size(209, 26)
-        Me.txtBuscar.TabIndex = 16
+        Me.txtBuscar.TabIndex = 1
         '
         'GroupBox2
         '
         Me.GroupBox2.Controls.Add(Me.dgListaCiudad)
         Me.GroupBox2.Font = New System.Drawing.Font("Trebuchet MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.GroupBox2.Location = New System.Drawing.Point(12, 189)
+        Me.GroupBox2.Location = New System.Drawing.Point(16, 201)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(250, 288)
-        Me.GroupBox2.TabIndex = 24
+        Me.GroupBox2.TabIndex = 3
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Lista de ciudades"
         '
@@ -223,6 +223,7 @@ Partial Class frmCiudad
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgListaCiudad.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.dgListaCiudad.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgListaCiudad.ColumnHeadersVisible = False
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft
         DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window
         DataGridViewCellStyle3.Font = New System.Drawing.Font("Trebuchet MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -236,6 +237,7 @@ Partial Class frmCiudad
         Me.dgListaCiudad.MultiSelect = False
         Me.dgListaCiudad.Name = "dgListaCiudad"
         Me.dgListaCiudad.ReadOnly = True
+        Me.dgListaCiudad.RowHeadersVisible = False
         Me.dgListaCiudad.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgListaCiudad.Size = New System.Drawing.Size(244, 266)
         Me.dgListaCiudad.TabIndex = 1
@@ -264,7 +266,7 @@ Partial Class frmCiudad
         Me.btnEliminar.Location = New System.Drawing.Point(6, 104)
         Me.btnEliminar.Name = "btnEliminar"
         Me.btnEliminar.Size = New System.Drawing.Size(215, 35)
-        Me.btnEliminar.TabIndex = 26
+        Me.btnEliminar.TabIndex = 4
         Me.btnEliminar.Text = "Eliminar"
         Me.btnEliminar.UseVisualStyleBackColor = True
         '
@@ -277,7 +279,7 @@ Partial Class frmCiudad
         Me.btnNuevoCiudadYGuardar.Location = New System.Drawing.Point(6, 22)
         Me.btnNuevoCiudadYGuardar.Name = "btnNuevoCiudadYGuardar"
         Me.btnNuevoCiudadYGuardar.Size = New System.Drawing.Size(215, 35)
-        Me.btnNuevoCiudadYGuardar.TabIndex = 25
+        Me.btnNuevoCiudadYGuardar.TabIndex = 2
         Me.btnNuevoCiudadYGuardar.Text = "Nueva ciudad"
         Me.btnNuevoCiudadYGuardar.UseVisualStyleBackColor = True
         '
@@ -290,7 +292,7 @@ Partial Class frmCiudad
         Me.btnModificar.Location = New System.Drawing.Point(6, 63)
         Me.btnModificar.Name = "btnModificar"
         Me.btnModificar.Size = New System.Drawing.Size(215, 35)
-        Me.btnModificar.TabIndex = 24
+        Me.btnModificar.TabIndex = 3
         Me.btnModificar.Text = "Modificar"
         Me.btnModificar.UseVisualStyleBackColor = True
         '
@@ -304,8 +306,8 @@ Partial Class frmCiudad
         Me.btnCancelar.Location = New System.Drawing.Point(6, 244)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(215, 35)
-        Me.btnCancelar.TabIndex = 23
-        Me.btnCancelar.Text = "Cancelar"
+        Me.btnCancelar.TabIndex = 5
+        Me.btnCancelar.Text = "Cerrar"
         Me.btnCancelar.UseVisualStyleBackColor = True
         '
         'GroupBox4
@@ -361,7 +363,7 @@ Partial Class frmCiudad
         Me.txtCiudad.Location = New System.Drawing.Point(38, 44)
         Me.txtCiudad.Name = "txtCiudad"
         Me.txtCiudad.Size = New System.Drawing.Size(183, 26)
-        Me.txtCiudad.TabIndex = 16
+        Me.txtCiudad.TabIndex = 1
         '
         'Panel2
         '
@@ -369,10 +371,10 @@ Partial Class frmCiudad
         Me.Panel2.Controls.Add(Me.GroupBox4)
         Me.Panel2.Controls.Add(Me.GroupBox3)
         Me.Panel2.Controls.Add(Me.Label1)
-        Me.Panel2.Location = New System.Drawing.Point(277, 60)
+        Me.Panel2.Location = New System.Drawing.Point(281, 72)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(277, 417)
-        Me.Panel2.TabIndex = 27
+        Me.Panel2.TabIndex = 2
         '
         'Label1
         '
@@ -394,10 +396,11 @@ Partial Class frmCiudad
         '
         'frmCiudad
         '
+        Me.AcceptButton = Me.btnNuevoCiudadYGuardar
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(567, 489)
+        Me.ClientSize = New System.Drawing.Size(575, 512)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
