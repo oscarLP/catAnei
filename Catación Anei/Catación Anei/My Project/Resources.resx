@@ -1,0 +1,907 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="granola" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\granola.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nuez de nogal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nuez de nogal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="inconsistente" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\inconsistente.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="maderozo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\maderozo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="apagado1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\apagado1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="herbal1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\herbal1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ciruela" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ciruela.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="grosella roja" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\grosella roja.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ligero1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ligero1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tierra" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tierra.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="carambola" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\carambola.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="desbalanceado" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\desbalanceado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pasas amarillas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pasas amarillas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Cedula" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cedula.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sudoroso" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sudoroso.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Descriptores 48x48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Descriptores 48x48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Nueva sesión de catación 32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Nueva sesión de catación 32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rio" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rio.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="maracuyá" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\maracuyá.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="calabacin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\calabacin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Catadores registrados 48x48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Catadores registrados 48x48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Proveedor 3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Proveedor 3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mantequilla" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mantequilla.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Realizar cataciones 68x68" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Realizar cataciones 68x68.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lupulo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lupulo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lavanda" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lavanda.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Perfil" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Perfil.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="vegetal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\vegetal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="uva" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\uva.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Administrador 16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Administrador 16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="té verde" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\té verde.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="especias" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\especias.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Modificar 32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Modificar 32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="frutas secas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\frutas secas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ligero" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ligero.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pecano" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pecano.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="salvia1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\salvia1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Contraseña 48x48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Contraseña 48x48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hojas verdes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hojas verdes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="clementina" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\clementina.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="azucar morena" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\azucar morena.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="vainilla" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\vainilla.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sesiones de cataciones registradas 48x48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sesiones de cataciones registradas 48x48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mielada" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mielada.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="uva verde" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\uva verde.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="grosella negra" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\grosella negra.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="clavo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\clavo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="chocolate" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\chocolate.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Usuario 32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Usuario 32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cereza negra" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cereza negra.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Eliminar 32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Eliminar 32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="olivia" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\olivia.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="deslucido" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\deslucido.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="almendra" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\almendra.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Nueva sesión de catación 48x48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Nueva sesión de catación 48x48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ingresar 32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ingresar 32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Proveedor 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Proveedor 2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Logotipo 98x63" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Logotipo 98x63.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Telefono" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Telefono.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Confirmar contraseña" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Confirmar contraseña.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="apagado" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\apagado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ingresar 32x321" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ingresar 32x321.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="naranja" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\naranja.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="madera fresca" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\madera fresca.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Apellido" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Apellido.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gengibre" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gengibre.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Consultas y estadisticas 128x128" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Consultas y estadisticas 128x128.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="arveja" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\arveja.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="crema" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\crema.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="limpio" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\limpio.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sucio" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sucio.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ciudad 48x48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ciudad 48x48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Nivel de tueste 4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Nivel de tueste 4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="malta" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\malta.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Hacer gestión 48x48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hacer gestión 48x48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lychee" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lychee.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="piña" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\piña.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="silvestre" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\silvestre.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cocoa en polvo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cocoa en polvo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pan dulce" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pan dulce.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="manzana verde" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\manzana verde.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="prolongado" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\prolongado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="avellano" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\avellano.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pan tostado" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pan tostado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="manzana-pera" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\manzana-pera.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Nuevo catador 32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Nuevo catador 32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="magnolia" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\magnolia.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="heno-paja" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\heno-paja.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="té negro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\té negro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="melon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\melon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mango" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mango.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="caramelo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\caramelo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="uva blanca" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\uva blanca.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Fondo - Menú principal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Fondo - Menú principal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="carne" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\carne.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nuez" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nuez.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="brillante" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\brillante.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="estructuado" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\estructuado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ahumado" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ahumado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pan fresco" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pan fresco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="seco" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\seco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Gestionar catadores 68x68" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Gestionar catadores 68x68.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Muestra 32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Muestra 32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="frutas de hueso" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\frutas de hueso.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Nivel de tueste 5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Nivel de tueste 5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="azucar quemada" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\azucar quemada.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="galleta salada" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\galleta salada.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="limoncillo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\limoncillo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Usuario 26x26" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Usuario 26x26.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hibiscus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hibiscus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tangerina" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tangerina.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="miel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\miel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="uvas pasas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\uvas pasas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="viejo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\viejo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cacahuate" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cacahuate.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pimienta verde - vegetal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pimienta verde - vegetal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ayuda 16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ayuda 16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tipped" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tipped.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ciruela pasa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ciruela pasa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="floral" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\floral.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="anis" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\anis.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Usuario 24x24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Usuario 24x24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="granos-cereal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\granos-cereal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bergamota" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bergamota.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="caballo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\caballo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cremoso" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cremoso.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="carbon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\carbon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="frutas tropicales" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\frutas tropicales.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="chocolate de leche" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\chocolate de leche.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="delicado" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\delicado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mohoso" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mohoso.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="blando" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\blando.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Taza no ok" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Taza no ok.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Realizar cataciones 128x128" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Realizar cataciones 128x128.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Nivel de tueste 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Nivel de tueste 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="horneado" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\horneado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="uva roja" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\uva roja.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="menta" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\menta.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="balanceado" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\balanceado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="toronja" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\toronja.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="débil" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\débil.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Muestra 48x48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Muestra 48x48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cola" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cola.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="suelo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\suelo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="miel de maple" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\miel de maple.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hongos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hongos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Cancelar 32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cancelar 32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="papaya" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\papaya.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="moras" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\moras.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Nueva sesión de catación2 48x48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Nueva sesión de catación2 48x48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Nivel de tueste 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Nivel de tueste 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="medio" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\medio.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nectarina" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nectarina.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="jugoso" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\jugoso.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="leve" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\leve.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="frambuesa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\frambuesa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hijo seco" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hijo seco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Finca 26x26" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Finca 26x26.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dátiles" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dátiles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="citrico" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\citrico.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Guardar 32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Guardar 32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="redondeado" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\redondeado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tamarindo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tamarindo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fermentado" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fermentado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="salado" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\salado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="canela" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\canela.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Catar 48x48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Catar 48x48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="melasa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\melasa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Usuario 48x48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Usuario 48x48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dense" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dense.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dulce" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dulce.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rápido" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rápido.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Direccion 26x26" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Direccion 26x26.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Fondo - Inicio de Sesión" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Fondo - Inicio de Sesión.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nuez de marañon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nuez de marañon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cuero" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cuero.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Contraseña 32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Contraseña 32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="guisante" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\guisante.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="coco" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\coco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="centeno" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\centeno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mandarina" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mandarina.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cedro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cedro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fresa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fresa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="No 26x26" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\No 26x26.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="chocolate oscuro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\chocolate oscuro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="terroso1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\terroso1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="crujiente" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\crujiente.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tostado" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tostado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="arándano" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\arándano.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="astringente" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\astringente.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="uva concord" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\uva concord.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dense1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dense1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lima" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lima.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="salsa de soya" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\salsa de soya.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Productor 2 48x48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Productor 2 48x48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ciudad 24x24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ciudad 24x24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="trigo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\trigo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Contraseña 26x26" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Contraseña 26x26.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="curry" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\curry.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="manzana roja" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\manzana roja.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="terroso" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\terroso.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Nombre" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Nombre.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Administrador 32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Administrador 32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Uniformidad ok" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Uniformidad ok.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="chocolate amargo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\chocolate amargo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="jazmín" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\jazmín.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Descriptores" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Descriptores.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Productor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Productor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pimienta verde" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pimienta verde.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="herboso1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\herboso1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="salvia" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\salvia.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="herbal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\herbal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="piel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\piel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mora azul" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mora azul.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="chocolate de reposteria" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\chocolate de reposteria.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Contraseña 16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Contraseña 16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Izquierda 25x25" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Izquierda 25x25.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="caucho" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\caucho.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="quemado" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\quemado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="eneldo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\eneldo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cebada" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cebada.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tomate seco" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tomate seco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="yute" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\yute.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="platano" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\platano.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cereza" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cereza.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tutoriales 24x24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tutoriales 24x24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="azahar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\azahar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="azucar de caña" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\azucar de caña.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Gestionar catadores 128x128" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Gestionar catadores 128x128.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cilantro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cilantro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="albaricoque" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\albaricoque.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pimienta negra" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pimienta negra.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="herboso" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\herboso.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Usuario 24x241" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Usuario 24x241.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rosas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rosas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="vibrante" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\vibrante.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Buscar 26x26" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Buscar 26x26.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="granos de cacao" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\granos de cacao.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="limón" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\limón.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="durazno" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\durazno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Proveedor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Proveedor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tabaco" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tabaco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Si 26x26" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Si 26x26.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ciudad 32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ciudad 32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tomate" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tomate.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ciudad 26x26" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ciudad 26x26.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="melón" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\melón.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="malvavisco" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\malvavisco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Correo 26x26" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Correo 26x26.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Nivel de tueste 3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Nivel de tueste 3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="frutal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\frutal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Vereda 26 x26" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Vereda 26 x26.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rancio" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rancio.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nuez moscada" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nuez moscada.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Gestionar catadores 68x681" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Gestionar catadores 68x681.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Catar 32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Catar 32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="kiwi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\kiwi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Filtrar 26x26" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Filtrar 26x26.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Proveedores2 48x48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Proveedores2 48x48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Logotipo 88x57" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Logotipo 88x57.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Cerrar sesion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cerrar sesion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Iniciar sesion 32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Iniciar sesion 32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+</root>
