@@ -74,7 +74,11 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Datos\Administrador.vb" />
+    <Compile Include="Datos\Catador.vb" />
     <Compile Include="Datos\Conexion BD.vb" />
+    <Compile Include="Datos\Personas.vb" />
+    <Compile Include="Datos\Usuarios.vb" />
     <Compile Include="Formularios\Descriptores\Acidez.Designer.vb">
       <DependentUpon>Acidez.vb</DependentUpon>
     </Compile>
