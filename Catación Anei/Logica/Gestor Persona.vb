@@ -1,75 +1,101 @@
-﻿Imports System.Data.SqlClient
-Public Class Gestor_Persona
-    Private db As New Conexion_BD
-    Private Comando As SqlCommand
+﻿Public Class Gestor_Persona
+    Private persona As Personas
 
-    Public Function Guardar_Persona(codigo, cedula, nombre, apellido, telefono, correo, tipo_persona) As Boolean
-        Dim i As Integer
-        Try
-            Dim _sql As String = String.Format("INSERT INTO PERSONA (codigo, cedula, nombre, apellido, telefono, correo, tipo_persona) VALUES('{0}','{1}','{2}','{3}','{4}','{5}','{6}')",
-                                               codigo, cedula, nombre, apellido, telefono, correo, tipo_persona)
-            Using cmd As New SqlCommand(_sql, db.Conexion)
-                db.Conexion.Open()
-                i = cmd.ExecuteNonQuery
-                db.Conexion.Close()
-            End Using
-        Catch ex As Exception
-            If Err.Description.Contains("UNIQUE KEY") = True Then
-                MsgBox("Esta cedula ya se encuentra registrada.", vbExclamation, "Seguridad - Persona")
-            Else
-                MsgBox(ex.Message, vbCritical, "Seguridad - Persona")
-            End If
-            db.Conexion.Close()
-        End Try
-        If i > 0 Then
-            Return True
-        Else
-            Return False
+    Public Function Guardar_Persona(codigo, cedula, nombre, apellido, telefono, correo, tipo_persona) As String
+        Dim resp_guardar As String
+
+        'para  codigo
+        If (String.IsNullOrEmpty(codigo)) Then
+            resp_guardar = "No se ha recibido un codigo de persona."
+            Return resp_guardar
         End If
+
+        'Para cedula
+        If (String.IsNullOrEmpty(cedula)) Then
+            resp_guardar = "No se ha recibido una cedula de persona."
+            Return resp_guardar
+        End If
+
+        'Para nombre
+        If (String.IsNullOrEmpty(nombre)) Then
+            resp_guardar = "No se ha recibido un nombre de persona."
+            Return resp_guardar
+        End If
+
+        'Para apellido
+        If (String.IsNullOrEmpty(apellido)) Then
+            resp_guardar = "No se ha recibido un apellido de persona."
+            Return resp_guardar
+        End If
+
+        'Para tipo de persona
+        If (String.IsNullOrEmpty(tipo_persona)) Then
+            resp_guardar = "No se ha recibido un tipo de persona."
+            Return resp_guardar
+        End If
+
+        If (tipo_persona <> "Usuario" Or tipo_persona <> "Productor" Or tipo_persona <> "Proveedor") Then
+            resp_guardar = "El tipo de persona a registrar no es válido."
+            Return resp_guardar
+        End If
+
+        'Si no ha retornado nada hasta éste punto entonces procedemos a insertar 
+        resp_guardar = persona.insert(codigo, cedula, nombre, apellido, telefono, correo, tipo_persona)
+        Return resp_guardar
+
     End Function
 
-    Public Function Modificar_Persona(codigo, cedula, nombre, apellido, telefono, correo, tipo_persona) As Boolean
-        Dim i As Integer
-        Try
-            db.Conexion.Open()
-            Dim sql As String = "UPDATE PERSONA SET cedula = '" & cedula & "', nombre = '" & nombre & "', apellido = '" & apellido & "', telefono = '" & telefono &
-                                "', correo = '" & correo & "', tipo_persona = '" & tipo_persona & "' WHERE codigo = '" & codigo & "'"
-            Comando = New SqlCommand(sql, db.Conexion)
-            i = Comando.ExecuteNonQuery()
-            db.Conexion.Close()
+    Public Function Modificar_Persona(codigo, cedula, nombre, apellido, telefono, correo, tipo_persona) As String
+        Dim resp_guardar As String
 
-        Catch ex As Exception
-            MessageBox.Show(ex.Message)
-            db.Conexion.Close()
-        End Try
-        If i > 0 Then
-            Return True
-        Else
-            Return False
+        'para  codigo
+        If (String.IsNullOrEmpty(codigo)) Then
+            resp_guardar = "No se ha recibido un codigo de persona."
+            Return resp_guardar
         End If
+
+        'Para cedula
+        If (String.IsNullOrEmpty(cedula)) Then
+            resp_guardar = "No se ha recibido una cedula de persona."
+            Return resp_guardar
+        End If
+
+        'Para nombre
+        If (String.IsNullOrEmpty(nombre)) Then
+            resp_guardar = "No se ha recibido un nombre de persona."
+            Return resp_guardar
+        End If
+
+        'Para apellido
+        If (String.IsNullOrEmpty(apellido)) Then
+            resp_guardar = "No se ha recibido un apellido de persona."
+            Return resp_guardar
+        End If
+
+        'Para tipo de persona
+        If (String.IsNullOrEmpty(tipo_persona)) Then
+            resp_guardar = "No se ha recibido un tipo de persona."
+            Return resp_guardar
+        End If
+
+        If (tipo_persona <> "Usuario" Or tipo_persona <> "Productor" Or tipo_persona <> "Proveedor") Then
+            resp_guardar = "El tipo de persona a modificar no es válido."
+            Return resp_guardar
+        End If
+
+        'Si no ha retornado nada hasta éste punto entonces procedemos a actualizar
+        resp_guardar = persona.update(codigo, cedula, nombre, apellido, telefono, correo, tipo_persona)
+        Return resp_guardar
+
     End Function
 
-    Public Function Eliminar_Persona(codigo) As Boolean
-        Dim i As Integer
-        Try
-            db.Conexion.Open()
-            Dim sql As String = "DELETE FROM PERSONA WHERE codigo = '" & codigo & "'"
-            Comando = New SqlCommand(sql, db.Conexion)
-            i = Comando.ExecuteNonQuery
-            db.Conexion.Close()
-        Catch ex As Exception
-            If Err.Description.Contains("REFERENCE") = True Then
-                MsgBox("No se puede elimar este catador ya que tiene sesiones registradas.", vbExclamation, "Seguridad - Persona")
-            Else
-                MsgBox(ex.Message, vbCritical, "Seguridad - Persona")
-            End If
-            db.Conexion.Close()
-        End Try
-        If i > 0 Then
-            Return True
-        Else
-            Return False
+    Public Function Eliminar_Persona(codigo) As String
+
+        If (String.IsNullOrEmpty(codigo)) Then
+            Return "No se ha recibido codigo de persona a eliminar"
         End If
+
+        Return persona.delete(codigo)
     End Function
 
     'GENERAR UN CODIGO AL AZAR
