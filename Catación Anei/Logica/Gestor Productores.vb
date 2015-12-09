@@ -3,30 +3,36 @@ Public Class Gestor_Productores
     Private db As New Conexion_BD
     Private Comando As SqlCommand
 
-    Public Function Guardar_Productores(codigo, vereda, finca, fk_codigo_ciudad, fk_codigo_persona) As Boolean
-        Dim i As Integer
-        Try
-            Dim _sql As String = String.Format("INSERT INTO PRODUCTOR (codigo, vereda, finca, fk_codigo_ciudad, fk_codigo_persona) VALUES('{0}','{1}','{2}','{3}','{4}')",
-                                               codigo, vereda, finca, fk_codigo_ciudad, fk_codigo_persona)
-            Using cmd As New SqlCommand(_sql, db.Conexion)
-                db.Conexion.Open()
-                i = cmd.ExecuteNonQuery
-                db.Conexion.Close()
-            End Using
-        Catch ex As Exception
-            If Err.Description.Contains("codigo") = True Then
-                MsgBox("No se pudo guardar el registro, por favor intente de nuevo.", vbExclamation, "Seguridad - Productores")
-            Else
-                MsgBox(ex.Message, vbCritical, "Seguridad - Productores")
-            End If
-            db.Conexion.Close()
-        End Try
-        If i > 0 Then
-            Return True
-        Else
-            Return False
-        End If
+    Dim fun As New funcionDeProductores 'NUEVO
+
+    Public Function Guardar_Productores(ByVal productor As Productor) As Boolean
+        Return fun.Guardar_Productores(productor)
     End Function
+
+    'Public Function Guardar_Productores(codigo, vereda, finca, fk_codigo_ciudad, fk_codigo_persona) As Boolean
+    '    Dim i As Integer
+    '    Try
+    '        Dim _sql As String = String.Format("INSERT INTO PRODUCTOR (codigo, vereda, finca, fk_codigo_ciudad, fk_codigo_persona) VALUES('{0}','{1}','{2}','{3}','{4}')",
+    '                                           codigo, vereda, finca, fk_codigo_ciudad, fk_codigo_persona)
+    '        Using cmd As New SqlCommand(_sql, db.Conexion)
+    '            db.Conexion.Open()
+    '            i = cmd.ExecuteNonQuery
+    '            db.Conexion.Close()
+    '        End Using
+    '    Catch ex As Exception
+    '        If Err.Description.Contains("codigo") = True Then
+    '            MsgBox("No se pudo guardar el registro, por favor intente de nuevo.", vbExclamation, "Seguridad - Productores")
+    '        Else
+    '            MsgBox(ex.Message, vbCritical, "Seguridad - Productores")
+    '        End If
+    '        db.Conexion.Close()
+    '    End Try
+    '    If i > 0 Then
+    '        Return True
+    '    Else
+    '        Return False
+    '    End If
+    'End Function
 
     Public Function Modificar_Productor(codigo, vereda, finca, fk_codigo_ciudad, fk_codigo_persona) As Boolean
         Dim i As Integer

@@ -20,10 +20,11 @@
     'BOTON GUARDAR
     '---------------------------------------------------------------------------------------------------------------------------
     Private Sub btnNuevoCatadorYGuardar_Click(sender As Object, e As EventArgs) Handles btnNuevoCatadorYGuardar.Click
-        'Devuelve respuesta acerca del registro de 'PERSONA' desde el Gestor_Persona
-        Dim resp_persona As String
-        'Devuelve respuesta acerca del registro de 'USUARIO' desde el Gestor_Persona
-        Dim resp_usuario As String
+        Dim per As New Persona 'NUEVO
+        Dim usu As New Usuario 'NUEVO
+
+        Dim i As Boolean 'MODIFICADO 'Variable utilizada para obtener respuesta si el registro fue guardado correctamente en la tabla 'PERSONA'
+        Dim j As Boolean 'MODIFICADO 'Variable utilizada para obtener respuesta si el registro fue guardado correctamente en la tabla 'USUARIO'
         Dim Codigo_Persona As String
         Dim Codigo_Usuario As String
 
@@ -47,18 +48,34 @@
             Else
                 Codigo_Persona = Fun_Persona.Codigo_Azar() 'Obtiene un codigo al azar para luego guardarlo
                 Codigo_Usuario = Fun_Usuario.Codigo_Azar() 'Obtiene un codigo al azar para luego guardarlo
+                '-----------------------
+                per.codigo = Codigo_Persona
+                per.cedula = txtCedula.Text
+                per.nombre = txtNombre.Text
+                per.apellido = txtApellido.Text
+                per.telefono = txtTelefono.Text
+                per.correo = txtCorreo.Text
+                per.tipo_persona = "Usuario"
+                '-----------------------
 
-                resp_persona = Fun_Persona.Guardar_Persona(Codigo_Persona, txtCedula.Text, txtNombre.Text, txtApellido.Text, txtTelefono.Text, txtCorreo.Text, "Usuario")
+                '-----------------------
+                usu.codigo = Codigo_Usuario
+                usu.nombre_usuario = txtNombreUsuario.Text
+                usu.contrasenia = txtContraseña.Text
+                usu.permiso = cbPermiso.Text
+                usu.tipo_usuario = "Catador"
+                usu.fk_codigo_persona = Codigo_Persona
+                '-----------------------
 
-                'Si  es igual a " " quiere decir que el registro de la persona fue correcto
-                If resp_persona = "" Then
-                    resp_usuario = Fun_Usuario.Guardar_Usuario(Codigo_Usuario, txtNombreUsuario.Text, txtContraseña.Text, cbPermiso.Text, "Catador", Codigo_Persona)
-                Else
-                    resp_usuario = "No se ha podido registrar el usuario catador"
+                'i = Fun_Persona.Guardar_Persona(Codigo_Persona, txtCedula.Text, txtNombre.Text, txtApellido.Text, txtTelefono.Text, txtCorreo.Text, "Usuario")
+                i = Fun_Persona.Guardar_Persona(per)
+
+                If i = True Then 'Si 'i' es igual a true quiere decir que el registro de esta persona se guarda correctamente
+                    'j = Fun_Usuario.Guardar_Usuario(Codigo_Usuario, txtNombreUsuario.Text, txtContraseña.Text, cbPermiso.Text, "Catador", Codigo_Persona)
+                    j = Fun_Usuario.Guardar_Usuario(usu)
                 End If
 
-                'Si tanto persona y usuario se han registrado correctamente
-                If resp_persona = "" And resp_usuario = "" Then '
+                If i = True And j = True Then 'Si 'i' y 'j' son iguales a true quiere decir que se guardo el registro correctamente
                     'Modificar boton Guardar
                     btnNuevoCatadorYGuardar.Text = "Nuevo catador"
                     btnNuevoCatadorYGuardar.Image = My.Resources.Nuevo_catador_32x32 'Coloca una imagen el boton 'Guardar'
@@ -69,12 +86,8 @@
                     Total_Registrados()
                     Contar_Registros()
                 Else
-                    'Muestra mensajes de error
-                    MsgBox(resp_persona, vbCritical, "Error registro de catador")
-                    MsgBox(resp_usuario, vbCritical, "Error registro de catador")
-
-                    'Procedemos a eliminar la persona registrada
-                    Fun_Persona.Eliminar_Persona(Codigo_Persona)
+                    Fun_Persona.Eliminar_Persona(Codigo_Persona) 'Elimina el registro de la persona abado de registrar si no se pudo guardar el registro del Usuario
+                    txtCedula.Focus()
                 End If
             End If
         End If
@@ -123,13 +136,11 @@
 
                 i = Fun_Persona.Modificar_Persona(varCod_Persona, txtCedula.Text, txtNombre.Text, txtApellido.Text, txtTelefono.Text, txtCorreo.Text, "Usuario")
 
-                If i = "" Then
+                If i = True Then
                     j = Fun_Usuario.Modificar_Usuario(varCod_Usuario, txtNombreUsuario.Text, txtContraseña.Text, cbPermiso.Text)
-                Else
-                    MsgBox(i, vbCritical, "Error modificar catador")
                 End If
 
-                If i = "" And j = "" Then
+                If i = True And j = True Then
                     MessageBox.Show("Modificado correctamente")
                     Despues_Modificar()
                     CargarGrilla()
@@ -150,9 +161,8 @@
     Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
         Dim varCod_Persona As String
         varCod_Persona = RegistroSeleccionado(0)("cod_persona")
-
         If MsgBox("¿Esta seguro de eliminar el registro?", vbQuestion + vbYesNo, "Pregunta") = vbYes Then
-            If Fun_Persona.Eliminar_Persona(varCod_Persona) = "" Then
+            If Fun_Persona.Eliminar_Persona(varCod_Persona) Then
                 MessageBox.Show("Eliminado Correctamente")
                 CargarGrilla()
                 Total_Registrados()
@@ -283,7 +293,6 @@
 
     'Evento de la grilla para mostrar el registro (fila) en la parte 'Gestion de catador'
     Private Sub dgListaCatadores_CellEnter(sender As Object, e As DataGridViewCellEventArgs) Handles dgListaCatadores.CellEnter
-
         If dgListaCatadores.ContainsFocus = True Then
             If btnNuevoCatadorYGuardar.Text = "Guardar" Then 'Esto quiere decir que se esta llevando el registro de un nuevo catador
                 If MsgBox("Se está llevando a cabo el registro de un nuevo catador. ¿Desea cancelar el registro?", vbQuestion + vbYesNo, "Pregunta") = vbYes Then

@@ -21,6 +21,9 @@
     'BOTON GUARDAR
     '---------------------------------------------------------------------------------------------------------------------------
     Private Sub btnNuevoProductorYGuardar_Click(sender As Object, e As EventArgs) Handles btnNuevoProductorYGuardar.Click
+        Dim per As New Persona 'NUEVO
+        Dim prod As New Productor 'NUEVO
+
         Dim i As Boolean 'Variable utilizada para obtener respuesta si el registro fue guardado correctamente en la tabla 'PERSONA'
         Dim j As Boolean 'Variable utilizada para obtener respuesta si el registro fue guardado correctamente en la tabla 'PRODUCTORES'
         Dim Codigo_Persona As String
@@ -40,10 +43,30 @@
                 Codigo_Persona = Fun_Persona.Codigo_Azar() 'Obtiene un codigo al azar para luego guardarlo
                 Codigo_Productor = Fun_Productor.Codigo_Azar() 'Obtiene un codigo al azar para luego guardarlo
 
-                i = Fun_Persona.Guardar_Persona(Codigo_Persona, txtCedula.Text, txtNombre.Text, txtApellido.Text, txtTelefono.Text, txtCorreo.Text, "Productor")
+                '-----------------------
+                per.codigo = Codigo_Persona
+                per.cedula = txtCedula.Text
+                per.nombre = txtNombre.Text
+                per.apellido = txtApellido.Text
+                per.telefono = txtTelefono.Text
+                per.correo = txtCorreo.Text
+                per.tipo_persona = "Usuario"
+                '-----------------------
+
+                '-----------------------
+                prod.codigo = Codigo_Productor
+                prod.vereda = txtVereda.Text
+                prod.finca = txtFinca.Text
+                prod.fk_codigo_ciudad = Fun_Productor.Codigo_Ciudad(cbCiudad.Text)
+                prod.fk_codigo_persona = Codigo_Persona
+                '-----------------------
+
+                'i = Fun_Persona.Guardar_Persona(Codigo_Persona, txtCedula.Text, txtNombre.Text, txtApellido.Text, txtTelefono.Text, txtCorreo.Text, "Productor")
+                i = Fun_Persona.Guardar_Persona(per)
 
                 If i = True Then
-                    j = Fun_Productor.Guardar_Productores(Codigo_Productor, txtVereda.Text, txtFinca.Text, Fun_Productor.Codigo_Ciudad(cbCiudad.Text), Codigo_Persona)
+                    'j = Fun_Productor.Guardar_Productores(Codigo_Productor, txtVereda.Text, txtFinca.Text, Fun_Productor.Codigo_Ciudad(cbCiudad.Text), Codigo_Persona)
+                    j = Fun_Productor.Guardar_Productores(prod)
 
                     'Modificar boton Guardar
                     btnNuevoProductorYGuardar.Text = "Nuevo productor"

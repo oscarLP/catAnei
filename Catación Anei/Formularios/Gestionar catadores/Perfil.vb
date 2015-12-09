@@ -72,8 +72,10 @@
     End Sub
 
     Private Sub btnAceptar_Click(sender As Object, e As EventArgs) Handles btnAceptar.Click
-        Dim resp_persona As String 'Variable utilizada para obtener respuesta si el registro fue guardado correctamente en la tabla 'PERSONA'
-        Dim resp_usuario As String 'Variable utilizada para obtener respuesta si el registro fue guardado correctamente en la tabla 'USUARIO'
+        Dim per As New Persona 'NUEVO
+        Dim usu As New Usuario 'NUEVO
+        Dim i As Boolean 'Variable utilizada para obtener respuesta si el registro fue guardado correctamente en la tabla 'PERSONA'
+        Dim j As Boolean 'Variable utilizada para obtener respuesta si el registro fue guardado correctamente en la tabla 'USUARIO'
         Dim Codigo_Persona As String
         Dim Codigo_Usuario As String
         Registro_Administrador.DataSource = Fun_Administrador.Datos_Administrador()
@@ -94,38 +96,50 @@
                 Codigo_Persona = Fun_Persona.Codigo_Azar() 'Obtiene un codigo al azar para luego guardarlo
                 Codigo_Usuario = Fun_Usuario.Codigo_Azar() 'Obtiene un codigo al azar para luego guardarlo
 
-                resp_persona = Fun_Persona.Guardar_Persona(Codigo_Persona, txtCedula.Text, txtNombre.Text, txtApellido.Text, txtTelefono.Text, txtCorreo.Text, "Usuario")
+                '-----------------------
+                per.codigo = Codigo_Persona
+                per.cedula = txtCedula.Text
+                per.nombre = txtNombre.Text
+                per.apellido = txtApellido.Text
+                per.telefono = txtTelefono.Text
+                per.correo = txtCorreo.Text
+                per.tipo_persona = "Usuario"
+                '-----------------------
 
-                'Si  es igual a " " quiere decir que el registro de la persona fue correcto
-                If resp_persona = "" Then
-                    resp_usuario = Fun_Usuario.Guardar_Usuario(Codigo_Usuario, txtNombreUsuario.Text, txtContrasenia.Text, "Si", "Administrador", Codigo_Persona)
-                Else
-                    resp_usuario = "No se ha podido registrar el usuario catador"
+                '-----------------------
+                usu.codigo = Codigo_Usuario
+                usu.nombre_usuario = txtNombreUsuario.Text
+                usu.contrasenia = txtContrasenia.Text
+                usu.permiso = "Si"
+                usu.tipo_usuario = "Administrador"
+                usu.fk_codigo_persona = Codigo_Persona
+                '-----------------------
+
+                'i = Fun_Persona.Guardar_Persona(Codigo_Persona, txtCedula.Text, txtNombre.Text, txtApellido.Text, txtTelefono.Text, txtCorreo.Text, "Usuario")
+                i = Fun_Persona.Guardar_Persona(per)
+
+                If i = True Then 'Si 'i' es igual a true quiere decir que el registro de esta persona se guarda correctamente
+                    'j = Fun_Usuario.Guardar_Usuario(Codigo_Usuario, txtNombreUsuario.Text, txtContrasenia.Text, "Si", "Administrador", Codigo_Persona)
+                    j = Fun_Usuario.Guardar_Usuario(usu)
                 End If
 
-                'Si tanto persona y usuario se han registrado correctamente
-                If resp_persona = "" And resp_usuario = "" Then '
+                If i = True And j = True Then
                     MsgBox("Perfil del administrador: Creado correctamente.", MsgBoxStyle.Information, "Seguridad")
                     frmBienvenido.Iniciar_Sesion() 'Ejecuta el subproceso 'Iniciar_Sesion' del formulario 'Bienvenido' para que se active el boton 'Iniciar Sesion'
                     Mostrar_Administrador()
                     frmBienvenido.btnCrearPerfil.Enabled = False
                     Me.Close()
                 Else
-                    'Muestra mensajes de error
-                    MsgBox(resp_persona, vbCritical, "Error registro de catador")
-                    MsgBox(resp_usuario, vbCritical, "Error registro de catador")
-
-                    'Procedemos a eliminar la persona registrada
                     Fun_Persona.Eliminar_Persona(Codigo_Persona)
+                    frmBienvenido.btnCrearPerfil.Enabled = True
+                    MsgBox("No se pudo guardar.", vbExclamation, "Seguridad")
                 End If
-
             End If
             '---------------------------------------------------------------------------------------------------------
 
             'MODIFICAR
             '---------------------------------------------------------------------------------------------------------
         ElseIf Registro_Administrador.Count > 0 Then 'Si 'Registro_Administrador' es mayor a cero quiere decir que el perfil del administrador ya esta registrado y se va a modificar
-
             If txtContrasenia.Text <> txtRContrasenia.Text Then
                 MsgBox("La contraseña de confirmación no coinciden.", vbCritical, "Seguridad")
                 txtRContrasenia.Clear()
@@ -135,17 +149,13 @@
                 Codigo_Persona = Registro_Administrador.Item(0)("cod_persona")
                 Codigo_Usuario = Registro_Administrador.Item(0)("cod_usuario")
 
-                resp_persona = Fun_Persona.Modificar_Persona(Codigo_Persona, txtCedula.Text, txtNombre.Text, txtApellido.Text, txtTelefono.Text, txtCorreo.Text, "Usuario")
+                i = Fun_Persona.Modificar_Persona(Codigo_Persona, txtCedula.Text, txtNombre.Text, txtApellido.Text, txtTelefono.Text, txtCorreo.Text, "Usuario")
 
-                If resp_persona = "" Then
-                    resp_usuario = Fun_Usuario.Modificar_Usuario(Codigo_Usuario, txtNombreUsuario.Text, txtContrasenia.Text, "Si")
-                Else
-                    MsgBox("Error al Modificar. Vuelva a intentarlo", vbCritical, "Seguridad")
-                    txtCedula.Clear()
-                    txtCedula.Focus()
+                If i = True Then
+                    j = Fun_Usuario.Modificar_Usuario(Codigo_Usuario, txtNombreUsuario.Text, txtContrasenia.Text, "Si")
                 End If
 
-                If resp_persona = "" And resp_usuario = "" Then
+                If i = True And j = True Then
                     MessageBox.Show("Modificado correctamente")
                     Me.Close()
                 Else
