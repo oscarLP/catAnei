@@ -20,6 +20,9 @@
     'BOTON GUARDAR
     '---------------------------------------------------------------------------------------------------------------------------
     Private Sub btnNuevoProveedorYGuardar_Click(sender As Object, e As EventArgs) Handles btnNuevoProveedorYGuardar.Click
+        Dim per As New Persona 'NUEVO
+        Dim prov As New Proveedor 'NUEVO
+
         Dim i As Boolean
         Dim j As Boolean
         Dim Codigo_Persona As String
@@ -39,10 +42,31 @@
                 Codigo_Persona = Fun_Persona.Codigo_Azar() 'Obtiene un codigo al azar para luego guardarlo
                 Codigo_Proveedores = Fun_Proveedor.Codigo_Azar() 'Obtiene un codigo al azar para luego guardarlo
 
-                i = Fun_Persona.Guardar_Persona(Codigo_Persona, txtCedula.Text, txtNombre.Text, txtApellido.Text, txtTelefono.Text, txtCorreo.Text, "Proveedor")
+                '-----------------------
+                per.codigo = Codigo_Persona
+                per.cedula = txtCedula.Text
+                per.nombre = txtNombre.Text
+                per.apellido = txtApellido.Text
+                per.telefono = txtTelefono.Text
+                per.correo = txtCorreo.Text
+                per.tipo_persona = "Usuario"
+                '-----------------------
+
+                '-----------------------
+                prov.codigo = Codigo_Proveedores
+                prov.vereda = txtVereda.Text
+                prov.finca = txtFinca.Text
+                prov.fk_codigo_ciudad = Fun_Proveedor.Codigo_Ciudad(cbCiudad.Text)
+                prov.fk_codigo_persona = Codigo_Persona
+                '-----------------------
+
+                'i = Fun_Persona.Guardar_Persona(Codigo_Persona, txtCedula.Text, txtNombre.Text, txtApellido.Text, txtTelefono.Text, txtCorreo.Text, "Proveedor")
+                i = Fun_Persona.Guardar_Persona(per)
 
                 If i = True Then
-                    j = Fun_Proveedor.Guardar_Proveedores(Codigo_Proveedores, txtVereda.Text, txtFinca.Text, Fun_Proveedor.Codigo_Ciudad(cbCiudad.Text), Codigo_Persona)
+                    'j = Fun_Proveedor.Guardar_Proveedores(Codigo_Proveedores, txtVereda.Text, txtFinca.Text, Fun_Proveedor.Codigo_Ciudad(cbCiudad.Text), Codigo_Persona)
+                    j = Fun_Proveedor.Guardar_Proveedores(prov)
+
                     'Modificar boton Guardar
                     btnNuevoProveedorYGuardar.Text = "Nuevo proveedor"
                     btnNuevoProveedorYGuardar.Image = My.Resources.Nuevo_catador_32x32 'Coloca una imagen el boton 'Guardar'

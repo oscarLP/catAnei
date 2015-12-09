@@ -35,39 +35,3 @@ E:\Universidad Popular del Cesar (UPC)\Programación\Visual Studio\Catación Ane
 E:\Universidad Popular del Cesar (UPC)\Programación\Visual Studio\Catación Anei\Catación Anei\bin\Debug\af\Catación Anei.resources.dll
 E:\Universidad Popular del Cesar (UPC)\Programación\Visual Studio\Catación Anei\Catación Anei\obj\Debug\Catación_Anei.frmGestionarCatadores.af.resources
 E:\Universidad Popular del Cesar (UPC)\Programación\Visual Studio\Catación Anei\Catación Anei\obj\Debug\af\Catación Anei.resources.dll
-E:\Users\SONY\Documents\GitHub\catAnei\Catación Anei\bin\Debug\Catación Anei.exe.config
-E:\Users\SONY\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación Anei.exe
-E:\Users\SONY\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación Anei.xml
-E:\Users\SONY\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación Anei.pdb
-E:\Users\SONY\Documents\GitHub\catAnei\Catación Anei\bin\Debug\Catación Anei.exe
-E:\Users\SONY\Documents\GitHub\catAnei\Catación Anei\bin\Debug\Catación Anei.pdb
-E:\Users\SONY\Documents\GitHub\catAnei\Catación Anei\bin\Debug\Catación Anei.xml
-E:\Users\SONY\Documents\GitHub\catAnei\Catación Anei\bin\Debug\af\Catación Anei.resources.dll
-E:\Users\SONY\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación_Anei.frmDescriptores_Acidez.resources
-E:\Users\SONY\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación_Anei.frmDescriptores_Balance.resources
-E:\Users\SONY\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación_Anei.frmDescriptores_Cuerpo.resources
-E:\Users\SONY\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación_Anei.frmDescriptores_SaborBoca.resources
-E:\Users\SONY\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación_Anei.frmDescriptores_Sabor.resources
-E:\Users\SONY\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación_Anei.frmDescriptores_SalÁcido.resources
-E:\Users\SONY\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación_Anei.frmDescriptores_SensaciónBoca.resources
-E:\Users\SONY\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación_Anei.frmBienvenido.resources
-E:\Users\SONY\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación_Anei.frmCambiarContraseña.resources
-E:\Users\SONY\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación_Anei.frmCiudad.resources
-E:\Users\SONY\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación_Anei.frmGestionarCatadores.resources
-E:\Users\SONY\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación_Anei.frmPerfil.resources
-E:\Users\SONY\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación_Anei.frmProductores.resources
-E:\Users\SONY\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación_Anei.frmProveedores.resources
-E:\Users\SONY\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación_Anei.frmIniciarSesion.resources
-E:\Users\SONY\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación_Anei.frmMenuPrincipal.resources
-E:\Users\SONY\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación_Anei.frmCatarRobusta.resources
-E:\Users\SONY\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación_Anei.frmCatarArabica.resources
-E:\Users\SONY\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación_Anei.frmDescriptores_Defectos.resources
-E:\Users\SONY\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación_Anei.frmDescriptores_FraganciaAroma.resources
-E:\Users\SONY\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación_Anei.frmModicarSesionCatacion.resources
-E:\Users\SONY\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación_Anei.frmMuestra.resources
-E:\Users\SONY\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación_Anei.frmNuevaSesionCatacion.resources
-E:\Users\SONY\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación_Anei.frmRealizarCataciones.resources
-E:\Users\SONY\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación_Anei.Resources.resources
-E:\Users\SONY\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación_Anei.frmGestionarCatadores.af.resources
-E:\Users\SONY\Documents\GitHub\catAnei\Catación Anei\obj\Debug\Catación Anei.vbproj.GenerateResource.Cache
-E:\Users\SONY\Documents\GitHub\catAnei\Catación Anei\obj\Debug\af\Catación Anei.resources.dll

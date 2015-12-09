@@ -74,11 +74,19 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Datos\Administrador.vb" />
-    <Compile Include="Datos\Catador.vb" />
-    <Compile Include="Datos\Conexion BD.vb" />
-    <Compile Include="Datos\Personas.vb" />
-    <Compile Include="Datos\Usuarios.vb" />
+    <Compile Include="Datos\funcionDeCiudad.vb" />
+    <Compile Include="Datos\funcionDeProductores.vb" />
+    <Compile Include="Datos\funcionDeProveedores.vb" />
+    <Compile Include="Datos\funcionDeUsuario.vb" />
+    <Compile Include="Entidad\Ciudad.vb" />
+    <Compile Include="Entidad\Conexion BD.vb" />
+    <Compile Include="Datos\funcionDePersona.vb" />
+    <Compile Include="Entidad\Pais.vb" />
+    <Compile Include="Entidad\Persona.vb" />
+    <Compile Include="Entidad\Productor.vb" />
+    <Compile Include="Entidad\Proveedor.vb" />
+    <Compile Include="Entidad\Sesion_catado.vb" />
+    <Compile Include="Entidad\Usuario.vb" />
     <Compile Include="Formularios\Descriptores\Acidez.Designer.vb">
       <DependentUpon>Acidez.vb</DependentUpon>
     </Compile>
