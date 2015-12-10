@@ -3,27 +3,33 @@ Public Class Gestor_Sesion_de_catacion
     Private db As New Conexion_BD
     Private Comando As SqlCommand
 
-    Public Function Guardar_SesionCatacion(codigo, fecha_inicio, hora_inicio, descripcion, fk_codigo_ciudad, estructura_identificador, protocolo, numero_muestras, fk_codigo_usuario) As Boolean
-        Dim i As Integer
-        Try
-            Dim _sql As String = String.Format("INSERT INTO SESION_CATADO (codigo, fecha_inicio, hora_inicio, descripcion, fk_codigo_ciudad, estructura_identificador," +
-                                               "protocolo, numero_muestras, fk_codigo_usuario) VALUES('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}')",
-                                               codigo, fecha_inicio, hora_inicio, descripcion, fk_codigo_ciudad, estructura_identificador, protocolo, numero_muestras, fk_codigo_usuario)
-            Using cmd As New SqlCommand(_sql, db.Conexion)
-                db.Conexion.Open()
-                i = cmd.ExecuteNonQuery
-                db.Conexion.Close()
-            End Using
-        Catch ex As Exception
-            MsgBox(ex.Message)
-            db.Conexion.Close()
-        End Try
-        If i > 0 Then
-            Return True
-        Else
-            Return False
-        End If
+    Dim fun As New funcionDeSesion_catado 'NUEVO
+
+    Public Function Guardar_SesionCatado(ByVal sesion_catado As Sesion_catado) As Boolean
+        Return fun.Guardar_SesionCatacion(sesion_catado)
     End Function
+
+    'Public Function Guardar_SesionCatacion(codigo, fecha_inicio, hora_inicio, descripcion, fk_codigo_ciudad, estructura_identificador, protocolo, numero_muestras, fk_codigo_usuario) As Boolean
+    '    Dim i As Integer
+    '    Try
+    '        Dim _sql As String = String.Format("INSERT INTO SESION_CATADO (codigo, fecha_inicio, hora_inicio, descripcion, fk_codigo_ciudad, estructura_identificador," +
+    '                                           "protocolo, numero_muestras, fk_codigo_usuario) VALUES('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}')",
+    '                                           codigo, fecha_inicio, hora_inicio, descripcion, fk_codigo_ciudad, estructura_identificador, protocolo, numero_muestras, fk_codigo_usuario)
+    '        Using cmd As New SqlCommand(_sql, db.Conexion)
+    '            db.Conexion.Open()
+    '            i = cmd.ExecuteNonQuery
+    '            db.Conexion.Close()
+    '        End Using
+    '    Catch ex As Exception
+    '        MsgBox(ex.Message)
+    '        db.Conexion.Close()
+    '    End Try
+    '    If i > 0 Then
+    '        Return True
+    '    Else
+    '        Return False
+    '    End If
+    'End Function
 
     Public Function Modificar_SesionCatacion(codigo, fecha_inicio, hora_inicio, descripcion, fk_codigo_ciudad, estructura_identificador, protocolo) As Boolean
         Dim i As Integer

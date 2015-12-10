@@ -23,6 +23,7 @@ Partial Class frmCatarRobusta
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmCatarRobusta))
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.cbPuntaje_SaborBoca = New System.Windows.Forms.ComboBox()
@@ -157,14 +158,14 @@ Partial Class frmCatarRobusta
         Me.imgUniformidad2 = New System.Windows.Forms.PictureBox()
         Me.imgUniformidad1 = New System.Windows.Forms.PictureBox()
         Me.Label18 = New System.Windows.Forms.Label()
-        Me.ListaMuestras = New System.Windows.Forms.ListBox()
-        Me.Label20 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.btnGuardar = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.btnGuardar = New System.Windows.Forms.Button()
+        Me.GroupBox11 = New System.Windows.Forms.GroupBox()
+        Me.bgMuestras = New System.Windows.Forms.DataGridView()
         Me.GroupBox6.SuspendLayout()
         Me.GroupBox5.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
@@ -213,6 +214,8 @@ Partial Class frmCatarRobusta
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox11.SuspendLayout()
+        CType(Me.bgMuestras, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label12
@@ -1837,33 +1840,6 @@ Partial Class frmCatarRobusta
         Me.Label18.TabIndex = 1
         Me.Label18.Text = "Uniformidad"
         '
-        'ListaMuestras
-        '
-        Me.ListaMuestras.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.ListaMuestras.BackColor = System.Drawing.Color.Peru
-        Me.ListaMuestras.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ListaMuestras.ForeColor = System.Drawing.Color.White
-        Me.ListaMuestras.FormattingEnabled = True
-        Me.ListaMuestras.ItemHeight = 22
-        Me.ListaMuestras.Items.AddRange(New Object() {"Muestra 1", "Muestra 2", "Muestra 3", "Muestra 4", "Muestra 5", "Muestra 6", "Muestra 7"})
-        Me.ListaMuestras.Location = New System.Drawing.Point(12, 115)
-        Me.ListaMuestras.Name = "ListaMuestras"
-        Me.ListaMuestras.Size = New System.Drawing.Size(130, 510)
-        Me.ListaMuestras.TabIndex = 0
-        '
-        'Label20
-        '
-        Me.Label20.AutoSize = True
-        Me.Label20.BackColor = System.Drawing.Color.Transparent
-        Me.Label20.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label20.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label20.Location = New System.Drawing.Point(12, 90)
-        Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(70, 22)
-        Me.Label20.TabIndex = 41
-        Me.Label20.Text = "Muestras"
-        '
         'Label10
         '
         Me.Label10.AutoSize = True
@@ -1901,6 +1877,21 @@ Partial Class frmCatarRobusta
         Me.Panel1.Size = New System.Drawing.Size(992, 54)
         Me.Panel1.TabIndex = 36
         '
+        'btnGuardar
+        '
+        Me.btnGuardar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnGuardar.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnGuardar.ForeColor = System.Drawing.Color.Teal
+        Me.btnGuardar.Image = Global.Catación_Anei.My.Resources.Resources.Guardar_32x32
+        Me.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnGuardar.Location = New System.Drawing.Point(872, 9)
+        Me.btnGuardar.Name = "btnGuardar"
+        Me.btnGuardar.Size = New System.Drawing.Size(108, 35)
+        Me.btnGuardar.TabIndex = 13
+        Me.btnGuardar.Text = "Guardar"
+        Me.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnGuardar.UseVisualStyleBackColor = True
+        '
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.Catación_Anei.My.Resources.Resources.Catar_48x48
@@ -1919,20 +1910,45 @@ Partial Class frmCatarRobusta
         Me.PictureBox2.TabIndex = 40
         Me.PictureBox2.TabStop = False
         '
-        'btnGuardar
+        'GroupBox11
         '
-        Me.btnGuardar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnGuardar.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnGuardar.ForeColor = System.Drawing.Color.Teal
-        Me.btnGuardar.Image = Global.Catación_Anei.My.Resources.Resources.Guardar_32x32
-        Me.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnGuardar.Location = New System.Drawing.Point(872, 9)
-        Me.btnGuardar.Name = "btnGuardar"
-        Me.btnGuardar.Size = New System.Drawing.Size(108, 35)
-        Me.btnGuardar.TabIndex = 13
-        Me.btnGuardar.Text = "Guardar"
-        Me.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnGuardar.UseVisualStyleBackColor = True
+        Me.GroupBox11.Controls.Add(Me.bgMuestras)
+        Me.GroupBox11.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox11.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.GroupBox11.Location = New System.Drawing.Point(12, 84)
+        Me.GroupBox11.Name = "GroupBox11"
+        Me.GroupBox11.Size = New System.Drawing.Size(124, 549)
+        Me.GroupBox11.TabIndex = 45
+        Me.GroupBox11.TabStop = False
+        Me.GroupBox11.Text = "Muestras"
+        '
+        'bgMuestras
+        '
+        Me.bgMuestras.AllowUserToAddRows = False
+        Me.bgMuestras.AllowUserToDeleteRows = False
+        Me.bgMuestras.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.bgMuestras.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
+        Me.bgMuestras.BackgroundColor = System.Drawing.Color.White
+        Me.bgMuestras.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised
+        Me.bgMuestras.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.bgMuestras.ColumnHeadersVisible = False
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SaddleBrown
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.bgMuestras.DefaultCellStyle = DataGridViewCellStyle2
+        Me.bgMuestras.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.bgMuestras.Location = New System.Drawing.Point(3, 22)
+        Me.bgMuestras.MultiSelect = False
+        Me.bgMuestras.Name = "bgMuestras"
+        Me.bgMuestras.ReadOnly = True
+        Me.bgMuestras.RowHeadersVisible = False
+        Me.bgMuestras.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.bgMuestras.Size = New System.Drawing.Size(118, 524)
+        Me.bgMuestras.TabIndex = 44
         '
         'frmCatarRobusta
         '
@@ -1940,14 +1956,13 @@ Partial Class frmCatarRobusta
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(992, 641)
+        Me.Controls.Add(Me.GroupBox11)
         Me.Controls.Add(Me.lbSesion)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.lbCalificacion)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.Panel2)
-        Me.Controls.Add(Me.ListaMuestras)
-        Me.Controls.Add(Me.Label20)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Panel1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -2027,6 +2042,8 @@ Partial Class frmCatarRobusta
         Me.Panel1.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox11.ResumeLayout(False)
+        CType(Me.bgMuestras, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -2112,8 +2129,6 @@ Partial Class frmCatarRobusta
     Friend WithEvents imgUniformidad2 As System.Windows.Forms.PictureBox
     Friend WithEvents imgUniformidad1 As System.Windows.Forms.PictureBox
     Friend WithEvents Label18 As System.Windows.Forms.Label
-    Friend WithEvents ListaMuestras As System.Windows.Forms.ListBox
-    Friend WithEvents Label20 As System.Windows.Forms.Label
     Friend WithEvents Label10 As System.Windows.Forms.Label
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
@@ -2173,4 +2188,6 @@ Partial Class frmCatarRobusta
     Friend WithEvents txtBalance As System.Windows.Forms.TextBox
     Friend WithEvents Label11 As System.Windows.Forms.Label
     Friend WithEvents btnGuardar As System.Windows.Forms.Button
+    Friend WithEvents GroupBox11 As System.Windows.Forms.GroupBox
+    Friend WithEvents bgMuestras As System.Windows.Forms.DataGridView
 End Class

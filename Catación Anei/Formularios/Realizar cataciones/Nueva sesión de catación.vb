@@ -14,6 +14,8 @@
     'BOTON GUARDAR
     '---------------------------------------------------------------------------------------------------------------------------
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
+        Dim Ses_Cat As New Sesion_catado
+
         Dim Codigo_Ciudad As String
         If cbLugar.Text = "" Then
             MsgBox("Por favor, seleccione el lugar de catación", vbExclamation, "Seguridad")
@@ -23,8 +25,23 @@
 
             Codigo_SesionCatado = Fun_SesionCatacion.Codigo_Azar() 'Obtiene un codigo al azar para luego guardarlo
             Codigo_Ciudad = Fun_SesionCatacion.Codigo_Ciudad(cbLugar.Text)
-            i = Fun_SesionCatacion.Guardar_SesionCatacion(Codigo_SesionCatado, dtpFecha_Inicio.Text, dtpHora_Inicio.Text, txtDescripcion.Text, Codigo_Ciudad,
-                                                          IdentificadorMuestra(), ProtocoloCatacion(), nuNumeroMuestras.Value, Fun_SesionCatacion.CodigoUsuario())
+
+            '------------------------------
+            Ses_Cat.codigo = Codigo_SesionCatado
+            Ses_Cat.fecha_inicio = dtpFecha_Inicio.Text
+            Ses_Cat.hora_inicio = dtpHora_Inicio.Text
+            Ses_Cat.descripcion = txtDescripcion.Text
+            Ses_Cat.fk_codigo_ciudad = Codigo_Ciudad
+            Ses_Cat.estructura_identificador = IdentificadorMuestra()
+            Ses_Cat.protocolo = ProtocoloCatacion()
+            Ses_Cat.fk_codigo_usuario = Fun_SesionCatacion.CodigoUsuario()
+            Ses_Cat.numero_muestras = nuNumeroMuestras.Value
+            Ses_Cat.estado = "Incompleto"
+            '------------------------------
+
+            'i = Fun_SesionCatacion.Guardar_SesionCatacion(Codigo_SesionCatado, dtpFecha_Inicio.Text, dtpHora_Inicio.Text, txtDescripcion.Text, Codigo_Ciudad,
+            '                                              IdentificadorMuestra(), ProtocoloCatacion(), nuNumeroMuestras.Value, Fun_SesionCatacion.CodigoUsuario())
+            i = Fun_SesionCatacion.Guardar_SesionCatado(Ses_Cat)
             If i = True Then 'Si 'i' es igual a true quiere decir que el registro de esta sesion de catacion se guardo correctamente
                 Guardar_Identificador_Muestras()
                 LimpiarCampos()
@@ -73,9 +90,9 @@
     'Obtiene y envia el Protocolo de catacion de la muestra seleccionada
     Function ProtocoloCatacion() As String
         Dim ProtCatacion As String = "Arábica"
-        If rbLetras.Checked = True Then
+        If rbArabica.Checked = True Then
             ProtCatacion = "Arábica"
-        ElseIf rbDigitos.Checked = True Then
+        ElseIf rbRobusta.Checked = True Then
             ProtCatacion = "Robusta"
         End If
         Return ProtCatacion
@@ -124,33 +141,89 @@
             Guardar_Arabica(Cod_Muestra)
             Guardar_ArabicaRobusta(Cod_Muestra)
         ElseIf ProtocoloCatacion() = "Robusta" Then
-            MsgBox("Entroooooo")
             Guardar_Robusta(Cod_Muestra)
             Guardar_ArabicaRobusta(Cod_Muestra)
         End If
     End Sub
 
     Sub Guardar_Arabica(Codigo_Muestra)
+        Dim Ara As New Arabica
+
         Dim Codigo_Azar As String
         Codigo_Azar = Fun_Arabica.Codigo_Azar()
 
-        Fun_Arabica.Guardar_Arabica(Codigo_Azar, Codigo_Muestra)
+        '--------------------------------
+        Ara.codigo = Codigo_Azar
+        Ara.fk_codigo_muestra = Codigo_Muestra
+        Ara.calificacion = 82.5
+        Ara.puntaje_acidez = 7.5
+        Ara.puntaje_cuerpo = 7.5
+        Ara.puntaje_dulzor = 10
+        Ara.dulzor1 = "Verdadero"
+        Ara.dulzor2 = "Falso"
+        Ara.dulzor3 = "Verdadero"
+        Ara.dulzor4 = "Verdadero"
+        Ara.dulzor5 = "Verdadero"
+        '--------------------------------
+        Fun_Arabica.Guardar_Arabica(Ara)
     End Sub
 
     Sub Guardar_ArabicaRobusta(Codigo_Muestra)
+        Dim Ara_Rob As New Arabica_Robusta
+
         Dim Codigo_Azar As String
         Codigo_Azar = Fun_Arabica_Robusta.Codigo_Azar()
 
-        Fun_Arabica_Robusta.Guardar_Arabica_Robusta(Codigo_Azar, Codigo_Muestra)
+        '--------------------------------
+        Ara_Rob.codigo = Codigo_Azar
+        Ara_Rob.fk_codigo_muestra = Codigo_Muestra
+        Ara_Rob.nivel_tueste = "3"
+        Ara_Rob.puntaje_fragancia_aroma = 7.5
+        Ara_Rob.puntuaje_sabor = 7.5
+        Ara_Rob.puntuaje_sabor_boca = 7.5
+        Ara_Rob.puntuaje_balance = 7.5
+        Ara_Rob.puntuaje_general = 7.5
+        Ara_Rob.puntuaje_uniformidad = 10
+        Ara_Rob.uniformidad1 = "Verdadero"
+        Ara_Rob.uniformidad2 = "Verdadero"
+        Ara_Rob.uniformidad3 = "Verdadero"
+        Ara_Rob.uniformidad4 = "Verdadero"
+        Ara_Rob.uniformidad5 = "Verdadero"
+        Ara_Rob.puntuaje_taza_limpia = 10
+        Ara_Rob.taza_limpia1 = "Verdadero"
+        Ara_Rob.taza_limpia2 = "Verdadero"
+        Ara_Rob.taza_limpia3 = "Verdadero"
+        Ara_Rob.taza_limpia4 = "Verdadero"
+        Ara_Rob.taza_limpia5 = "Verdadero"
+        Ara_Rob.numero_defectos = 0
+        Ara_Rob.nota = ""
+        '--------------------------------
+
+        Fun_Arabica_Robusta.Guardar_Arabica_Robusta(Ara_Rob)
     End Sub
 
     Sub Guardar_Robusta(Codigo_Muestra)
-        MsgBox("Entro")
+        Dim Rob As New Robusta
+
         Dim Codigo_Azar As String
         Codigo_Azar = Fun_Robusta.Codigo_Azar()
-        MsgBox("Entro1")
-        Fun_Robusta.Guardar_Robusta(Codigo_Azar, Codigo_Muestra)
-        MsgBox("Entr3")
+
+        '--------------------------------
+        Rob.codigo = Codigo_Azar
+        Rob.fk_codigo_muestra = Codigo_Muestra
+        Rob.calificacion = 82.5
+        Rob.sabor_boca = 0
+        Rob.puntaje_sal_acido = 7.5
+        Rob.baja_salinidad = ""
+        Rob.alta_acidez = ""
+        Rob.puntaje_amargo_dulce = 7.5
+        Rob.bajo_amargor = ""
+        Rob.alto_dulzor = ""
+        Rob.puntaje_sensacion_boca = 7.5
+        Rob.sensacion_boca = ""
+        '--------------------------------
+
+        Fun_Robusta.Guardar_Robusta(Rob)
     End Sub
 
     Private Sub btnCiudad_Click(sender As Object, e As EventArgs) Handles btnCiudad.Click
