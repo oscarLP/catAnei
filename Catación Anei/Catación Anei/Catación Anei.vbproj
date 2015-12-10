@@ -1,0 +1,634 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7F102665-878B-4D65-894E-E8C9C50F2D2C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Catación_Anei.My.MyApplication</StartupObject>
+    <RootNamespace>Catación_Anei</RootNamespace>
+    <AssemblyName>Catación Anei</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Catación Anei.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Catación Anei.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icon - Café.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Datos\Conexion BD.vb" />
+    <Compile Include="Formularios\Descriptores\Acidez.Designer.vb">
+      <DependentUpon>Acidez.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Descriptores\Acidez.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Descriptores\Balance.Designer.vb">
+      <DependentUpon>Balance.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Descriptores\Balance.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Descriptores\Cuerpo.Designer.vb">
+      <DependentUpon>Cuerpo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Descriptores\Cuerpo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Descriptores\Sabor de boca.Designer.vb">
+      <DependentUpon>Sabor de boca.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Descriptores\Sabor de boca.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Descriptores\Sabor.Designer.vb">
+      <DependentUpon>Sabor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Descriptores\Sabor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Descriptores\Sal - Ácido.Designer.vb">
+      <DependentUpon>Sal - Ácido.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Descriptores\Sal - Ácido.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Descriptores\Sensación en boca.Designer.vb">
+      <DependentUpon>Sensación en boca.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Descriptores\Sensación en boca.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Gestionar catadores\Bienvenido.Designer.vb">
+      <DependentUpon>Bienvenido.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Gestionar catadores\Bienvenido.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Gestionar catadores\Cambiar contraseña.Designer.vb">
+      <DependentUpon>Cambiar contraseña.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Gestionar catadores\Cambiar contraseña.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Gestionar catadores\Ciudad.Designer.vb">
+      <DependentUpon>Ciudad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Gestionar catadores\Ciudad.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Gestionar catadores\Gestionar catadores.Designer.vb">
+      <DependentUpon>Gestionar catadores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Gestionar catadores\Gestionar catadores.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Gestionar catadores\Perfil.Designer.vb">
+      <DependentUpon>Perfil.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Gestionar catadores\Perfil.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Gestionar catadores\Productores.Designer.vb">
+      <DependentUpon>Productores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Gestionar catadores\Productores.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Gestionar catadores\Proveedores.Designer.vb">
+      <DependentUpon>Proveedores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Gestionar catadores\Proveedores.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Iniciar sesión.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Iniciar sesión.Designer.vb">
+      <DependentUpon>Iniciar sesión.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Menú principal.Designer.vb">
+      <DependentUpon>Menú principal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Menú principal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Realizar cataciones\Catar - Robusta.Designer.vb">
+      <DependentUpon>Catar - Robusta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Realizar cataciones\Catar - Robusta.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Realizar cataciones\Catar - Arábica.Designer.vb">
+      <DependentUpon>Catar - Arábica.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Realizar cataciones\Catar - Arábica.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Descriptores\Defectos.Designer.vb">
+      <DependentUpon>Defectos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Descriptores\Defectos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Descriptores\Fragancia - Aroma.Designer.vb">
+      <DependentUpon>Fragancia - Aroma.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Descriptores\Fragancia - Aroma.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Realizar cataciones\Modicar sesión de catación.Designer.vb">
+      <DependentUpon>Modicar sesión de catación.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Realizar cataciones\Modicar sesión de catación.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Realizar cataciones\Muestra.Designer.vb">
+      <DependentUpon>Muestra.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Realizar cataciones\Muestra.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Realizar cataciones\Nueva sesión de catación.Designer.vb">
+      <DependentUpon>Nueva sesión de catación.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Realizar cataciones\Nueva sesión de catación.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Realizar cataciones\Realizar cataciones.Designer.vb">
+      <DependentUpon>Realizar cataciones.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Realizar cataciones\Realizar cataciones.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Logica\Gestor Administrador.vb" />
+    <Compile Include="Logica\Gestor Arabica.vb" />
+    <Compile Include="Logica\Gestor Arabica_Robusta.vb" />
+    <Compile Include="Logica\Gestor Catador.vb" />
+    <Compile Include="Logica\Gestor Ciudad.vb" />
+    <Compile Include="Logica\Gestor Muestra.vb" />
+    <Compile Include="Logica\Gestor Productores.vb" />
+    <Compile Include="Logica\Gestor Proveedores.vb" />
+    <Compile Include="Logica\Gestor Robusta.vb" />
+    <Compile Include="Logica\Gestor Sesion de catacion.vb" />
+    <Compile Include="Logica\Gestor Usuario.vb" />
+    <Compile Include="Logica\Gestor Persona.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Formularios\Descriptores\Acidez.resx">
+      <DependentUpon>Acidez.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Descriptores\Balance.resx">
+      <DependentUpon>Balance.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Descriptores\Cuerpo.resx">
+      <DependentUpon>Cuerpo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Descriptores\Sabor de boca.resx">
+      <DependentUpon>Sabor de boca.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Descriptores\Sabor.resx">
+      <DependentUpon>Sabor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Descriptores\Sal - Ácido.resx">
+      <DependentUpon>Sal - Ácido.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Descriptores\Sensación en boca.resx">
+      <DependentUpon>Sensación en boca.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Gestionar catadores\Bienvenido.resx">
+      <DependentUpon>Bienvenido.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Gestionar catadores\Cambiar contraseña.resx">
+      <DependentUpon>Cambiar contraseña.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Gestionar catadores\Ciudad.resx">
+      <DependentUpon>Ciudad.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Gestionar catadores\Gestionar catadores.af.resx">
+      <DependentUpon>Gestionar catadores.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Gestionar catadores\Gestionar catadores.resx">
+      <DependentUpon>Gestionar catadores.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Gestionar catadores\Perfil.resx">
+      <DependentUpon>Perfil.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Gestionar catadores\Productores.resx">
+      <DependentUpon>Productores.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Gestionar catadores\Proveedores.resx">
+      <DependentUpon>Proveedores.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Iniciar sesión.resx">
+      <DependentUpon>Iniciar sesión.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Menú principal.resx">
+      <DependentUpon>Menú principal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Realizar cataciones\Catar - Robusta.resx">
+      <DependentUpon>Catar - Robusta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Realizar cataciones\Catar - Arábica.resx">
+      <DependentUpon>Catar - Arábica.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Descriptores\Defectos.resx">
+      <DependentUpon>Defectos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Descriptores\Fragancia - Aroma.resx">
+      <DependentUpon>Fragancia - Aroma.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Realizar cataciones\Modicar sesión de catación.resx">
+      <DependentUpon>Modicar sesión de catación.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Realizar cataciones\Muestra.resx">
+      <DependentUpon>Muestra.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Realizar cataciones\Nueva sesión de catación.resx">
+      <DependentUpon>Nueva sesión de catación.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Realizar cataciones\Realizar cataciones.resx">
+      <DependentUpon>Realizar cataciones.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\Fondo - Inicio de Sesión.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logotipo 88x57.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Usuario 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ayuda 16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Contraseña 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ingresar 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Icon - Café.ico" />
+    <None Include="Resources\Iniciar sesion 32x32.png" />
+    <None Include="Resources\Muestra 48x48.png" />
+    <None Include="Resources\Muestra 32x32.png" />
+    <None Include="Resources\Ingresar 32x321.png" />
+    <None Include="Resources\Administrador 32x32.png" />
+    <None Include="Resources\No 26x26.png" />
+    <None Include="Resources\Si 26x26.png" />
+    <None Include="Resources\Ciudad 24x24.png" />
+    <None Include="Resources\Ciudad 32x32.png" />
+    <None Include="Resources\Ciudad 48x48.png" />
+    <None Include="Resources\Productor 2 48x48.png" />
+    <None Include="Resources\Proveedores2 48x48.png" />
+    <None Include="Resources\Proveedor 3.png" />
+    <None Include="Resources\Proveedor 2.jpg" />
+    <None Include="Resources\Finca 26x26.png" />
+    <None Include="Resources\Ciudad 26x26.png" />
+    <None Include="Resources\Vereda 26 x26.png" />
+    <None Include="Resources\Administrador 16x16.png" />
+    <None Include="Resources\Perfil.png" />
+    <None Include="Resources\Proveedor.png" />
+    <None Include="Resources\Productor.png" />
+    <None Include="Resources\Usuario 24x241.png" />
+    <None Include="Resources\Usuario 48x48.png" />
+    <None Include="Resources\Contraseña 48x48.png" />
+    <None Include="Resources\Contraseña 16x16.png" />
+    <None Include="Resources\Taza no ok.png" />
+    <None Include="Resources\terroso1.png" />
+    <None Include="Resources\suelo.png" />
+    <None Include="Resources\sucio.png" />
+    <None Include="Resources\rancio.png" />
+    <None Include="Resources\mohoso.png" />
+    <None Include="Resources\yute.png" />
+    <None Include="Resources\tipped.png" />
+    <None Include="Resources\quemado.png" />
+    <None Include="Resources\horneado.png" />
+    <None Include="Resources\maderozo.png" />
+    <None Include="Resources\viejo.png" />
+    <None Include="Resources\herboso1.png" />
+    <None Include="Resources\caucho.png" />
+    <None Include="Resources\rio.png" />
+    <None Include="Resources\fermentado.png" />
+    <None Include="Resources\caballo.png" />
+    <None Include="Resources\piel.png" />
+    <None Include="Resources\sudoroso.png" />
+    <None Include="Resources\dense1.png" />
+    <None Include="Resources\desbalanceado.png" />
+    <None Include="Resources\inconsistente.png" />
+    <None Include="Resources\dense.png" />
+    <None Include="Resources\silvestre.png" />
+    <None Include="Resources\cremoso.png" />
+    <None Include="Resources\medio.png" />
+    <None Include="Resources\ligero1.png" />
+    <None Include="Resources\ligero.png" />
+    <None Include="Resources\vibrante.png" />
+    <None Include="Resources\brillante.png" />
+    <None Include="Resources\apagado1.png" />
+    <None Include="Resources\crujiente.png" />
+    <None Include="Resources\limpio.png" />
+    <None Include="Resources\delicado.png" />
+    <None Include="Resources\balanceado.png" />
+    <None Include="Resources\apagado.png" />
+    <None Include="Resources\rápido.png" />
+    <None Include="Resources\débil.png" />
+    <None Include="Resources\estructuado.png" />
+    <None Include="Resources\astringente.png" />
+    <None Include="Resources\blando.png" />
+    <None Include="Resources\leve.png" />
+    <None Include="Resources\prolongado.png" />
+    <None Include="Resources\seco.png" />
+    <None Include="Resources\redondeado.png" />
+    <None Include="Resources\deslucido.png" />
+    <None Include="Resources\jugoso.png" />
+    <None Include="Resources\tomate.png" />
+    <None Include="Resources\tomate seco.png" />
+    <None Include="Resources\salsa de soya.png" />
+    <None Include="Resources\carne.png" />
+    <None Include="Resources\cuero.png" />
+    <None Include="Resources\herbal1.png" />
+    <None Include="Resources\clavo.png" />
+    <None Include="Resources\grosella negra.png" />
+    <None Include="Resources\herboso.png" />
+    <None Include="Resources\pimienta verde - vegetal.png" />
+    <None Include="Resources\arveja.png" />
+    <None Include="Resources\guisante.png" />
+    <None Include="Resources\calabacin.png" />
+    <None Include="Resources\hojas verdes.png" />
+    <None Include="Resources\hongos.png" />
+    <None Include="Resources\heno-paja.png" />
+    <None Include="Resources\tabaco.png" />
+    <None Include="Resources\madera fresca.png" />
+    <None Include="Resources\tierra.png" />
+    <None Include="Resources\bergamota.png" />
+    <None Include="Resources\lupulo.png" />
+    <None Include="Resources\té negro.png" />
+    <None Include="Resources\té verde.png" />
+    <None Include="Resources\menta.png" />
+    <None Include="Resources\salvia1.png" />
+    <None Include="Resources\eneldo.png" />
+    <None Include="Resources\olivia.png" />
+    <None Include="Resources\cedro.png" />
+    <None Include="Resources\curry.png" />
+    <None Include="Resources\anis.png" />
+    <None Include="Resources\nuez moscada.png" />
+    <None Include="Resources\gengibre.png" />
+    <None Include="Resources\cilantro.png" />
+    <None Include="Resources\canela.png" />
+    <None Include="Resources\pimienta verde.png" />
+    <None Include="Resources\pimienta negra.png" />
+    <None Include="Resources\carbon.png" />
+    <None Include="Resources\ahumado.png" />
+    <None Include="Resources\azucar quemada.png" />
+    <None Include="Resources\pan tostado.png" />
+    <None Include="Resources\malta.png" />
+    <None Include="Resources\cebada.png" />
+    <None Include="Resources\pan fresco.png" />
+    <None Include="Resources\trigo.png" />
+    <None Include="Resources\centeno.png" />
+    <None Include="Resources\galleta salada.png" />
+    <None Include="Resources\granola.png" />
+    <None Include="Resources\pan dulce.png" />
+    <None Include="Resources\almendra.png" />
+    <None Include="Resources\avellano.png" />
+    <None Include="Resources\pecano.png" />
+    <None Include="Resources\nuez de marañon.png" />
+    <None Include="Resources\cacahuate.png" />
+    <None Include="Resources\nuez de nogal.png" />
+    <None Include="Resources\melasa.png" />
+    <None Include="Resources\cola.png" />
+    <None Include="Resources\miel de maple.png" />
+    <None Include="Resources\caramelo.png" />
+    <None Include="Resources\azucar morena.png" />
+    <None Include="Resources\azucar de caña.png" />
+    <None Include="Resources\malvavisco.png" />
+    <None Include="Resources\crema.png" />
+    <None Include="Resources\mantequilla.png" />
+    <None Include="Resources\miel.png" />
+    <None Include="Resources\vainilla.png" />
+    <None Include="Resources\chocolate de leche.png" />
+    <None Include="Resources\cocoa en polvo.png" />
+    <None Include="Resources\chocolate amargo.png" />
+    <None Include="Resources\chocolate de reposteria.png" />
+    <None Include="Resources\chocolate oscuro.png" />
+    <None Include="Resources\granos de cacao.png" />
+    <None Include="Resources\ciruela pasa.png" />
+    <None Include="Resources\dátiles.png" />
+    <None Include="Resources\hijo seco.png" />
+    <None Include="Resources\uvas pasas.png" />
+    <None Include="Resources\pasas amarillas.png" />
+    <None Include="Resources\grosella roja.png" />
+    <None Include="Resources\mora azul.png" />
+    <None Include="Resources\fresa.png" />
+    <None Include="Resources\frambuesa.png" />
+    <None Include="Resources\arándano.png" />
+    <None Include="Resources\cereza negra.png" />
+    <None Include="Resources\cereza.png" />
+    <None Include="Resources\ciruela.png" />
+    <None Include="Resources\albaricoque.png" />
+    <None Include="Resources\nectarina.png" />
+    <None Include="Resources\durazno.png" />
+    <None Include="Resources\piña.png" />
+    <None Include="Resources\coco.png" />
+    <None Include="Resources\platano.png" />
+    <None Include="Resources\kiwi.png" />
+    <None Include="Resources\papaya.png" />
+    <None Include="Resources\mango.png" />
+    <None Include="Resources\maracuyá.png" />
+    <None Include="Resources\tamarindo.png" />
+    <None Include="Resources\carambola.png" />
+    <None Include="Resources\lychee.png" />
+    <None Include="Resources\uva roja.png" />
+    <None Include="Resources\uva concord.png" />
+    <None Include="Resources\uva verde.png" />
+    <None Include="Resources\uva blanca.png" />
+    <None Include="Resources\melon.png" />
+    <None Include="Resources\mielada.png" />
+    <None Include="Resources\salvia.png" />
+    <None Include="Resources\manzana roja.png" />
+    <None Include="Resources\manzana verde.png" />
+    <None Include="Resources\naranja.png" />
+    <None Include="Resources\mandarina.png" />
+    <None Include="Resources\tangerina.png" />
+    <None Include="Resources\clementina.png" />
+    <None Include="Resources\toronja.png" />
+    <None Include="Resources\limón.png" />
+    <None Include="Resources\lima.png" />
+    <None Include="Resources\frutas secas.png" />
+    <None Include="Resources\moras.png" />
+    <None Include="Resources\frutas de hueso.png" />
+    <None Include="Resources\frutas tropicales.png" />
+    <None Include="Resources\uva.png" />
+    <None Include="Resources\melón.png" />
+    <None Include="Resources\manzana-pera.png" />
+    <None Include="Resources\citrico.png" />
+    <None Include="Resources\limoncillo.png" />
+    <None Include="Resources\azahar.png" />
+    <None Include="Resources\jazmín.png" />
+    <None Include="Resources\magnolia.png" />
+    <None Include="Resources\lavanda.png" />
+    <None Include="Resources\rosas.png" />
+    <None Include="Resources\hibiscus.png" />
+    <None Include="Resources\vegetal.png" />
+    <None Include="Resources\terroso.png" />
+    <None Include="Resources\herbal.png" />
+    <None Include="Resources\salado.png" />
+    <None Include="Resources\especias.png" />
+    <None Include="Resources\tostado.png" />
+    <None Include="Resources\granos-cereal.png" />
+    <None Include="Resources\nuez.png" />
+    <None Include="Resources\dulce.png" />
+    <None Include="Resources\chocolate.png" />
+    <None Include="Resources\frutal.png" />
+    <None Include="Resources\floral.png" />
+    <None Include="Resources\Descriptores 48x48.png" />
+    <None Include="Resources\Izquierda 25x25.png" />
+    <None Include="Resources\Uniformidad ok.png" />
+    <None Include="Resources\Descriptores.png" />
+    <None Include="Resources\Nivel de tueste 5.png" />
+    <None Include="Resources\Nivel de tueste 4.png" />
+    <None Include="Resources\Nivel de tueste 3.png" />
+    <None Include="Resources\Nivel de tueste 2.png" />
+    <None Include="Resources\Nivel de tueste 1.png" />
+    <None Include="Resources\Nueva sesión de catación 48x48.png" />
+    <None Include="Resources\Catar 48x48.png" />
+    <None Include="Resources\Cancelar 32x32.png" />
+    <None Include="Resources\Guardar 32x32.png" />
+    <None Include="Resources\Nueva sesión de catación2 48x48.png" />
+    <None Include="Resources\Catar 32x32.png" />
+    <None Include="Resources\Nueva sesión de catación 32x32.png" />
+    <None Include="Resources\Sesiones de cataciones registradas 48x48.png" />
+    <None Include="Resources\Realizar cataciones 68x68.png" />
+    <None Include="Resources\Eliminar 32x32.png" />
+    <None Include="Resources\Modificar 32x32.png" />
+    <None Include="Resources\Nuevo catador 32x32.png" />
+    <None Include="Resources\Direccion 26x26.png" />
+    <None Include="Resources\Correo 26x26.png" />
+    <None Include="Resources\Telefono.png" />
+    <None Include="Resources\Apellido.png" />
+    <None Include="Resources\Nombre.png" />
+    <None Include="Resources\Cedula.png" />
+    <None Include="Resources\Confirmar contraseña.png" />
+    <None Include="Resources\Contraseña 26x26.png" />
+    <None Include="Resources\Usuario 26x26.png" />
+    <None Include="Resources\Hacer gestión 48x48.png" />
+    <None Include="Resources\Filtrar 26x26.png" />
+    <None Include="Resources\Buscar 26x26.png" />
+    <None Include="Resources\Catadores registrados 48x48.png" />
+    <None Include="Resources\Gestionar catadores 68x681.png" />
+    <None Include="Resources\Gestionar catadores 68x68.png" />
+    <None Include="Resources\Fondo - Menú principal.png" />
+    <None Include="Resources\Consultas y estadisticas 128x128.png" />
+    <None Include="Resources\Realizar cataciones 128x128.png" />
+    <None Include="Resources\Gestionar catadores 128x128.png" />
+    <None Include="Resources\Cerrar sesion.png" />
+    <None Include="Resources\Usuario 24x24.png" />
+    <None Include="Resources\Tutoriales 24x24.png" />
+    <None Include="Resources\Logotipo 98x63.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

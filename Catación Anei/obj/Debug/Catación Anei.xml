@@ -15,6 +15,14 @@ CataciónAnei
   Reemplaza la propiedad CurrentUICulture del subproceso actual para todas las
   búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
 </summary>
+</member><member name="P:Catación_Anei.My.Resources.Resources.Administrador_16x16">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Catación_Anei.My.Resources.Resources.Administrador_32x32">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
 </member><member name="P:Catación_Anei.My.Resources.Resources.ahumado">
 	<summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
@@ -215,6 +223,22 @@ CataciónAnei
 	<summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
+</member><member name="P:Catación_Anei.My.Resources.Resources.Ciudad_24x24">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Catación_Anei.My.Resources.Resources.Ciudad_26x26">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Catación_Anei.My.Resources.Resources.Ciudad_32x32">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Catación_Anei.My.Resources.Resources.Ciudad_48x48">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
 </member><member name="P:Catación_Anei.My.Resources.Resources.clavo">
 	<summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
@@ -355,6 +379,10 @@ CataciónAnei
 	<summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
+</member><member name="P:Catación_Anei.My.Resources.Resources.Finca_26x26">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
 </member><member name="P:Catación_Anei.My.Resources.Resources.floral">
 	<summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
@@ -488,6 +516,14 @@ CataciónAnei
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member><member name="P:Catación_Anei.My.Resources.Resources.Ingresar_32x32">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Catación_Anei.My.Resources.Resources.Ingresar_32x321">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Catación_Anei.My.Resources.Resources.Iniciar_sesion_32x32">
 	<summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
@@ -651,6 +687,14 @@ CataciónAnei
 	<summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
+</member><member name="P:Catación_Anei.My.Resources.Resources.Muestra_32x32">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Catación_Anei.My.Resources.Resources.Muestra_48x48">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
 </member><member name="P:Catación_Anei.My.Resources.Resources.naranja">
 	<summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
@@ -676,6 +720,10 @@ CataciónAnei
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member><member name="P:Catación_Anei.My.Resources.Resources.Nivel_de_tueste_5">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Catación_Anei.My.Resources.Resources.No_26x26">
 	<summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
@@ -743,6 +791,10 @@ CataciónAnei
 	<summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
+</member><member name="P:Catación_Anei.My.Resources.Resources.Perfil">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
 </member><member name="P:Catación_Anei.My.Resources.Resources.piel">
 	<summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
@@ -767,7 +819,31 @@ CataciónAnei
 	<summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
+</member><member name="P:Catación_Anei.My.Resources.Resources.Productor">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Catación_Anei.My.Resources.Resources.Productor_2_48x48">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
 </member><member name="P:Catación_Anei.My.Resources.Resources.prolongado">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Catación_Anei.My.Resources.Resources.Proveedor">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Catación_Anei.My.Resources.Resources.Proveedor_2">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Catación_Anei.My.Resources.Resources.Proveedor_3">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Catación_Anei.My.Resources.Resources.Proveedores2_48x48">
 	<summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
@@ -824,6 +900,10 @@ CataciónAnei
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member><member name="P:Catación_Anei.My.Resources.Resources.Sesiones_de_cataciones_registradas_48x48">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Catación_Anei.My.Resources.Resources.Si_26x26">
 	<summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
@@ -919,6 +999,10 @@ CataciónAnei
 	<summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
+</member><member name="P:Catación_Anei.My.Resources.Resources.Usuario_24x241">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
 </member><member name="P:Catación_Anei.My.Resources.Resources.Usuario_26x26">
 	<summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
@@ -960,6 +1044,10 @@ CataciónAnei
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member><member name="P:Catación_Anei.My.Resources.Resources.vegetal">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Catación_Anei.My.Resources.Resources.Vereda_26_x26">
 	<summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>

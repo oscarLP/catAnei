@@ -1,3 +1,43 @@
 Trolazos
 rtwerewrew
 una nueva rama llamada 2.0
+yo soy yesith y estoy interesado
+[Master] to [YESITH] : Tu push ha sido satisfactorio YESITH.
+Yo soy ana y estoy probando el push
+
+hola aqui se van a poner de ahora en adelante los errores del proyecto.
+
+Revision proyecto 05/12/2015
+
+cambios y modificaciones requeridos en el software:
+
+-Boton cancelar en formulario gestionar catadores
+
+-Deshabilitar formulario bienvenida si ya ha sido creado un usuario admin
+
+-Etiqueta en el check box mostrar contreseña
+
+-Boton ayuda en el permiso en el formulario gestionar catadores
+
+-Habilitar para poder modificar fecha y hora del formulario de crear sesion
+
+-Agregarle a la base de datos en la tabla sesion de catacion un campo que se llame 'estado' y debe aparecer en la grilla.
+generar numero de muestras en orden, ej:
+
+letras --> 5 muestras 
+A,B,C,D,E
+
+numeros --> 5 muestras 
+1,2,3,4,5
+
+-Boton guardar y modificar en muestras
+
+-Boton ayuda en humedad
+
+-Cambiar el boton 'Muestras' por editar muestras y tambien el titulo.
+
+-Grilla productor y proveedor ocultas en el formulario editar muestra
+
+-Rrror en el boton modificar 
+
+-Controlar un mensaje de error cuando se quiera eliminar un usuario que ya tenga sesiones COMPLETAS creadas.
